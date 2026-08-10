@@ -1,0 +1,282 @@
+schemaVersion: "1.0"
+id: vocal_coach_full_concept_v3
+title: AI Vocal Coach Full Product Concept v3
+description: A 15-question test of the complete first-release journey, first-week trial, CNY 68 subscription, trust, safety, and role fit.
+questions:
+  - id: q0_research_role
+    prompt: Which role is closest to the one you are using to judge this product concept?
+    type: single_choice
+    construct: research_role
+    required: true
+    options:
+      - id: beginner
+        label: Beginner with little or no structured vocal training
+      - id: ktv_casual
+        label: KTV, social, or casual singing enthusiast
+      - id: self_taught_hobbyist
+        label: Self-taught or serious hobbyist who practises independently
+      - id: student_candidate
+        label: Vocal student, music major, or performance or exam candidate
+      - id: creator_performer
+        label: Cover creator, livestream singer, choir or band singer, or performer
+      - id: teacher_coach
+        label: Vocal teacher, coach, or other voice professional
+      - id: institution_buyer
+        label: Studio, school, choir, or institution decision-maker
+      - id: low_need_control
+        label: Music-interested person not currently seeking singing improvement
+
+  - id: q1_current_behavior
+    prompt: Which best describes your current singing, vocal practice, teaching, or supervision behavior?
+    type: single_choice
+    construct: current_vocal_behavior
+    required: true
+    options:
+      - id: structured_daily
+        label: Structured practice or teaching daily or almost daily
+      - id: structured_weekly
+        label: Structured practice or teaching several times a week
+      - id: informal_weekly
+        label: Sing regularly but practise informally or without a clear plan
+      - id: occasional
+        label: Sing or supervise only a few times a month
+      - id: rare_none
+        label: Rarely or never do this now, although interested in music
+
+  - id: q2_primary_unmet_need
+    prompt: What is the most important unmet need this complete product could address for you or your students?
+    type: single_choice
+    construct: primary_unmet_need
+    required: true
+    options:
+      - id: know_priority
+        label: Know what is wrong and what to fix first
+      - id: convert_to_practice
+        label: Turn a diagnosis into the right structured exercises
+      - id: complete_learning_path
+        label: Follow a complete progressive curriculum instead of scattered tips
+      - id: hear_progress
+        label: Hear and see whether a specific technique is improving
+      - id: safe_independent_practice
+        label: Practise independently without pushing the voice unsafely
+      - id: teacher_efficiency
+        label: Make student assessment and between-lesson practice more efficient
+      - id: no_meaningful_need
+        label: It would not address a meaningful need for me
+
+  - id: q3_overall_value
+    prompt: Based only on the complete brief, how valuable would this product be for your own use or professional workflow?
+    type: likert
+    construct: perceived_complete_concept_value
+    required: true
+    askRationale: true
+    minValue: 1
+    maxValue: 5
+
+  - id: q4_core_selling_point
+    prompt: Which single element is the strongest reason to choose this product?
+    type: single_choice
+    construct: strongest_core_selling_point
+    required: true
+    askRationale: true
+    options:
+      - id: baseline_priority
+        label: First-use voice baseline followed by one highest-priority issue
+      - id: original_evidence
+        label: Exact original evidence clip instead of only a score
+      - id: confidence_honesty
+        label: High-confidence, possible, and cannot-determine labels that admit uncertainty
+      - id: matched_week_plan
+        label: A matched plan designed for noticeable improvement in one week
+      - id: complete_curriculum
+        label: A complete progressive curriculum aligned with mainstream vocal concepts
+      - id: progress_tracking
+        label: Technique-based growth tracking and practice check-ins
+      - id: teacher_complement
+        label: Teacher review, override, and disagreement feedback
+      - id: none
+        label: None is a strong reason to choose it
+
+  - id: q5_evidence_confidence_trust
+    prompt: How does the combination of original evidence clips and explicit confidence handling affect your trust?
+    type: single_choice
+    construct: evidence_and_uncertainty_trust
+    required: true
+    askRationale: true
+    options:
+      - id: enough_self_guided
+        label: Enough to begin a self-guided trial
+      - id: useful_verify_progress
+        label: Useful if I can verify it through my own progress
+      - id: useful_teacher_check
+        label: Useful, but I would compare important findings with a teacher
+      - id: need_independent_proof
+        label: Still need independent accuracy and safety evidence before relying on it
+      - id: distrust_ai_diagnosis
+        label: I would still not trust AI vocal diagnosis
+
+  - id: q6_complete_curriculum_value
+    prompt: Compared with a one-off diagnosis app, what effect does the complete progressive curriculum have on the concept's value?
+    type: single_choice
+    construct: curriculum_incremental_value
+    required: true
+    options:
+      - id: much_more_valuable
+        label: Much more valuable because it provides a full learning path
+      - id: somewhat_more_valuable
+        label: Somewhat more valuable, but diagnosis remains the main value
+      - id: only_if_quality_proven
+        label: More valuable only if lessons and demonstrations are high quality
+      - id: prefer_targeted_only
+        label: I would prefer only targeted exercises, not a complete curriculum
+      - id: no_added_value
+        label: The complete curriculum adds little or no value for my role
+
+  - id: q7_one_week_credibility
+    prompt: How credible and motivating is a plan designed to produce a clearly noticeable improvement in one specific issue within one week of correct practice?
+    type: single_choice
+    construct: one_week_improvement_credibility
+    required: true
+    askRationale: true
+    options:
+      - id: credible_motivating
+        label: Credible and strongly motivating
+      - id: credible_with_baseline
+        label: Credible if before-and-after evidence uses the same baseline task
+      - id: possible_not_guaranteed
+        label: Possible for some issues, but it must not sound guaranteed
+      - id: skeptical_need_demo
+        label: I am skeptical and would need demonstrations or independent evidence
+      - id: not_credible
+        label: Not credible enough to affect my decision
+
+  - id: q8_free_week_behavior
+    prompt: If the full first week were free and recordings were private by default, what would you realistically do?
+    type: single_choice
+    construct: realistic_free_week_behavior
+    required: true
+    askRationale: true
+    options:
+      - id: complete_full_week
+        label: Build the baseline and complete the recommended week-long plan
+      - id: baseline_and_first_exercise
+        label: Complete the baseline and first exercise, then decide whether to continue
+      - id: test_one_sample
+        label: Test one voice sample or one student before committing more time
+      - id: wait_for_proof
+        label: Wait for credible demonstrations, reviews, or professional recommendations
+      - id: would_not_try
+        label: I probably would not try it even when free
+
+  - id: q9_subscription_68
+    prompt: After the free week, what would you realistically do at CNY 68 per month if the experience worked as described?
+    type: single_choice
+    construct: cny_68_subscription_intent
+    required: true
+    askRationale: true
+    options:
+      - id: definitely_subscribe
+        label: Definitely subscribe for personal use
+      - id: likely_if_improved
+        label: Likely subscribe if I notice the promised improvement
+      - id: subscribe_periodically
+        label: Subscribe only during active training periods
+      - id: professional_use
+        label: Consider it for teaching or professional use, subject to suitable workflow terms
+      - id: price_too_high
+        label: CNY 68 per month is too expensive for the value
+      - id: would_not_subscribe
+        label: I would not subscribe regardless of this price
+
+  - id: q10_retention_condition
+    prompt: What single result would be most important for keeping the subscription beyond the first paid month?
+    type: single_choice
+    construct: primary_retention_condition
+    required: true
+    options:
+      - id: repeated_improvement
+        label: Repeated noticeable improvement on new priority issues
+      - id: diagnosis_accuracy
+        label: Diagnoses remain accurate and consistent across recordings
+      - id: curriculum_progression
+        label: The curriculum continues to unlock useful next steps
+      - id: adherence
+        label: The plan makes me or my students practise consistently
+      - id: teacher_workflow
+        label: Teacher review and between-lesson workflow saves meaningful time
+      - id: safety_trust
+        label: Safety and uncertainty handling remain reliably conservative
+      - id: no_retention_case
+        label: I do not see a reason to keep a monthly subscription
+
+  - id: q11_biggest_skepticism
+    prompt: Even with all described safeguards, what is your biggest remaining doubt or adoption blocker?
+    type: single_choice
+    construct: primary_remaining_skepticism
+    required: true
+    askRationale: true
+    options:
+      - id: wrong_diagnosis
+        label: A wrong diagnosis could create bad habits or harm the voice
+      - id: generic_personalization
+        label: The lesson or exercise may still be generic rather than truly personal
+      - id: week_claim
+        label: The one-week noticeable-improvement claim may overpromise
+      - id: curriculum_quality
+        label: The complete curriculum may not match a good teacher's depth or sequencing
+      - id: privacy
+        label: Voice recordings and progress data remain too sensitive
+      - id: effort
+        label: Recording and daily practice require too much time or discipline
+      - id: teacher_conflict
+        label: AI advice may conflict with a teacher's method or judgement
+      - id: price
+        label: A recurring CNY 68 payment may not remain worthwhile
+      - id: no_major_doubt
+        label: No major doubt beyond seeing the product work
+
+  - id: q12_teacher_conflict
+    prompt: If the AI diagnosis conflicts with a trusted teacher's judgement, which response would best preserve value for your role?
+    type: single_choice
+    construct: teacher_conflict_resolution
+    required: true
+    options:
+      - id: teacher_override
+        label: Follow the teacher and let the teacher override the plan
+      - id: compare_evidence
+        label: Compare the original clip, confidence, and both explanations before deciding
+      - id: mark_feedback
+        label: Mark the diagnosis as disputed and submit feedback for review
+      - id: second_human_opinion
+        label: Pause that exercise and seek another qualified human opinion
+      - id: trust_ai_if_high_confidence
+        label: Follow the AI when it marks the finding high confidence
+      - id: stop_using
+        label: Stop using the product after a meaningful conflict
+
+  - id: q13_safety_response
+    prompt: How does automatic stop-training behavior for pain, persistent hoarseness, or meaningful fatigue affect your willingness to use or recommend the product?
+    type: single_choice
+    construct: safety_stop_training_response
+    required: true
+    askRationale: true
+    options:
+      - id: essential_increases_trust
+        label: Essential and substantially increases trust
+      - id: positive_if_conservative
+        label: Positive if it is conservative without frequent false alarms
+      - id: defer_to_human
+        label: Positive only when it clearly directs the user to appropriate human help
+      - id: limited_value
+        label: Helpful, but it does not reduce my main concern about AI guidance
+      - id: annoying
+        label: Likely to interrupt practice and reduce usefulness
+      - id: no_effect
+        label: It would not affect my decision
+
+  - id: q14_decisive_reaction
+    prompt: In three or four sentences, explain who this product is most useful for, what would make you adopt or reject it, and what evidence after the free week would justify or fail to justify CNY 68 per month.
+    type: free_text
+    construct: role_specific_decisive_reaction
+    required: true
+

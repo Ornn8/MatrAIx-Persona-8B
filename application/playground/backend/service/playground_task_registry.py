@@ -175,6 +175,7 @@ PLAYGROUND_TASK_INDEX: Dict[str, PlaygroundTaskEntry] = {
     ),
     # Survey (questionnaire metadata mapping still lives in survey_task_content)
     "example-survey_product-feedback": PlaygroundTaskEntry(application_type="survey"),
+    "survey_vocal-coach-concept-feedback": PlaygroundTaskEntry(application_type="survey"),
     "survey_product-attitudes": PlaygroundTaskEntry(application_type="survey"),
     "survey_claude-code-vscode-checkpoints": PlaygroundTaskEntry(application_type="survey"),
     "survey_robinhood-cortex-digests": PlaygroundTaskEntry(application_type="survey"),

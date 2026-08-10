@@ -253,6 +253,21 @@ def preflight_checks() -> List[Dict[str, Any]]:
         }
     )
 
+    deepseek_key = os.environ.get("DEEPSEEK_API_KEY")
+    checks.append(
+        {
+            "group": "Core",
+            "name": "DeepSeek (official)",
+            "ok": bool(deepseek_key),
+            "optional": True,
+            "detail": (
+                "Configured."
+                if deepseek_key
+                else "Not configured. Required for official DeepSeek persona models."
+            ),
+        }
+    )
+
     # ---- Chatbot — RecAI is deeply probed; other adapters are offered --- #
     root = _interecagent_root()
     llm4crs = os.path.join(root, "llm4crs")

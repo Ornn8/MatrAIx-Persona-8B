@@ -1,0 +1,1810 @@
+{
+ "schema_version": "1.0",
+ "personas": [
+  {
+   "persona_id": "0001",
+   "path": "persona_0001.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0002",
+   "path": "persona_0002.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0003",
+   "path": "persona_0003.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0004",
+   "path": "persona_0004.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0005",
+   "path": "persona_0005.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0006",
+   "path": "persona_0006.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0007",
+   "path": "persona_0007.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Student"
+  },
+  {
+   "persona_id": "0008",
+   "path": "persona_0008.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0009",
+   "path": "persona_0009.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0010",
+   "path": "persona_0010.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0011",
+   "path": "persona_0011.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0012",
+   "path": "persona_0012.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0013",
+   "path": "persona_0013.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0014",
+   "path": "persona_0014.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0015",
+   "path": "persona_0015.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0016",
+   "path": "persona_0016.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0017",
+   "path": "persona_0017.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0018",
+   "path": "persona_0018.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0019",
+   "path": "persona_0019.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0020",
+   "path": "persona_0020.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0021",
+   "path": "persona_0021.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0022",
+   "path": "persona_0022.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0023",
+   "path": "persona_0023.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Student"
+  },
+  {
+   "persona_id": "0024",
+   "path": "persona_0024.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "75-84",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0025",
+   "path": "persona_0025.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0026",
+   "path": "persona_0026.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0027",
+   "path": "persona_0027.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0028",
+   "path": "persona_0028.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Student"
+  },
+  {
+   "persona_id": "0029",
+   "path": "persona_0029.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0030",
+   "path": "persona_0030.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0031",
+   "path": "persona_0031.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0032",
+   "path": "persona_0032.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0033",
+   "path": "persona_0033.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0034",
+   "path": "persona_0034.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0035",
+   "path": "persona_0035.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0036",
+   "path": "persona_0036.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0037",
+   "path": "persona_0037.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0038",
+   "path": "persona_0038.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0039",
+   "path": "persona_0039.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0040",
+   "path": "persona_0040.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0041",
+   "path": "persona_0041.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0042",
+   "path": "persona_0042.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0043",
+   "path": "persona_0043.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0044",
+   "path": "persona_0044.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0045",
+   "path": "persona_0045.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Student"
+  },
+  {
+   "persona_id": "0046",
+   "path": "persona_0046.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0047",
+   "path": "persona_0047.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0048",
+   "path": "persona_0048.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0049",
+   "path": "persona_0049.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0050",
+   "path": "persona_0050.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0051",
+   "path": "persona_0051.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0052",
+   "path": "persona_0052.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0053",
+   "path": "persona_0053.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0054",
+   "path": "persona_0054.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0055",
+   "path": "persona_0055.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0056",
+   "path": "persona_0056.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0057",
+   "path": "persona_0057.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0058",
+   "path": "persona_0058.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0059",
+   "path": "persona_0059.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0060",
+   "path": "persona_0060.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0061",
+   "path": "persona_0061.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0062",
+   "path": "persona_0062.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0063",
+   "path": "persona_0063.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Student"
+  },
+  {
+   "persona_id": "0064",
+   "path": "persona_0064.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "85+",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0065",
+   "path": "persona_0065.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0066",
+   "path": "persona_0066.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0067",
+   "path": "persona_0067.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "75-84",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0068",
+   "path": "persona_0068.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0069",
+   "path": "persona_0069.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0070",
+   "path": "persona_0070.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0071",
+   "path": "persona_0071.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Parent of young kids"
+  },
+  {
+   "persona_id": "0072",
+   "path": "persona_0072.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0073",
+   "path": "persona_0073.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0074",
+   "path": "persona_0074.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0075",
+   "path": "persona_0075.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0076",
+   "path": "persona_0076.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0077",
+   "path": "persona_0077.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "75-84",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0078",
+   "path": "persona_0078.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0079",
+   "path": "persona_0079.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0080",
+   "path": "persona_0080.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0081",
+   "path": "persona_0081.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0082",
+   "path": "persona_0082.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0083",
+   "path": "persona_0083.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Student"
+  },
+  {
+   "persona_id": "0084",
+   "path": "persona_0084.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0085",
+   "path": "persona_0085.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0086",
+   "path": "persona_0086.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0087",
+   "path": "persona_0087.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0088",
+   "path": "persona_0088.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Student"
+  },
+  {
+   "persona_id": "0089",
+   "path": "persona_0089.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0090",
+   "path": "persona_0090.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0091",
+   "path": "persona_0091.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0092",
+   "path": "persona_0092.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0093",
+   "path": "persona_0093.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0094",
+   "path": "persona_0094.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0095",
+   "path": "persona_0095.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0096",
+   "path": "persona_0096.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0097",
+   "path": "persona_0097.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0098",
+   "path": "persona_0098.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0099",
+   "path": "persona_0099.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "75-84",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0100",
+   "path": "persona_0100.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0101",
+   "path": "persona_0101.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0102",
+   "path": "persona_0102.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0103",
+   "path": "persona_0103.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0104",
+   "path": "persona_0104.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0105",
+   "path": "persona_0105.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0106",
+   "path": "persona_0106.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0107",
+   "path": "persona_0107.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0108",
+   "path": "persona_0108.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0109",
+   "path": "persona_0109.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0110",
+   "path": "persona_0110.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0111",
+   "path": "persona_0111.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0112",
+   "path": "persona_0112.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0113",
+   "path": "persona_0113.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0114",
+   "path": "persona_0114.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0115",
+   "path": "persona_0115.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0116",
+   "path": "persona_0116.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Student"
+  },
+  {
+   "persona_id": "0117",
+   "path": "persona_0117.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0118",
+   "path": "persona_0118.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0119",
+   "path": "persona_0119.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0120",
+   "path": "persona_0120.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0121",
+   "path": "persona_0121.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0122",
+   "path": "persona_0122.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0123",
+   "path": "persona_0123.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0124",
+   "path": "persona_0124.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0125",
+   "path": "persona_0125.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0126",
+   "path": "persona_0126.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0127",
+   "path": "persona_0127.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0128",
+   "path": "persona_0128.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0129",
+   "path": "persona_0129.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "75-84",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0130",
+   "path": "persona_0130.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0131",
+   "path": "persona_0131.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0132",
+   "path": "persona_0132.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0133",
+   "path": "persona_0133.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0134",
+   "path": "persona_0134.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0135",
+   "path": "persona_0135.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "75-84",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0136",
+   "path": "persona_0136.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0137",
+   "path": "persona_0137.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "85+",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0138",
+   "path": "persona_0138.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0139",
+   "path": "persona_0139.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0140",
+   "path": "persona_0140.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0141",
+   "path": "persona_0141.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0142",
+   "path": "persona_0142.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0143",
+   "path": "persona_0143.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "75-84",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0144",
+   "path": "persona_0144.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0145",
+   "path": "persona_0145.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0146",
+   "path": "persona_0146.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0147",
+   "path": "persona_0147.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0148",
+   "path": "persona_0148.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0149",
+   "path": "persona_0149.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "75-84",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0150",
+   "path": "persona_0150.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0151",
+   "path": "persona_0151.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0152",
+   "path": "persona_0152.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0153",
+   "path": "persona_0153.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "75-84",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0154",
+   "path": "persona_0154.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "85+",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0155",
+   "path": "persona_0155.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0156",
+   "path": "persona_0156.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0157",
+   "path": "persona_0157.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0158",
+   "path": "persona_0158.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Parent of young kids"
+  },
+  {
+   "persona_id": "0159",
+   "path": "persona_0159.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0160",
+   "path": "persona_0160.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0161",
+   "path": "persona_0161.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0162",
+   "path": "persona_0162.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0163",
+   "path": "persona_0163.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0164",
+   "path": "persona_0164.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0165",
+   "path": "persona_0165.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0166",
+   "path": "persona_0166.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0167",
+   "path": "persona_0167.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0168",
+   "path": "persona_0168.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0169",
+   "path": "persona_0169.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0170",
+   "path": "persona_0170.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Parent of young kids"
+  },
+  {
+   "persona_id": "0171",
+   "path": "persona_0171.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0172",
+   "path": "persona_0172.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0173",
+   "path": "persona_0173.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0174",
+   "path": "persona_0174.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0175",
+   "path": "persona_0175.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0176",
+   "path": "persona_0176.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0177",
+   "path": "persona_0177.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Parent of young kids"
+  },
+  {
+   "persona_id": "0178",
+   "path": "persona_0178.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0179",
+   "path": "persona_0179.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0180",
+   "path": "persona_0180.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0181",
+   "path": "persona_0181.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0182",
+   "path": "persona_0182.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0183",
+   "path": "persona_0183.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Parent of young kids"
+  },
+  {
+   "persona_id": "0184",
+   "path": "persona_0184.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0185",
+   "path": "persona_0185.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0186",
+   "path": "persona_0186.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Student"
+  },
+  {
+   "persona_id": "0187",
+   "path": "persona_0187.yaml",
+   "source": "cgss",
+   "display_name": "Yuki Sato",
+   "age_bracket": "65-74",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0188",
+   "path": "persona_0188.yaml",
+   "source": "cgss",
+   "display_name": "Jun Park",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0189",
+   "path": "persona_0189.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "25-34",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0190",
+   "path": "persona_0190.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0191",
+   "path": "persona_0191.yaml",
+   "source": "cgss",
+   "display_name": "Min Ho",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0192",
+   "path": "persona_0192.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0193",
+   "path": "persona_0193.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0194",
+   "path": "persona_0194.yaml",
+   "source": "cgss",
+   "display_name": "Hana Kim",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0195",
+   "path": "persona_0195.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0196",
+   "path": "persona_0196.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "35-44",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  },
+  {
+   "persona_id": "0197",
+   "path": "persona_0197.yaml",
+   "source": "cgss",
+   "display_name": "Li Wei Chen",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Retirement"
+  },
+  {
+   "persona_id": "0198",
+   "path": "persona_0198.yaml",
+   "source": "cgss",
+   "display_name": "Aiko Nakamura",
+   "age_bracket": "18-24",
+   "region": "East Asia",
+   "life_stage": "Early career"
+  },
+  {
+   "persona_id": "0199",
+   "path": "persona_0199.yaml",
+   "source": "cgss",
+   "display_name": "Mei Lin Tan",
+   "age_bracket": "55-64",
+   "region": "East Asia",
+   "life_stage": "Empty nester"
+  },
+  {
+   "persona_id": "0200",
+   "path": "persona_0200.yaml",
+   "source": "cgss",
+   "display_name": "Wei Zhang",
+   "age_bracket": "45-54",
+   "region": "East Asia",
+   "life_stage": "Mid-life"
+  }
+ ],
+ "source_counts": {
+  "cgss": 200
+ },
+ "smoke_persona_id": "0001",
+ "notes": "CGSS2017 LLM-rich subset: 200 stratified respondents, 44 observed dims + LLM-inferred (avg 105.4 grounded/1290). China-only cohort; keep isolated from non-China pools. Source: CNSDA CGSS2017 + DeepSeek inference layer."
+}

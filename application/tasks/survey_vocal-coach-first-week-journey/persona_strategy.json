@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "pool": "persona/datasets/matraix-persona-1m",
+  "sources": [],
+  "defaultMode": "stratified",
+  "dimensionFilters": {
+    "age_bracket": [
+      "18-24",
+      "25-34",
+      "35-44",
+      "45-54",
+      "55-64",
+      "65-74"
+    ],
+    "topic_music": [
+      "Passionate",
+      "Interested"
+    ],
+    "ind_music": [
+      "None",
+      "Some exposure",
+      "Experienced",
+      "Veteran"
+    ],
+    "trust_level": [
+      "Trusting",
+      "Verifying",
+      "Skeptical"
+    ],
+    "economic_motivation": [
+      "Cost-sensitive",
+      "Value-driven",
+      "Premium-seeking",
+      "Indifferent"
+    ]
+  },
+  "stratifyFields": [
+    "ind_music"
+  ],
+  "sampleSizePerValueGroup": 50,
+  "seed": 20260811
+}

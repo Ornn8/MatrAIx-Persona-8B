@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {"contextType": "question_response"},
+      "summaryAnalyses": [
+        {
+          "id": "vocal_pricing_68.reason_by_response",
+          "targetFacetKey": "reason",
+          "groupByFacetKey": "response",
+          "groupByMode": "categorical",
+          "summaryKind": "llm_bucket_summary"
+        }
+      ],
+      "signalScans": [
+        {
+          "id": "vocal_pricing_68.conversion_signal_scan",
+          "targetFacetKey": "reason",
+          "groupByFacetKey": "response",
+          "groupByMode": "categorical",
+          "judgeKind": "llm_signal_judge",
+          "prompt": "Identify explicit reasons supporting or rejecting CNY 68, monthly versus quarterly or one-off payment, and post-trial conversion. Do not infer willingness to pay from general product interest.",
+          "rubric": "Mark true only when the rationale explicitly supports the signal under the stated package and price.",
+          "signals": [
+            {"key": "supports_monthly_68", "label": "Supports monthly CNY 68", "valueType": "boolean"},
+            {"key": "requires_outcome_proof", "label": "Requires outcome proof", "valueType": "boolean"},
+            {"key": "prefers_commitment_discount", "label": "Prefers commitment discount", "valueType": "boolean"},
+            {"key": "prefers_pay_per_use", "label": "Prefers pay per use", "valueType": "boolean"},
+            {"key": "rejects_paid_package", "label": "Rejects paid package", "valueType": "boolean"}
+          ]
+        }
+      ]
+    }
+  ]
+}

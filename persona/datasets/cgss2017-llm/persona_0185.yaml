@@ -1,0 +1,160 @@
+persona_id: '0185'
+version: '1.0'
+source: cgss
+display_name: Yuki Sato
+dimensions:
+  age_bracket: 45-54
+  att_data_privacy: Positive
+  att_remote_work: Enthusiast
+  att_traditional_gender_roles: Skeptical
+  bfi2_domain_negative_emotionality: Low
+  bfi2_facet_anxiety: Low
+  bfi2_facet_depression: Low
+  bfi2_facet_trust: High
+  big5_anxiety: Low
+  big5_depression: Low
+  big5_self_efficacy: Very high
+  big5_trust: High
+  cog_abstraction: Concrete
+  cog_ambiguity_tolerance: Moderate
+  cog_assertiveness: Moderate
+  cog_attention_span: Average
+  cog_big_picture_vs_detail: Both
+  cog_confidence_calibration: Cautious
+  cog_conflict_approach: Avoidant
+  cog_curiosity: Low
+  cog_decision_speed: Balanced
+  cog_detail_orientation: Moderate
+  cog_directness: Direct
+  cog_emoji_use: Never
+  cog_emotional_expressiveness: Low
+  cog_empathy_expression: Low
+  cog_formality: Neutral
+  cog_humor: Serious
+  cog_multitasking: Some
+  cog_numeracy_comfort: Moderate
+  cog_open_mindedness: Moderate
+  cog_optimism: Moderate
+  cog_politeness: Polite
+  cog_precision_of_language: Average
+  cog_reading_vs_watching: Prefers video
+  cog_risk_framing: Balanced
+  cog_skepticism: Moderate
+  cog_storytelling: Low
+  cog_use_of_jargon: Avoids jargon
+  cog_verbosity: Concise
+  cog_visual_vs_verbal: Visual
+  company_size: Enterprise (5k+)
+  demo_employment_status: Unemployed
+  demo_ethnicity_broad: East Asian
+  demo_housing_status: Own outright
+  demo_marital_status: Married
+  demo_religion_affiliation: None
+  dominant_trait: Balanced
+  economic_motivation: Indifferent
+  gender_identity: Man
+  habit_doomscrolling: Weekly
+  health_energy_level: High
+  health_general_health: Good
+  health_mental_health: Stable
+  highest_education: Secondary
+  ind_telecommunications: None
+  interpersonal_agency_dominance: Low
+  interpersonal_communion_warmth: Average
+  lang_mandarin: Native
+  life_stage: Mid-life
+  lifex_career_path_shape: Portfolio / patchwork
+  lifex_education_journey: Dropped out
+  lifex_faith_journey: Lifelong faith
+  lifex_financial_trajectory: Stable
+  lifex_formative_decade: 1980s
+  lifex_geographic_mobility: Never left hometown
+  lifex_health_journey: No major events
+  lifex_hometown_tie: Still there
+  lifex_immigration_generation: Native multi-generational
+  lifex_languages_lifetime: One
+  lifex_military_history: Never served
+  lifex_public_recognition: Private life
+  lifex_relationship_history: Married once
+  lstyle_exercise_freq: Daily
+  lstyle_music_listening: Rarely
+  lstyle_news_freq: Daily
+  lstyle_podcast_listening: Never
+  lstyle_reading_freq: Monthly
+  media_diet: Video-first
+  multilingualism: Monolingual
+  need_for_cognition: Low
+  primary_language: Mandarin
+  region: East Asia
+  religiosity: Secular
+  schwartz_value_achievement: Average
+  schwartz_value_benevolence: Average
+  schwartz_value_conformity: Average
+  schwartz_value_hedonism: Average
+  schwartz_value_power: Low
+  schwartz_value_security: High
+  schwartz_value_self_direction: Average
+  schwartz_value_stimulation: Low
+  schwartz_value_tradition: Average
+  schwartz_value_universalism: Average
+  sdt_need_autonomy: Average
+  sdt_need_competence: Average
+  sdt_need_relatedness: Average
+  seniority: Mid
+  socioeconomic_band: Middle
+  tech_savviness: Comfortable
+  topic_religion: Interested
+  topic_social_media: Interested
+  topic_spirituality: Interested
+  topic_technology: Interested
+  topic_tv_series: Interested
+  trait_adaptability: Moderate
+  trait_ambition: Moderate
+  trait_curiosity: Moderate
+  trait_discipline: Strong
+  trait_hope_optimism: Moderate
+  trait_leadership: Slight
+  trait_love_of_learning: Slight
+  trait_open_mindedness: Moderate
+  trait_perseverance: Strong
+  trait_playfulness: Moderate
+  trait_prudence: Moderate
+  trait_resilience: Strong
+  trait_self_regulation: Strong
+  trait_spirituality: Moderate
+  trait_zest: Moderate
+  trust_level: Trusting
+  val_achievement: Moderate
+  val_adventure: Minor
+  val_beauty_aesthetics: Moderate
+  val_career_success: Moderate
+  val_community: Moderate
+  val_creativity_self_expression: Moderate
+  val_equality: Moderate
+  val_family: Important
+  val_fun_enjoyment: Moderate
+  val_health: Important
+  val_helping_others: Moderate
+  val_independence: Moderate
+  val_integrity_honesty: Moderate
+  val_justice_fairness: Moderate
+  val_knowledge_truth: Moderate
+  val_loyalty: Moderate
+  val_order_structure: Moderate
+  val_patriotism: Moderate
+  val_personal_freedom: Moderate
+  val_personal_growth: Moderate
+  val_power_influence: Minor
+  val_privacy: Moderate
+  val_recognition: Moderate
+  val_security_stability: Important
+  val_social_status: Moderate
+  val_spirituality_faith: Important
+  val_sustainability: Moderate
+  val_tradition: Moderate
+  val_wealth: Moderate
+  values_priority: Security
+  years_experience: 20+
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
+  origin_persona_id: cgss2017-9051

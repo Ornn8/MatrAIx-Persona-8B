@@ -1,0 +1,214 @@
+schemaVersion: "1.0"
+id: vocal_coach_concept_feedback_v2
+title: AI Vocal Coach Concept Feedback
+description: A 12-question concept test for consumers and vocal professionals.
+questions:
+  - id: q0_research_role
+    prompt: Which research role is closest to you for this concept?
+    type: single_choice
+    construct: research_role
+    required: true
+    options:
+      - id: beginner
+        label: Beginner with little or no structured vocal training
+      - id: casual_enthusiast
+        label: KTV, social, or casual singing enthusiast
+      - id: self_taught_hobbyist
+        label: Self-taught or serious hobbyist who practises independently
+      - id: student_candidate
+        label: Vocal student, music major, or performance/exam candidate
+      - id: creator_performer
+        label: Cover creator, livestream singer, choir member, band singer, or performer
+      - id: teacher_coach
+        label: Vocal teacher, coach, or other voice professional
+      - id: institution_buyer
+        label: Studio, school, choir, or institution decision-maker
+      - id: low_need_control
+        label: Interested in music but not currently seeking singing improvement
+
+  - id: q1_singing_frequency
+    prompt: How often do you currently sing, practise, teach, or supervise vocal practice?
+    type: single_choice
+    construct: current_vocal_activity
+    required: true
+    options:
+      - id: daily
+        label: Daily or almost daily
+      - id: weekly
+        label: Several times a week
+      - id: monthly
+        label: A few times a month
+      - id: rare
+        label: Rarely, but I am interested
+      - id: none
+        label: I do not currently sing, teach, or supervise vocal practice
+
+  - id: q2_primary_need
+    prompt: What is the main unmet need this concept could address for you or your students?
+    type: single_choice
+    construct: primary_unmet_need
+    required: true
+    options:
+      - id: diagnose_priority
+        label: Identify what is wrong and what to fix first
+      - id: matched_practice
+        label: Turn a known issue into a suitable exercise and practice plan
+      - id: range_register
+        label: Improve range, high notes, or register transitions safely
+      - id: progress_visibility
+        label: Make improvement visible and support consistent practice
+      - id: between_lessons
+        label: Support student practice and review between lessons
+      - id: scalable_assessment
+        label: Give a teacher or institution a scalable first assessment
+      - id: no_meaningful_need
+        label: I do not have a meaningful need for this concept
+
+  - id: q3_personal_value
+    prompt: Based only on the concept brief, how valuable would this be for your own use or professional workflow?
+    type: likert
+    construct: perceived_concept_value
+    required: true
+    askRationale: true
+    minValue: 1
+    maxValue: 5
+
+  - id: q4_first_value
+    prompt: Which first-release outcome would give you the strongest reason to try or recommend it?
+    type: single_choice
+    construct: strongest_first_release_value
+    required: true
+    options:
+      - id: evidence_diagnosis
+        label: One prioritized diagnosis tied to an exact audio evidence clip
+      - id: matched_exercise
+        label: One exercise matched directly to the diagnosed issue
+      - id: safe_range_map
+        label: A conservative map of comfortable, usable, and strained range
+      - id: measurable_progress
+        label: Technique-based progress tracking over time
+      - id: teacher_review
+        label: A report a teacher can review and use between lessons
+      - id: none
+        label: None of these is compelling enough
+
+  - id: q5_evidence_trust
+    prompt: How would an exact playback clip, plain-language explanation, and confidence indication affect your trust in a diagnosis?
+    type: single_choice
+    construct: evidence_based_diagnostic_trust
+    required: true
+    askRationale: true
+    options:
+      - id: sufficient_for_trial
+        label: Enough to trust it for an initial self-guided trial
+      - id: useful_but_verify
+        label: Useful, but I would compare it with progress or another person
+      - id: require_teacher_validation
+        label: I would require validation by a qualified teacher or coach
+      - id: insufficient_without_accuracy_proof
+        label: Still insufficient without independent accuracy and safety evidence
+      - id: would_not_trust
+        label: I would not trust AI vocal diagnosis for this purpose
+
+  - id: q6_adoption_blocker
+    prompt: What is the biggest reason you might not use, recommend, or purchase it?
+    type: single_choice
+    construct: primary_adoption_blocker
+    required: true
+    options:
+      - id: wrong_feedback
+        label: Incorrect feedback could create bad habits or harm a voice
+      - id: generic_advice
+        label: The diagnosis or exercises might feel generic rather than personal
+      - id: privacy
+        label: Voice recordings and biometric-like data feel too private
+      - id: workflow_effort
+        label: Recording, reviewing, or following a plan takes too much effort
+      - id: teacher_conflict
+        label: It could conflict with a teacher's method or professional judgement
+      - id: price
+        label: The likely price may not justify the benefit
+      - id: no_need
+        label: I do not need a dedicated vocal-training product
+
+  - id: q7_privacy_choice
+    prompt: Which privacy arrangement would be acceptable for uploading singing recordings?
+    type: single_choice
+    construct: recording_privacy_acceptance
+    required: true
+    options:
+      - id: private_default_opt_in
+        label: Private by default; selected recordings may be opted in for model improvement
+      - id: processing_only_delete
+        label: Process the recording only for my report, then delete it automatically
+      - id: local_or_on_device
+        label: Only local or on-device processing would be acceptable
+      - id: organization_controlled
+        label: Acceptable only under teacher or institution-controlled storage and consent
+      - id: no_upload
+        label: I would not upload singing recordings under any arrangement
+
+  - id: q8_realistic_trial_intent
+    prompt: If a usable beta existed tomorrow, what would you realistically do?
+    type: single_choice
+    construct: realistic_beta_intent
+    required: true
+    askRationale: true
+    options:
+      - id: complete_assessment_now
+        label: Complete an assessment immediately
+      - id: try_if_free_private
+        label: Try it if the first assessment is free and private by default
+      - id: test_with_sample
+        label: Test it with one song, student, or anonymized sample first
+      - id: wait_for_proof
+        label: Wait for demonstrations, independent evidence, or professional recommendations
+      - id: not_try
+        label: Probably not try it
+
+  - id: q9_payment_preference
+    prompt: If the concept proved useful, which payment approach would be most acceptable?
+    type: single_choice
+    construct: payment_preference
+    required: true
+    askRationale: true
+    options:
+      - id: free_basic_paid_advanced
+        label: Free first assessment, then paid plans and progress features
+      - id: pay_per_analysis
+        label: Pay per detailed diagnosis or practice plan
+      - id: consumer_subscription
+        label: Personal subscription while feedback remains useful
+      - id: professional_seat
+        label: Teacher or coach subscription with student seats
+      - id: institution_license
+        label: Studio, school, choir, or institution license
+      - id: would_not_pay
+        label: I would use it only if it remained free
+
+  - id: q10_proof_of_value
+    prompt: Which result would best prove value for your role after an initial trial?
+    type: single_choice
+    construct: role_specific_proof_of_value
+    required: true
+    options:
+      - id: clearer_self_awareness
+        label: As a consumer, I understand my main vocal issue more clearly
+      - id: measurable_improvement
+        label: As a consumer, singing becomes easier, safer, or measurably better
+      - id: practice_adherence
+        label: As a consumer, I practise more consistently because the next step is clear
+      - id: teacher_agreement
+        label: A qualified teacher agrees with the diagnosis and exercise
+      - id: student_outcome
+        label: As a professional, student practice or lesson efficiency improves
+      - id: workflow_consistency
+        label: As a professional, reports are consistent enough to review at scale
+      - id: no_convincing_proof
+        label: A short trial would not provide convincing proof for me
+
+  - id: q11_decisive_reaction
+    prompt: In two or three sentences, state what would make you adopt this concept, what could stop you, and one thing an AI vocal coach must never do.
+    type: free_text
+    construct: decisive_reaction_and_trust_boundary
+    required: true

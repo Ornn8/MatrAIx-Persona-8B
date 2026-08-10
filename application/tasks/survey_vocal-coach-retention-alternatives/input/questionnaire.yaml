@@ -1,0 +1,439 @@
+schemaVersion: "1.0"
+id: vocal_coach_retention_alternatives_v1
+title: AI Vocal Coach Two-week Behavioral Diary
+description: A stateful 14-day scenario-choice simulation of activation, retention, churn, collaboration, safety, and reassessment behavior.
+questions:
+  - id: q0_research_role
+    prompt: Which assigned role will you use throughout this diary?
+    type: single_choice
+    construct: research_role
+    required: true
+    options:
+      - id: beginner
+        label: Beginner with little or no structured vocal training
+      - id: casual_enthusiast
+        label: KTV or social singing enthusiast
+      - id: self_taught_hobbyist
+        label: Self-taught or serious hobbyist
+      - id: advanced_student
+        label: Vocal student, music major, or exam candidate
+      - id: creator_performer
+        label: Creator, livestream singer, choir or band singer, or performer
+      - id: teacher_coach
+        label: Vocal teacher, coach, or voice professional
+      - id: institution_user
+        label: Studio, school, choir, or institution user
+
+  - id: d01_activation
+    prompt: Day 1 — You have 20 quiet minutes. Onboarding asks for a basic voice sample, shows one exact evidence clip for the highest-priority issue, labels confidence, and offers a 7-minute first exercise. What do you actually do?
+    type: single_choice
+    construct: day1_activation
+    required: true
+    askRationale: true
+    options:
+      - id: complete_assessment_and_exercise
+        label: Complete the sample, review the evidence, and finish the 7-minute exercise
+      - id: complete_assessment_only
+        label: Complete the sample and report, but leave the exercise for tomorrow
+      - id: shortened_sample_then_exercise
+        label: Use the shortest valid sample and complete a shortened exercise
+      - id: postpone_onboarding
+        label: Close the app and postpone onboarding to another day
+      - id: abandon_onboarding
+        label: Stop using the product during onboarding
+
+  - id: d02_reminder
+    prompt: Day 2 — At your chosen reminder time, the app offers the same targeted exercise in 5-minute and 3-minute versions. What happens?
+    type: single_choice
+    construct: reminder_response
+    required: true
+    options:
+      - id: complete_5min_now
+        label: Open the reminder and complete the 5-minute version now
+      - id: complete_3min_now
+        label: Open the reminder and complete the 3-minute minimum
+      - id: snooze_then_complete
+        label: Snooze once and complete it later that day
+      - id: skip_day_but_continue
+        label: Skip today but keep tomorrow's plan active
+      - id: disable_reminders_continue
+        label: Disable reminders but keep using the plan manually
+      - id: stop_using
+        label: Stop using the product
+      - id: inactive_after_stop
+        label: I had already stopped on Day 1, so no action occurs
+
+  - id: d03_failure_recovery
+    prompt: Day 3 — You fail the target pattern twice and cannot hear improvement. The app acknowledges uncertainty, shows the triggering evidence, and offers an easier 3-minute prerequisite. What do you do?
+    type: single_choice
+    construct: failure_recovery_behavior
+    required: true
+    askRationale: true
+    options:
+      - id: do_easier_version_now
+        label: Switch to and complete the easier prerequisite now
+      - id: inspect_evidence_then_retry
+        label: Replay the evidence and retry once with the easier version
+      - id: save_and_retry_tomorrow
+        label: Save the prerequisite and retry tomorrow
+      - id: seek_human_input_continue
+        label: Ask a teacher or knowledgeable person, while keeping the plan active
+      - id: skip_failure_continue
+        label: Skip this exercise but continue using the product
+      - id: stop_using
+        label: Stop because the exercise or diagnosis is not helping
+      - id: inactive_after_stop
+        label: I had already stopped, so no action occurs
+
+  - id: d04_early_improvement
+    prompt: Day 4 — A before/after evidence clip shows a small but audible improvement in the targeted issue; the app keeps the same focus. What do you do next?
+    type: single_choice
+    construct: response_to_early_improvement
+    required: true
+    options:
+      - id: complete_full_practice
+        label: Complete today's full practice
+      - id: compare_clips_then_complete
+        label: Replay the comparison, then complete today's practice
+      - id: complete_minimum
+        label: Complete only the 3-minute minimum
+      - id: share_progress_and_complete
+        label: Privately share the comparison with someone and complete practice
+      - id: skip_day_but_continue
+        label: Skip today despite the improvement, but keep the plan
+      - id: stop_using
+        label: Stop using the product
+      - id: inactive_after_stop
+        label: I had already stopped, so no action occurs
+
+  - id: d05_repetition
+    prompt: Day 5 — The app keeps the same priority because it is not yet stable, explains why repetition is needed, and offers one variation. What do you do?
+    type: single_choice
+    construct: repetition_tolerance
+    required: true
+    askRationale: true
+    options:
+      - id: repeat_as_assigned
+        label: Repeat the assigned exercise as written
+      - id: choose_variation_complete
+        label: Choose the variation and complete the session
+      - id: complete_minimum
+        label: Do only the 3-minute minimum
+      - id: skip_day_but_continue
+        label: Skip today but return tomorrow
+      - id: browse_explanation_no_practice
+        label: Review the explanation but do not practise
+      - id: stop_due_to_repetition
+        label: Stop because the content feels repetitive
+      - id: inactive_after_stop
+        label: I had already stopped, so no action occurs
+
+  - id: d06_busy_day
+    prompt: Day 6 — A busy day leaves only a few minutes. The reminder offers a 3-minute minimum, snooze, or a clean skip without losing progress. What do you actually do?
+    type: single_choice
+    construct: busy_day_recovery
+    required: true
+    options:
+      - id: complete_3min_now
+        label: Complete the 3-minute minimum now
+      - id: snooze_then_complete
+        label: Snooze and complete it later that day
+      - id: skip_and_schedule_day7
+        label: Skip today and schedule the Day 7 reassessment
+      - id: mute_reminders_continue
+        label: Mute reminders but keep the Day 7 plan
+      - id: stop_using
+        label: Stop using the product
+      - id: inactive_after_stop
+        label: I had already stopped, so no action occurs
+
+  - id: d07_first_reassessment
+    prompt: Day 7 — The free-week reassessment takes 6 minutes. It shows noticeable improvement in the original evidence segment, says the issue is not fully resolved, and recommends the next week. What do you do?
+    type: single_choice
+    construct: day7_retention_and_retest
+    required: true
+    askRationale: true
+    options:
+      - id: complete_retest_and_review
+        label: Complete the reassessment and review the before/after evidence
+      - id: complete_retest_share_teacher
+        label: Complete it and send the private report to a teacher or coach
+      - id: continue_practice_no_retest
+        label: Continue practising but skip the reassessment
+      - id: delay_retest_keep_active
+        label: Delay the reassessment but keep the plan active
+      - id: stop_despite_improvement
+        label: Stop using the product despite the reported improvement
+      - id: inactive_after_stop
+        label: I had already stopped, so no action occurs
+
+  - id: d08_subscription
+    prompt: Day 8 — The free week ends. Past reports remain viewable, but the full second-week plan and new analysis cost CNY 68 per month. What do you actually do today?
+    type: single_choice
+    construct: paid_conversion
+    required: true
+    askRationale: true
+    options:
+      - id: subscribe_now
+        label: Pay CNY 68 and continue today
+      - id: review_results_then_subscribe
+        label: Review the first-week evidence, then pay CNY 68 today
+      - id: ask_teacher_then_subscribe
+        label: Ask a teacher or coach, receive their support, and subscribe today
+      - id: defer_purchase
+        label: Do not subscribe today; keep only the past report
+      - id: decline_price
+        label: Stop because CNY 68 is not worth it
+      - id: decline_other_reason
+        label: Stop for a reason other than price
+      - id: inactive_before_paywall
+        label: I had already stopped before the paywall
+
+  - id: d09_missed_time
+    prompt: Day 9 — For active subscribers, the normal practice time is missed. A later reminder offers a 3-minute recovery session without streak pressure. What happens?
+    type: single_choice
+    construct: missed_session_recovery
+    required: true
+    options:
+      - id: complete_recovery_session
+        label: Complete the 3-minute recovery session
+      - id: complete_full_session_late
+        label: Complete the full session later than planned
+      - id: skip_resume_tomorrow
+        label: Skip today and resume tomorrow
+      - id: disable_reminders_continue
+        label: Disable reminders but continue independently
+      - id: stop_using
+        label: Cancel or stop using the product
+      - id: inactive_no_subscription
+        label: I am not an active subscriber, so no practice occurs
+
+  - id: d10_plateau
+    prompt: Day 10 — Today's evidence clip is essentially unchanged. The app labels this as a possible plateau, admits it cannot yet determine why, and offers either repetition or a different prerequisite. What do you do?
+    type: single_choice
+    construct: plateau_response
+    required: true
+    askRationale: true
+    options:
+      - id: repeat_and_continue
+        label: Repeat the current exercise and continue
+      - id: switch_prerequisite_continue
+        label: Switch to the different prerequisite and continue
+      - id: request_human_review
+        label: Request human or teacher review before the next practice
+      - id: skip_day_but_continue
+        label: Skip today but keep the subscription active
+      - id: stop_due_to_plateau
+        label: Stop because progress has stalled
+      - id: inactive_no_subscription
+        label: I am not an active subscriber, so no action occurs
+
+  - id: d11_teacher_conflict
+    prompt: Day 11 — A teacher or experienced singer disagrees with one app finding. The app lets you mark the conflict, attach their note, and lower the finding's authority while retaining the original evidence. What do you do?
+    type: single_choice
+    construct: teacher_collaboration_and_disagreement
+    required: true
+    options:
+      - id: mark_conflict_follow_teacher
+        label: Mark the conflict, submit the note, and follow the teacher's direction
+      - id: mark_conflict_compare_both
+        label: Mark the conflict and keep both views for comparison
+      - id: ask_second_human_opinion
+        label: Pause that exercise and seek another qualified opinion
+      - id: trust_app_continue
+        label: Keep following the app without submitting the disagreement
+      - id: stop_due_to_conflict
+        label: Stop using the product because of the conflict
+      - id: no_teacher_available_continue
+        label: No teacher is available; continue cautiously with the app
+      - id: inactive_no_subscription
+        label: I am not active, so no action occurs
+
+  - id: d12_safety_pause
+    prompt: Day 12 — Before practice, you report persistent hoarseness and unusual fatigue. The app blocks the exercise, tells you to stop training, and recommends qualified human care. What do you actually do?
+    type: single_choice
+    construct: safety_response
+    required: true
+    askRationale: true
+    options:
+      - id: stop_training_follow_guidance
+        label: Stop training, rest, and follow the safety guidance
+      - id: contact_human_before_return
+        label: Contact a qualified teacher or clinician and return only when cleared
+      - id: keep_account_safety_pause
+        label: Keep the subscription but pause all voice work until symptoms resolve
+      - id: ignore_warning_practise
+        label: Ignore the warning and practise elsewhere anyway
+      - id: stop_product_due_to_warning
+        label: Cancel the product because the warning undermines trust or usefulness
+      - id: inactive_no_subscription
+        label: I am not active, so no product action occurs
+
+  - id: d13_private_sharing
+    prompt: Day 13 — No new exercise is assigned while safety status is unresolved. Your first-week before/after evidence report can be exported or shared through a private link. What do you do?
+    type: single_choice
+    construct: sharing_behavior
+    required: true
+    options:
+      - id: share_with_teacher
+        label: Send the private report to a teacher or coach
+      - id: share_with_friend
+        label: Send it to a trusted friend or singing peer
+      - id: export_for_self
+        label: Export it only for my own records
+      - id: decline_share_privacy
+        label: Keep it in the app and do not share for privacy reasons
+      - id: no_value_no_share
+        label: Do nothing because the report is not useful enough
+      - id: inactive_no_access
+        label: I am inactive and do not return to the report
+
+  - id: d14_second_reassessment
+    prompt: Day 14 — If symptoms have resolved or a qualified human has cleared normal use, the app offers a 6-minute reassessment comparing Day 1 and Day 7. If not cleared, the safety pause remains. What do you do?
+    type: single_choice
+    construct: day14_retention_and_retest
+    required: true
+    askRationale: true
+    options:
+      - id: complete_retest_continue
+        label: Complete the reassessment and continue the recommended plan
+      - id: complete_retest_send_teacher
+        label: Complete it and send the comparison to a teacher or coach
+      - id: complete_retest_then_pause
+        label: Complete it, save the result, and pause further practice
+      - id: continue_without_retest
+        label: Continue using the product but skip this reassessment
+      - id: remain_safety_pause
+        label: Remain subscribed but safely paused because symptoms are not cleared
+      - id: cancel_before_retest
+        label: Cancel or stop before completing the reassessment
+      - id: inactive_no_subscription
+        label: I am not an active subscriber, so no reassessment occurs
+
+  - id: q15_practice_days
+    prompt: Based on your diary choices, how many days did you actually complete at least 3 minutes of assigned practice during the 14 days?
+    type: single_choice
+    construct: completed_practice_day_band
+    required: true
+    options:
+      - id: days_0
+        label: 0 days
+      - id: days_1_3
+        label: 1-3 days
+      - id: days_4_6
+        label: 4-6 days
+      - id: days_7_9
+        label: 7-9 days
+      - id: days_10_12
+        label: 10-12 days
+      - id: days_13_14
+        label: 13-14 days
+
+  - id: q16_final_state
+    prompt: Which structured end state best matches your completed diary?
+    type: single_choice
+    construct: day14_retention_proxy
+    required: true
+    options:
+      - id: retained_paid_active
+        label: Paid and still active at the end of Day 14
+      - id: retained_paid_safety_pause
+        label: Paid and retained, but safely paused pending recovery or human clearance
+      - id: free_week_completed_no_purchase
+        label: Reached Day 7 but did not purchase the second week
+      - id: churned_onboarding
+        label: Left during activation or onboarding
+      - id: churned_before_day7
+        label: Activated but stopped before the Day 7 reassessment
+      - id: churned_after_purchase
+        label: Purchased, then cancelled or stopped before Day 14
+
+  - id: q17_primary_churn_trigger
+    prompt: Which event came closest to making you stop, or actually caused you to stop?
+    type: single_choice
+    construct: primary_churn_trigger
+    required: true
+    askRationale: true
+    options:
+      - id: onboarding_effort
+        label: Initial recording or setup effort
+      - id: failed_exercise
+        label: Failing an exercise or not understanding what to do
+      - id: weak_or_uncertain_result
+        label: Weak, uncertain, or stalled evidence of improvement
+      - id: repetitive_content
+        label: Repetition or lack of novelty
+      - id: reminders_schedule
+        label: Reminders, schedule friction, or lack of time
+      - id: price_68
+        label: CNY 68 monthly price at the end of the free week
+      - id: teacher_conflict
+        label: Conflict with a teacher or trusted human
+      - id: safety_or_voice_health
+        label: Voice-health concern or safety warning
+      - id: privacy_sharing
+        label: Recording privacy or sharing concern
+      - id: no_major_churn_trigger
+        label: No event came close to making me stop
+
+  - id: q18_reassessment_behavior
+    prompt: Which reassessment behavior did your diary produce?
+    type: single_choice
+    construct: reassessment_completion_proxy
+    required: true
+    options:
+      - id: completed_day7_and_day14
+        label: Completed both Day 7 and Day 14 reassessments
+      - id: completed_day7_only
+        label: Completed only the Day 7 reassessment
+      - id: completed_day14_only
+        label: Completed only the Day 14 reassessment
+      - id: delayed_or_skipped_both
+        label: Stayed active for some time but completed neither reassessment
+      - id: inactive_before_retest
+        label: Became inactive before a reassessment could occur
+
+  - id: q19_collaboration_behavior
+    prompt: What was the highest level of real collaboration or sharing you chose in the diary?
+    type: single_choice
+    construct: sharing_and_teacher_collaboration_proxy
+    required: true
+    options:
+      - id: teacher_review_and_feedback
+        label: Shared with a teacher and submitted disagreement or feedback
+      - id: teacher_review_only
+        label: Shared with or consulted a teacher without submitting product feedback
+      - id: peer_share
+        label: Shared with a trusted friend or singing peer
+      - id: private_export_only
+        label: Exported only for personal records
+      - id: no_share_privacy
+        label: Deliberately kept all evidence private
+      - id: no_share_inactive
+        label: Did not reach or use any sharing action
+
+  - id: q20_next_30_days
+    prompt: Immediately after this diary, what account action do you take for the next 30 days?
+    type: single_choice
+    construct: forward_retention_proxy
+    required: true
+    askRationale: true
+    options:
+      - id: renew_same_frequency
+        label: Keep the paid plan and practise at roughly the same frequency
+      - id: renew_lower_frequency
+        label: Keep the paid plan but practise less often
+      - id: keep_during_human_review
+        label: Keep the paid plan while a teacher or clinician reviews the situation
+      - id: cancel_after_current_month
+        label: Use the remainder of the paid month, then cancel
+      - id: cancel_now
+        label: Cancel immediately
+      - id: never_subscribed
+        label: Remain unsubscribed after the free week
+
+  - id: q21_behavioral_summary
+    prompt: In two or three sentences, name the diary event that most strengthened continued use, the event that most weakened it, and the concrete action you took as a result.
+    type: free_text
+    construct: retention_behavior_explanation
+    required: true

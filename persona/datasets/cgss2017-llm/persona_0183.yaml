@@ -1,0 +1,102 @@
+persona_id: '0183'
+version: '1.0'
+source: cgss
+display_name: Yuki Sato
+dimensions:
+  age_bracket: 25-34
+  att_government_regulation: Neutral
+  att_traditional_gender_roles: Neutral
+  bfi2_domain_negative_emotionality: Low
+  bfi2_facet_anxiety: Low
+  bfi2_facet_depression: Low
+  bfi2_facet_trust: High
+  big5_anxiety: Low
+  big5_depression: Low
+  big5_trust: High
+  cog_abstraction: Concrete
+  cog_assertiveness: Moderate
+  cog_big_picture_vs_detail: Detail
+  cog_detail_orientation: Low
+  cog_directness: Direct
+  cog_emoji_use: Never
+  cog_emotional_expressiveness: Low
+  cog_formality: Neutral
+  cog_humor: Serious
+  cog_numeracy_comfort: Low
+  cog_optimism: Moderate
+  cog_politeness: Polite
+  cog_precision_of_language: Precise
+  cog_reading_vs_watching: Prefers video
+  cog_skepticism: Moderate
+  cog_use_of_jargon: Avoids jargon
+  cog_verbosity: Terse
+  company_size: Public sector
+  demo_children_count: 3+ children
+  demo_employment_status: Full-time
+  demo_ethnicity_broad: East Asian
+  demo_housing_status: Renting
+  demo_marital_status: Married
+  demo_parental_status: Parent of minors
+  demo_religion_affiliation: None
+  dominant_trait: Balanced
+  gender_identity: Woman
+  health_caregiver_status: Child caregiver
+  health_energy_level: Very high
+  health_general_health: Good
+  health_mental_health: Stable
+  health_mobility: Full
+  highest_education: Primary
+  ind_telecommunications: None
+  lang_mandarin: Native
+  life_stage: Parent of young kids
+  lifex_adversity_level: Minor setbacks
+  lifex_career_path_shape: Just starting
+  lifex_cultural_exposure: Monocultural
+  lifex_education_journey: Dropped out
+  lifex_entrepreneurship_history: Never considered
+  lifex_faith_journey: Lifelong faith
+  lifex_financial_trajectory: Stable
+  lifex_formative_decade: 2000s
+  lifex_geographic_mobility: Moved nationally
+  lifex_health_journey: No major events
+  lifex_hometown_tie: Rarely returns
+  lifex_immigration_generation: Native multi-generational
+  lifex_languages_lifetime: One
+  lifex_loss_experience: No major loss
+  lifex_military_history: Never served
+  lifex_parenting_journey: Young children
+  lifex_public_recognition: Private life
+  lifex_relationship_history: Married once
+  lifex_service_history: None
+  lifex_turning_point: No single one
+  lstyle_cooking_freq: Monthly
+  lstyle_exercise_freq: Never
+  lstyle_household_size: 5+ people
+  lstyle_music_listening: Rarely
+  lstyle_news_freq: Daily
+  lstyle_payment_pref: Mobile wallet
+  lstyle_podcast_listening: Never
+  lstyle_reading_freq: Never
+  major_life_events: None notable
+  media_diet: Social-media-heavy
+  multilingualism: Monolingual
+  pref_lead_vs_follow: Leans support
+  primary_language: Mandarin
+  region: East Asia
+  religiosity: Secular
+  seniority: Mid
+  socioeconomic_band: Low income
+  tech_savviness: Comfortable
+  topic_religion: Indifferent
+  topic_social_media: Interested
+  topic_spirituality: Interested
+  trait_hope_optimism: Moderate
+  trust_level: Trusting
+  val_family: Core value
+  val_health: Important
+  val_spirituality_faith: Minor
+  val_tradition: Important
+  years_experience: 0-2
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
+  origin_persona_id: cgss2017-882

@@ -198,6 +198,8 @@ def test_config_options(client):
     assert persona_model_values == set(PERSONA_MODEL_OPTIONS)
     assert "dashscope/qwen3.6-plus-2026-04-02" in persona_model_values
     assert "dashscope/deepseek-v4-pro" in persona_model_values
+    assert "dashscope/deepseek-v4-flash" in persona_model_values
+    assert "deepseek/deepseek-v4-flash" in persona_model_values
 
     assert body["defaults"]["engine"] == "gpt-4o-mini"
     assert body["defaults"]["rankerMode"] == "native"

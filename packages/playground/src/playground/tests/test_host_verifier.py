@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import shutil
+import subprocess
 import tempfile
 from pathlib import Path
 
@@ -52,7 +53,7 @@ def _write_fake_task(
         encoding="utf-8",
     )
     (task_dir / "tests" / "test.sh").write_text(
-        _test_sh(artifact_source), encoding="utf-8"
+        _test_sh(artifact_source), encoding="utf-8", newline="\n"
     )
 
 
@@ -103,6 +104,44 @@ def test_host_verifier_scores_app_output_without_filesystem_staging(tmp_path: Pa
     ran = maybe_run_host_verifier(repo_root=repo_root, trial_dir=trial_dir)
     assert ran is True
     assert (trial_dir / "verifier" / "reward.txt").read_text(encoding="utf-8").strip() == "1"
+
+
+def test_host_verifier_passes_posix_script_path_to_bash(tmp_path: Path, monkeypatch):
+    repo_root = tmp_path / "repo"
+    task_rel = "application/tasks/fake-task"
+    _write_fake_task(repo_root, task_rel, artifact_source="/app/output")
+
+    trial_dir = tmp_path / "trial"
+    _write_trial(
+        trial_dir,
+        task_rel,
+        artifact_source="/app/output",
+        with_decision=True,
+        with_exception=True,
+    )
+
+    commands: list[list[str]] = []
+    environments: list[dict[str, str]] = []
+
+    def fake_run(command, *, env, **kwargs):
+        commands.append(command)
+        environments.append(env)
+        return subprocess.CompletedProcess(command, 0, stdout="", stderr="")
+
+    monkeypatch.setattr("playground.host_verifier.subprocess.run", fake_run)
+
+    assert maybe_run_host_verifier(repo_root=repo_root, trial_dir=trial_dir) is True
+    assert commands[0][:2] == ["bash", "-c"]
+    assert "exec bash ./test.sh" in commands[0][2]
+    assert len(commands[0]) == 3
+    assert "\\" not in commands[0][2]
+    for name in (
+        "HARBOR_VERIFIER_DIR",
+        "PLAYGROUND_OUTPUT_DIR",
+        "MATRIX_OUTPUT_DIR",
+        "HARBOR_OUTPUT_DIR",
+    ):
+        assert "\\" not in environments[0][name]
 
 
 def test_host_verifier_scores_trial_and_clears_stale_exception(tmp_path: Path):
@@ -246,6 +285,7 @@ verifier_dir.mkdir(parents=True, exist_ok=True)
 PY
 """,
         encoding="utf-8",
+        newline="\n",
     )
 
     trial_dir = tmp_path / "trial"
@@ -363,6 +403,7 @@ verifier_dir.mkdir(parents=True, exist_ok=True)
 PY
 """,
         encoding="utf-8",
+        newline="\n",
     )
 
     trial_dir = tmp_path / "trial"

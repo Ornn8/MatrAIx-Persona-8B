@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response"
+      },
+      "summaryAnalyses": [
+        {
+          "id": "vocal_first_week.reason_by_response",
+          "targetFacetKey": "reason",
+          "groupByFacetKey": "response",
+          "groupByMode": "categorical",
+          "summaryKind": "llm_bucket_summary"
+        }
+      ],
+      "signalScans": [
+        {
+          "id": "vocal_first_week.funnel_signal_scan",
+          "targetFacetKey": "reason",
+          "groupByFacetKey": "response",
+          "groupByMode": "categorical",
+          "judgeKind": "llm_signal_judge",
+          "prompt": "Identify explicit reasons for continuing, delaying, or exiting the first-week vocal-coach journey. Distinguish setup effort, privacy, diagnostic trust, evidence clarity, exercise safety, time, weak progress, human validation, and price. Do not infer a signal that the respondent did not state.",
+          "rubric": "Mark a signal true only when the rationale explicitly supports it. Mixed or uncertain sentiment is not a positive continuation or payment signal.",
+          "signals": [
+            {
+              "key": "credible_stage_continuation",
+              "label": "Credible stage continuation",
+              "valueType": "boolean"
+            },
+            {
+              "key": "setup_effort_blocker",
+              "label": "Setup effort blocker",
+              "valueType": "boolean"
+            },
+            {
+              "key": "privacy_blocker",
+              "label": "Privacy blocker",
+              "valueType": "boolean"
+            },
+            {
+              "key": "requires_human_validation",
+              "label": "Requires human validation",
+              "valueType": "boolean"
+            },
+            {
+              "key": "safety_or_accuracy_blocker",
+              "label": "Safety or accuracy blocker",
+              "valueType": "boolean"
+            },
+            {
+              "key": "practice_effort_blocker",
+              "label": "Practice effort blocker",
+              "valueType": "boolean"
+            },
+            {
+              "key": "week_one_improvement_is_convincing",
+              "label": "Week-one improvement is convincing",
+              "valueType": "boolean"
+            },
+            {
+              "key": "credible_subscription_intent",
+              "label": "Credible CNY 68 subscription intent",
+              "valueType": "boolean"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

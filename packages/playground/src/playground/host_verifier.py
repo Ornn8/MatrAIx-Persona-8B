@@ -23,6 +23,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import shlex
 import shutil
 import subprocess
 import tomllib
@@ -162,6 +163,28 @@ def _dir_has_files(path: Path) -> bool:
 
 def _downloaded_artifact_dir(trial_dir: Path, source: str) -> Path:
     return trial_dir / "artifacts" / Path(source_relative_path(source))
+
+
+def _bash_host_path(path: Path, *, cwd: Path) -> str:
+    """Render a host path without assuming Git Bash or WSL drive mounts."""
+    try:
+        relative = os.path.relpath(path, cwd)
+    except ValueError:
+        return path.as_posix()
+    return Path(relative).as_posix()
+
+
+def _bash_verifier_command(env: dict[str, str]) -> str:
+    names = (
+        "HARBOR_VERIFIER_DIR",
+        "PLAYGROUND_OUTPUT_DIR",
+        "MATRIX_OUTPUT_DIR",
+        "HARBOR_OUTPUT_DIR",
+    )
+    assignments = " ".join(
+        f"{name}={shlex.quote(env.get(name, ''))}" for name in names
+    )
+    return f"export {assignments}; exec bash ./test.sh"
 
 
 def _expected_output_artifacts(task_dir: Path) -> list[str]:
@@ -480,13 +503,21 @@ def maybe_run_host_verifier(
     try:
         staged = _stage_sources(stage_pairs)
         try:
+            verifier_cwd = task_dir / "tests"
             env = dict(os.environ)
-            env["HARBOR_VERIFIER_DIR"] = str(verifier_dir)
-            env.update(env_overrides)
+            env["HARBOR_VERIFIER_DIR"] = _bash_host_path(
+                verifier_dir, cwd=verifier_cwd
+            )
+            env.update(
+                {
+                    name: _bash_host_path(Path(value), cwd=verifier_cwd)
+                    for name, value in env_overrides.items()
+                }
+            )
             try:
                 completed = subprocess.run(
-                    ["bash", str(test_sh)],
-                    cwd=task_dir / "tests",
+                    ["bash", "-c", _bash_verifier_command(env)],
+                    cwd=verifier_cwd,
                     env=env,
                     timeout=effective_timeout,
                     capture_output=True,

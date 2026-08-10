@@ -1,0 +1,16 @@
+{
+  "id": "cgss2017_llm_rich_subset",
+  "source": {
+    "type": "derived_subset",
+    "parent": "cgss2017_core_module",
+    "method": "observed crosswalk (44 dims) + DeepSeek LLM inference layer (Layer-2, 422 inferable dims, evidence-grounded verbatim quotes)",
+    "engine": "persona/curation/existing_data/scripts/llm_infer_engine.py",
+    "sample": 200
+  },
+  "dimensions_claimed": 422,
+  "format": "jsonl_gz_full1290",
+  "license": "official-survey-terms-cnsda-registration",
+  "gated": true,
+  "notes": "Stratified 200-person rich subset of CGSS2017 (age x gender balanced, seed 42). Full 1290-dim records: 44 dims observed via crosswalk + ~60-110 dims LLM-inferred (Personality, Values & Motivation, Behavior, Linguistic, Health, Life Events, topic_* interests) with verbatim evidence quotes from the rendered Chinese profile_text. validate_extraction.py: 0 errors; avg 105.4 grounded dims/persona (vs 29.3 observed-only); 12,809 summary_inference + 6,303 direct values. LLM: DeepSeek via application/playground/.env.local (MATRIX_PERSONA_MODEL config). Isolation: cgss2017- prefixed user_ids, China-only cohort. 19 rows hit API 402 mid-run were redone (redo_llm_batch.py).",
+  "pilot_output": "persona/curation/existing_data/outputs/cgss2017_llm/merged.jsonl.gz"
+}

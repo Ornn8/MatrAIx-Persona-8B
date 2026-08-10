@@ -1,0 +1,16 @@
+{
+  "id": "cgss2021_core_module",
+  "source": {
+    "type": "official_survey_reference",
+    "url": "https://www.cnsda.org/index.php?r=projects/view&id=65635422",
+    "project_name": "Chinese General Social Survey 2021",
+    "sample": 8148,
+    "variables": 700
+  },
+  "dimensions_claimed": 29,
+  "format": "stata_dta_value_labels",
+  "license": "official-survey-terms-cnsda-registration",
+  "gated": true,
+  "notes": "CGSS2021 nationally representative mainland-China household survey — newest CGSS release with this questionnaire layout. Crosswalk at scripts/crosswalks/cgss2021.py maps 29 schema dims. Question numbering was restructured vs 2017 (title-case A2/A3_1/A4..., A5 single-select religion, roster A011601-614, A59L employees); verified against the actual CGSS2021.dta. The 2017 D-module batteries (LOT-R optimism, filial duty, govt responsibility, cooking, parental death) and the 2017 internet-attitude items (news minutes, mobile payment, privacy, doomscrolling) do not exist in 2021 -> those dims are not mapped here (faithful nulls). New in 2021: D23_a alcohol, D23_b exercise. 8,148 respondents extracted (29 dims, avg 23.6 grounded dims/persona; validate_extraction.py: 0 errors). Coverage note: E34/P4c trust and D23 items come from ~1/3-sample add-on modules by design.",
+  "pilot_output": "persona/curation/existing_data/outputs/cgss2021_pilot/extraction_real.jsonl.gz"
+}

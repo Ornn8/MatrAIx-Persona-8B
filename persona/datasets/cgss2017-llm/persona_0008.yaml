@@ -1,0 +1,162 @@
+persona_id: '0008'
+version: '1.0'
+source: cgss
+display_name: Jun Park
+dimensions:
+  age_bracket: 65-74
+  att_government_regulation: Skeptical
+  att_traditional_gender_roles: Neutral
+  bfi2_facet_depression: Average
+  bfi2_facet_trust: Average
+  big5_depression: Average
+  big5_trust: Average
+  cog_abstraction: Concrete
+  cog_ambiguity_tolerance: High
+  cog_assertiveness: Low
+  cog_attention_span: Average
+  cog_big_picture_vs_detail: Big-picture
+  cog_confidence_calibration: Underconfident
+  cog_conflict_approach: Avoidant
+  cog_curiosity: Low
+  cog_decision_speed: Deliberate
+  cog_detail_orientation: Low
+  cog_directness: Direct
+  cog_emoji_use: Never
+  cog_emotional_expressiveness: Low
+  cog_empathy_expression: Low
+  cog_formality: Neutral
+  cog_humor: Serious
+  cog_multitasking: Prefers single-task
+  cog_numeracy_comfort: Low
+  cog_open_mindedness: Low
+  cog_optimism: Low
+  cog_perfectionism: Low
+  cog_politeness: Polite
+  cog_precision_of_language: Loose
+  cog_question_asking: Rarely asks
+  cog_reading_vs_watching: Prefers video
+  cog_risk_framing: Threat-focused
+  cog_skepticism: Moderate
+  cog_storytelling: Low
+  cog_use_of_jargon: Avoids jargon
+  cog_verbosity: Terse
+  cog_visual_vs_verbal: Visual
+  demo_children_count: Adult children
+  demo_ethnicity_broad: East Asian
+  demo_housing_status: Own outright
+  demo_marital_status: Married
+  demo_parental_status: Parent of adults
+  demo_religion_affiliation: None
+  dominant_trait: Balanced
+  english_proficiency: None
+  gender_identity: Man
+  health_caregiver_status: Not a caregiver
+  health_energy_level: Moderate
+  health_general_health: Poor
+  health_mental_health: Stable
+  highest_education: Primary
+  ind_telecommunications: None
+  lang_afrikaans: None
+  lang_amharic: None
+  lang_arabic: None
+  lang_bengali: None
+  lang_cantonese: None
+  lang_czech: None
+  lang_danish: None
+  lang_dutch: None
+  lang_english: None
+  lang_finnish: None
+  lang_french: None
+  lang_german: None
+  lang_greek: None
+  lang_gujarati: None
+  lang_hausa: None
+  lang_hebrew: None
+  lang_hindi: None
+  lang_hungarian: None
+  lang_igbo: None
+  lang_indonesian: None
+  lang_italian: None
+  lang_japanese: None
+  lang_korean: None
+  lang_malay: None
+  lang_mandarin: Native
+  lang_marathi: None
+  lang_norwegian: None
+  lang_persian: None
+  lang_polish: None
+  lang_portuguese: None
+  lang_punjabi: None
+  lang_romanian: None
+  lang_russian: None
+  lang_serbian: None
+  lang_spanish: None
+  lang_swahili: None
+  lang_swedish: None
+  lang_tagalog: None
+  lang_tamil: None
+  lang_telugu: None
+  lang_thai: None
+  lang_turkish: None
+  lang_ukrainian: None
+  lang_urdu: None
+  lang_vietnamese: None
+  lang_yoruba: None
+  lang_zulu: None
+  life_stage: Empty nester
+  lifex_adversity_level: Significant struggles
+  lifex_career_path_shape: Just starting
+  lifex_cultural_exposure: Monocultural
+  lifex_education_journey: Dropped out
+  lifex_entrepreneurship_history: Never considered
+  lifex_faith_journey: Lifelong faith
+  lifex_financial_trajectory: Stable
+  lifex_formative_decade: 1960s-70s
+  lifex_geographic_mobility: Moved within region
+  lifex_health_journey: Manages chronic condition
+  lifex_hometown_tie: Still there
+  lifex_immigration_generation: Native multi-generational
+  lifex_languages_lifetime: One
+  lifex_loss_experience: Multiple bereavements
+  lifex_military_history: Never served
+  lifex_parenting_journey: Grown children
+  lifex_public_recognition: Private life
+  lifex_relationship_history: Married once
+  lifex_service_history: None
+  lifex_travel_breadth: Never left country
+  lifex_turning_point: No single one
+  lstyle_cooking_freq: Weekly
+  lstyle_household_size: 2 people
+  lstyle_news_freq: Avoids news
+  lstyle_podcast_listening: Never
+  major_life_events: None notable
+  media_diet: Video-first
+  multilingualism: Monolingual
+  pref_early_vs_late: Laggard
+  primary_language: Mandarin
+  region: East Asia
+  religiosity: Secular
+  schwartz_value_security: Average
+  schwartz_value_tradition: Average
+  sdt_need_relatedness: High
+  socioeconomic_band: Low income
+  tech_savviness: Avoidant
+  topic_religion: Indifferent
+  topic_social_media: Indifferent
+  topic_spirituality: Interested
+  trait_curiosity: Slight
+  trait_hope_optimism: Slight
+  trait_love_of_learning: Slight
+  trait_open_mindedness: Moderate
+  trait_spirituality: Slight
+  trait_zest: Slight
+  trust_level: Verifying
+  val_family: Important
+  val_health: Important
+  val_security_stability: Important
+  val_social_status: Minor
+  val_spirituality_faith: Moderate
+  val_tradition: Important
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
+  origin_persona_id: cgss2017-10450

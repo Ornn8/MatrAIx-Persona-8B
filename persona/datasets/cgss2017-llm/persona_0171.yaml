@@ -1,0 +1,111 @@
+persona_id: '0171'
+version: '1.0'
+source: cgss
+display_name: Hana Kim
+dimensions:
+  accessibility_needs: None
+  age_bracket: 18-24
+  att_data_privacy: Enthusiast
+  att_remote_work: Enthusiast
+  att_traditional_gender_roles: Neutral
+  bfi2_domain_negative_emotionality: Low
+  bfi2_facet_anxiety: Low
+  bfi2_facet_depression: Low
+  bfi2_facet_trust: Low
+  big5_anxiety: Low
+  big5_depression: Low
+  big5_self_efficacy: High
+  big5_trust: Low
+  cog_abstraction: Concrete
+  cog_ambiguity_tolerance: Moderate
+  cog_assertiveness: Moderate
+  cog_confidence_calibration: Cautious
+  cog_detail_orientation: Low
+  cog_directness: Direct
+  cog_emoji_use: Never
+  cog_emotional_expressiveness: Low
+  cog_formality: Neutral
+  cog_humor: Serious
+  cog_optimism: Moderate
+  cog_politeness: Polite
+  cog_precision_of_language: Precise
+  cog_reading_vs_watching: Prefers reading
+  cog_skepticism: High
+  cog_use_of_jargon: Avoids jargon
+  cog_verbosity: Terse
+  company_size: Solo / freelance
+  demo_employment_status: Full-time
+  demo_ethnicity_broad: East Asian
+  demo_marital_status: Single
+  demo_religion_affiliation: None
+  dominant_trait: Balanced
+  economic_motivation: Value-driven
+  gender_identity: Man
+  habit_doomscrolling: Weekly
+  health_assistive_tech: None
+  health_caregiver_status: Not a caregiver
+  health_contrast_need: No
+  health_energy_level: High
+  health_general_health: Excellent
+  health_mental_health: Stable
+  health_mobility: Full
+  health_text_size_need: No
+  highest_education: Secondary
+  lang_mandarin: Native
+  life_stage: Early career
+  lifex_adversity_level: Minor setbacks
+  lifex_career_path_shape: Just starting
+  lifex_cultural_exposure: Monocultural
+  lifex_education_journey: Dropped out
+  lifex_entrepreneurship_history: Never considered
+  lifex_faith_journey: Lifelong faith
+  lifex_financial_trajectory: Stable
+  lifex_formative_decade: 2010s
+  lifex_geographic_mobility: Never left hometown
+  lifex_health_journey: No major events
+  lifex_hometown_tie: Still there
+  lifex_immigration_generation: Native multi-generational
+  lifex_languages_lifetime: One
+  lifex_military_history: Never served
+  lifex_parenting_journey: No children
+  lifex_public_recognition: Private life
+  lifex_relationship_history: Limited
+  lifex_service_history: None
+  lstyle_exercise_freq: Weekly
+  lstyle_music_listening: Sometimes
+  lstyle_news_freq: Constant
+  lstyle_payment_pref: Mobile wallet
+  lstyle_podcast_listening: Monthly
+  lstyle_reading_freq: Monthly
+  media_diet: Social-media-heavy
+  multilingualism: Monolingual
+  primary_language: Mandarin
+  region: East Asia
+  religiosity: Secular
+  seniority: Entry
+  socioeconomic_band: Lower-middle
+  tech_savviness: Digital native
+  topic_religion: Indifferent
+  topic_social_media: Interested
+  topic_spirituality: Indifferent
+  topic_technology: Interested
+  trait_adaptability: Moderate
+  trait_ambition: Moderate
+  trait_curiosity: Moderate
+  trait_discipline: Moderate
+  trait_hope_optimism: Moderate
+  trait_love_of_learning: Moderate
+  trait_open_mindedness: Moderate
+  trait_perseverance: Moderate
+  trait_prudence: Moderate
+  trait_resilience: Moderate
+  trait_self_regulation: Moderate
+  trait_spirituality: Slight
+  trait_zest: Moderate
+  trust_level: Skeptical
+  val_health: Important
+  val_spirituality_faith: Irrelevant
+  years_experience: 0-2
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
+  origin_persona_id: cgss2017-8022

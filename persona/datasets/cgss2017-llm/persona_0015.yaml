@@ -1,0 +1,93 @@
+persona_id: '0015'
+version: '1.0'
+source: cgss
+display_name: Jun Park
+dimensions:
+  age_bracket: 35-44
+  att_traditional_gender_roles: Opposed
+  bfi2_domain_negative_emotionality: High
+  bfi2_facet_depression: High
+  bfi2_facet_trust: High
+  big5_depression: High
+  big5_trust: High
+  cog_abstraction: Concrete
+  cog_detail_orientation: Low
+  cog_directness: Direct
+  cog_emoji_use: Never
+  cog_emotional_expressiveness: High
+  cog_formality: Neutral
+  cog_humor: Serious
+  cog_optimism: Low
+  cog_politeness: Polite
+  cog_precision_of_language: Precise
+  cog_reading_vs_watching: Prefers video
+  cog_use_of_jargon: Avoids jargon
+  cog_verbosity: Terse
+  demo_employment_status: Homemaker
+  demo_ethnicity_broad: East Asian
+  demo_marital_status: Married
+  demo_religion_affiliation: Folk / traditional
+  dominant_trait: Balanced
+  gender_identity: Woman
+  health_assistive_tech: None
+  health_caregiver_status: Child caregiver
+  health_contrast_need: No
+  health_energy_level: Low
+  health_fitness_level: Sedentary
+  health_general_health: Poor
+  health_mental_health: Struggling
+  health_mobility: Full
+  health_stress_level: High
+  health_text_size_need: No
+  highest_education: Associate's
+  ind_telecommunications: None
+  lang_mandarin: Native
+  life_stage: Mid-life
+  lifex_adversity_level: Significant struggles
+  lifex_career_path_shape: Just starting
+  lifex_education_journey: Returned as adult
+  lifex_faith_journey: Lifelong faith
+  lifex_formative_decade: 1990s
+  lifex_geographic_mobility: Never left hometown
+  lifex_health_journey: Mental health journey
+  lifex_hometown_tie: Still there
+  lifex_immigration_generation: Native multi-generational
+  lifex_languages_lifetime: One
+  lifex_military_history: Never served
+  lifex_public_recognition: Private life
+  lifex_relationship_history: Married once
+  lstyle_exercise_freq: Never
+  lstyle_music_listening: Rarely
+  lstyle_news_freq: Constant
+  lstyle_payment_pref: Mobile wallet
+  lstyle_podcast_listening: Never
+  lstyle_reading_freq: Daily
+  media_diet: Social-media-heavy
+  multilingualism: Monolingual
+  primary_language: Mandarin
+  region: East Asia
+  religiosity: Spiritual
+  socioeconomic_band: Low income
+  tech_savviness: Digital native
+  topic_religion: Indifferent
+  topic_social_media: Interested
+  topic_spirituality: Indifferent
+  topic_technology: Interested
+  trait_adaptability: Moderate
+  trait_curiosity: Moderate
+  trait_discipline: Moderate
+  trait_hope_optimism: Slight
+  trait_love_of_learning: Moderate
+  trait_open_mindedness: Moderate
+  trait_perseverance: Moderate
+  trait_playfulness: Moderate
+  trait_resilience: Slight
+  trait_self_regulation: Moderate
+  trait_spirituality: Slight
+  trait_zest: Slight
+  trust_level: Trusting
+  val_health: Important
+  val_spirituality_faith: Irrelevant
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
+  origin_persona_id: cgss2017-11090

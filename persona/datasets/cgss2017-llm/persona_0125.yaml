@@ -1,0 +1,126 @@
+persona_id: '0125'
+version: '1.0'
+source: cgss
+display_name: Jun Park
+dimensions:
+  accessibility_needs: None
+  age_bracket: 35-44
+  att_government_regulation: Skeptical
+  att_traditional_gender_roles: Opposed
+  bfi2_domain_negative_emotionality: Low
+  bfi2_facet_anxiety: Low
+  bfi2_facet_depression: Low
+  bfi2_facet_trust: High
+  big5_anxiety: Low
+  big5_depression: Low
+  big5_trust: High
+  cog_abstraction: Concrete
+  cog_assertiveness: Moderate
+  cog_attention_span: Long
+  cog_big_picture_vs_detail: Both
+  cog_confidence_calibration: Confident
+  cog_detail_orientation: Low
+  cog_directness: Direct
+  cog_emoji_use: Never
+  cog_emotional_expressiveness: Low
+  cog_formality: Neutral
+  cog_humor: Serious
+  cog_multitasking: Some
+  cog_numeracy_comfort: High
+  cog_optimism: Moderate
+  cog_politeness: Polite
+  cog_precision_of_language: Precise
+  cog_reading_vs_watching: Prefers reading
+  cog_skepticism: Moderate
+  cog_storytelling: Low
+  cog_use_of_jargon: Avoids jargon
+  cog_verbosity: Concise
+  cog_visual_vs_verbal: Verbal
+  company_size: SMB (50-500)
+  demo_employment_status: Full-time
+  demo_ethnicity_broad: East Asian
+  demo_housing_status: Own outright
+  demo_marital_status: Married
+  demo_religion_affiliation: None
+  dominant_trait: Balanced
+  gender_identity: Man
+  health_caregiver_status: Child caregiver
+  health_energy_level: Very high
+  health_general_health: Good
+  health_mental_health: Stable
+  highest_education: Bachelor's
+  interpersonal_agency_dominance: Average
+  interpersonal_communion_warmth: Average
+  lang_mandarin: Native
+  life_stage: Mid-life
+  lifex_adversity_level: Minor setbacks
+  lifex_career_path_shape: Linear climb
+  lifex_education_journey: Traditional track
+  lifex_entrepreneurship_history: Never considered
+  lifex_faith_journey: Lifelong faith
+  lifex_financial_trajectory: Steady upward
+  lifex_formative_decade: 2000s
+  lifex_geographic_mobility: Moved nationally
+  lifex_health_journey: No major events
+  lifex_hometown_tie: Rarely returns
+  lifex_immigration_generation: Native multi-generational
+  lifex_languages_lifetime: One
+  lifex_loss_experience: No major loss
+  lifex_military_history: Never served
+  lifex_parenting_journey: Young children
+  lifex_public_recognition: Private life
+  lifex_relationship_history: Married once
+  lstyle_cooking_freq: Weekly
+  lstyle_exercise_freq: Weekly
+  lstyle_household_size: 2 people
+  lstyle_music_listening: Sometimes
+  lstyle_news_freq: Constant
+  lstyle_payment_pref: Mobile wallet
+  lstyle_podcast_listening: Rarely
+  lstyle_reading_freq: Rarely
+  media_diet: Social-media-heavy
+  multilingualism: Monolingual
+  primary_language: Mandarin
+  region: East Asia
+  religiosity: Secular
+  schwartz_value_achievement: Average
+  schwartz_value_power: Average
+  schwartz_value_security: High
+  schwartz_value_tradition: Low
+  seniority: Manager
+  socioeconomic_band: Middle
+  tech_savviness: Digital native
+  topic_parenting: Interested
+  topic_religion: Indifferent
+  topic_social_media: Interested
+  topic_spirituality: Indifferent
+  topic_technology: Interested
+  trait_adaptability: Moderate
+  trait_ambition: Moderate
+  trait_curiosity: Moderate
+  trait_discipline: Moderate
+  trait_hope_optimism: Signature
+  trait_leadership: Moderate
+  trait_love_of_learning: Moderate
+  trait_open_mindedness: Moderate
+  trait_perseverance: Moderate
+  trait_prudence: Moderate
+  trait_resilience: Moderate
+  trait_self_regulation: Moderate
+  trait_social_intelligence: Moderate
+  trait_spirituality: Slight
+  trait_zest: Moderate
+  trust_level: Trusting
+  val_achievement: Important
+  val_career_success: Important
+  val_family: Moderate
+  val_fun_enjoyment: Moderate
+  val_health: Important
+  val_security_stability: Important
+  val_social_status: Moderate
+  val_spirituality_faith: Minor
+  val_tradition: Moderate
+  years_experience: 11-20
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
+  origin_persona_id: cgss2017-4740

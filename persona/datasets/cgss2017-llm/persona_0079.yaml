@@ -1,0 +1,91 @@
+persona_id: '0079'
+version: '1.0'
+source: cgss
+display_name: Min Ho
+dimensions:
+  age_bracket: 35-44
+  att_traditional_gender_roles: Opposed
+  bfi2_facet_depression: Low
+  bfi2_facet_trust: Very low
+  big5_depression: Low
+  big5_trust: Very low
+  cog_abstraction: Concrete
+  cog_detail_orientation: Low
+  cog_directness: Direct
+  cog_emoji_use: Never
+  cog_emotional_expressiveness: Low
+  cog_formality: Neutral
+  cog_humor: Serious
+  cog_optimism: Low
+  cog_politeness: Polite
+  cog_precision_of_language: Precise
+  cog_reading_vs_watching: Prefers video
+  cog_risk_framing: Threat-focused
+  cog_skepticism: High
+  cog_use_of_jargon: Avoids jargon
+  cog_verbosity: Terse
+  demo_employment_status: Homemaker
+  demo_ethnicity_broad: East Asian
+  demo_housing_status: Renting
+  demo_marital_status: Married
+  demo_religion_affiliation: None
+  dominant_trait: Balanced
+  gender_identity: Man
+  health_assistive_tech: None
+  health_caregiver_status: Child caregiver
+  health_contrast_need: No
+  health_energy_level: Moderate
+  health_general_health: Fair
+  health_mental_health: Stable
+  health_mobility: Full
+  health_text_size_need: No
+  highest_education: Secondary
+  ind_telecommunications: None
+  lang_mandarin: Native
+  life_stage: Mid-life
+  lifex_adversity_level: Minor setbacks
+  lifex_career_path_shape: Just starting
+  lifex_education_journey: Traditional track
+  lifex_faith_journey: Lifelong faith
+  lifex_financial_trajectory: Stable
+  lifex_formative_decade: 2000s
+  lifex_geographic_mobility: Moved nationally
+  lifex_health_journey: No major events
+  lifex_hometown_tie: Rarely returns
+  lifex_immigration_generation: Native multi-generational
+  lifex_languages_lifetime: One
+  lifex_military_history: Never served
+  lifex_public_recognition: Private life
+  lifex_relationship_history: Married once
+  lstyle_exercise_freq: Weekly
+  lstyle_music_listening: All day
+  lstyle_news_freq: Constant
+  lstyle_payment_pref: Mobile wallet
+  lstyle_podcast_listening: Rarely
+  lstyle_reading_freq: Rarely
+  media_diet: Social-media-heavy
+  multilingualism: Monolingual
+  primary_language: Mandarin
+  region: East Asia
+  religiosity: Secular
+  socioeconomic_band: Low income
+  tech_savviness: Digital native
+  topic_religion: Indifferent
+  topic_social_media: Interested
+  topic_spirituality: Interested
+  topic_technology: Interested
+  trait_adaptability: Moderate
+  trait_curiosity: Moderate
+  trait_hope_optimism: Slight
+  trait_love_of_learning: Moderate
+  trait_open_mindedness: Slight
+  trait_resilience: Moderate
+  trait_self_regulation: Moderate
+  trait_spirituality: Slight
+  trait_zest: Moderate
+  trust_level: Skeptical
+  val_health: Moderate
+  val_spirituality_faith: Irrelevant
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
+  origin_persona_id: cgss2017-2133

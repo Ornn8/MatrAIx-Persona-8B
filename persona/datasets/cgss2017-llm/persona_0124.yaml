@@ -1,0 +1,117 @@
+persona_id: '0124'
+version: '1.0'
+source: cgss
+display_name: Li Wei Chen
+dimensions:
+  accessibility_needs: None
+  age_bracket: 18-24
+  att_traditional_gender_roles: Opposed
+  bfi2_domain_negative_emotionality: High
+  bfi2_facet_anxiety: High
+  bfi2_facet_depression: High
+  bfi2_facet_energy_level: High
+  bfi2_facet_trust: Low
+  big5_activity_level: High
+  big5_anxiety: High
+  big5_cheerfulness: Low
+  big5_depression: High
+  big5_emotionality: High
+  big5_trust: Low
+  cog_abstraction: Concrete
+  cog_assertiveness: Moderate
+  cog_attention_span: Average
+  cog_big_picture_vs_detail: Both
+  cog_curiosity: Moderate
+  cog_detail_orientation: Moderate
+  cog_directness: Direct
+  cog_emoji_use: Never
+  cog_emotional_expressiveness: High
+  cog_empathy_expression: Low
+  cog_formality: Neutral
+  cog_humor: Serious
+  cog_multitasking: Some
+  cog_numeracy_comfort: Moderate
+  cog_optimism: Low
+  cog_politeness: Polite
+  cog_precision_of_language: Precise
+  cog_reading_vs_watching: Prefers reading
+  cog_skepticism: High
+  cog_use_of_jargon: Avoids jargon
+  cog_verbosity: Terse
+  company_size: SMB (50-500)
+  demo_employment_status: Full-time
+  demo_ethnicity_broad: East Asian
+  demo_housing_status: Own outright
+  demo_marital_status: Single
+  demo_religion_affiliation: None
+  dominant_trait: Balanced
+  gender_identity: Man
+  health_assistive_tech: None
+  health_caregiver_status: Not a caregiver
+  health_contrast_need: No
+  health_energy_level: Very high
+  health_general_health: Fair
+  health_mental_health: Struggling
+  health_mobility: Full
+  health_pain_level: None
+  health_stress_level: High
+  health_text_size_need: No
+  highest_education: Vocational / cert
+  ind_telecommunications: None
+  interpersonal_agency_dominance: Low
+  interpersonal_communion_warmth: Low
+  lang_mandarin: Native
+  life_stage: Early career
+  lifex_career_path_shape: Just starting
+  lifex_education_journey: Vocational / trade
+  lifex_faith_journey: Lifelong faith
+  lifex_formative_decade: 2010s
+  lifex_geographic_mobility: Never left hometown
+  lifex_health_journey: No major events
+  lifex_hometown_tie: Still there
+  lifex_immigration_generation: Native multi-generational
+  lifex_languages_lifetime: One
+  lifex_military_history: Never served
+  lifex_parenting_journey: No children
+  lifex_public_recognition: Private life
+  lifex_relationship_history: Limited
+  lstyle_exercise_freq: Never
+  lstyle_music_listening: All day
+  lstyle_news_freq: Daily
+  lstyle_payment_pref: Mobile wallet
+  lstyle_podcast_listening: Never
+  lstyle_reading_freq: Never
+  media_diet: Social-media-heavy
+  multilingualism: Monolingual
+  primary_language: Mandarin
+  region: East Asia
+  religiosity: Secular
+  seniority: Mid
+  socioeconomic_band: Middle
+  tech_savviness: Digital native
+  topic_religion: Indifferent
+  topic_social_media: Interested
+  topic_spirituality: Indifferent
+  topic_technology: Interested
+  trait_adaptability: Moderate
+  trait_ambition: Moderate
+  trait_curiosity: Moderate
+  trait_discipline: Moderate
+  trait_hope_optimism: Slight
+  trait_leadership: Slight
+  trait_love_of_learning: Moderate
+  trait_open_mindedness: Moderate
+  trait_perseverance: Moderate
+  trait_playfulness: Moderate
+  trait_prudence: Moderate
+  trait_resilience: Moderate
+  trait_self_regulation: Moderate
+  trait_spirituality: Slight
+  trait_zest: Moderate
+  trust_level: Skeptical
+  val_health: Moderate
+  val_spirituality_faith: Irrelevant
+  years_experience: 0-2
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
+  origin_persona_id: cgss2017-4724

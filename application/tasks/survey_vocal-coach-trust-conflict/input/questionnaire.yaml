@@ -1,0 +1,301 @@
+schemaVersion: "1.0"
+id: vocal_coach_trust_conflict_v1
+title: AI Vocal Coach Trust and Conflict Scenarios
+description: A 19-question behavioral concept test of evidence, calibrated uncertainty, disagreement handling, trust repair, and professional control.
+questions:
+  - id: q0_research_role
+    prompt: Which role is closest to how you would judge these scenarios?
+    type: single_choice
+    construct: research_role
+    required: true
+    options:
+      - id: beginner
+        label: Beginner with little or no structured training
+      - id: casual_hobbyist
+        label: KTV, social, casual, or self-taught hobby singer
+      - id: advanced_student
+        label: Serious student, music major, or exam candidate
+      - id: creator_performer
+        label: Creator, choir or band singer, livestream singer, or performer
+      - id: teacher_coach
+        label: Vocal teacher, coach, or other voice professional
+      - id: institution_buyer
+        label: Studio, school, choir, or institution decision-maker
+
+  - id: q1_decision_context
+    prompt: When vocal feedback affects what you or a student practises next, whose judgement do you normally rely on most?
+    type: single_choice
+    construct: current_decision_authority
+    required: true
+    options:
+      - id: own_listening
+        label: My own listening and physical experience
+      - id: teacher
+        label: A teacher, coach, or voice professional
+      - id: peers_recordings
+        label: Peers, recordings, or online learning materials
+      - id: measurement_tools
+        label: Apps, measurements, or other technical tools
+      - id: mixed_sources
+        label: I compare several sources before deciding
+      - id: no_established_method
+        label: I do not have an established way to decide
+
+  - id: q2_baseline_trust
+    prompt: Before seeing the scenarios, how willing would you be to let a highly accurate but not infallible AI diagnosis influence the next week of practice?
+    type: likert
+    construct: baseline_diagnostic_trust
+    required: true
+    askRationale: true
+    minValue: 1
+    maxValue: 5
+
+  - id: q3_evidence_ab
+    prompt: "Evidence A/B: A report says only 'breath support: 62/100'. B plays the exact original phrase, marks the relevant moment, explains the observable cue, names one priority, and shows case confidence. Which report would you permit to influence the next exercise?"
+    type: single_choice
+    construct: evidence_format_behavior
+    required: true
+    askRationale: true
+    options:
+      - id: use_a
+        label: I would act on A
+      - id: use_b
+        label: I would act on B
+      - id: inspect_b_then_decide
+        label: I would inspect B's clip and explanation, then decide
+      - id: human_confirmation_first
+        label: I would require human confirmation before acting on either
+      - id: reject_both
+        label: I would not let either influence practice
+
+  - id: q4_high_confidence_behavior
+    prompt: "High-confidence case: B identifies a register-transition problem, highlights two repeatable moments in the original recording, explains the cue, and labels the finding high confidence. What would you actually do next?"
+    type: single_choice
+    construct: high_confidence_adoption_behavior
+    required: true
+    options:
+      - id: start_targeted_week
+        label: Start the recommended one-week targeted exercise plan
+      - id: replay_then_start
+        label: Replay the evidence and start only if I can hear or feel the issue
+      - id: compare_another_sample
+        label: Record another sample and compare before starting
+      - id: ask_teacher_first
+        label: Ask a teacher or qualified person before changing practice
+      - id: do_not_act
+        label: Do not act on the AI result
+
+  - id: q5_low_confidence_ab
+    prompt: "Low-confidence A/B: The recording is noisy and the system cannot separate tension from style. A still declares 'throat tension detected' and assigns an exercise. B says 'unable to determine', explains why, offers a safer re-recording setup, and allows human review. Which handling should the product use?"
+    type: single_choice
+    construct: uncertainty_calibration_preference
+    required: true
+    askRationale: true
+    options:
+      - id: prefer_a
+        label: A, because a definite answer is more useful
+      - id: prefer_b
+        label: B, because admitting uncertainty is more trustworthy
+      - id: prefer_b_human_only
+        label: B, but only a human should decide this case
+      - id: neither
+        label: Neither handling is acceptable
+
+  - id: q6_low_confidence_behavior
+    prompt: If the product uses B and explicitly cannot determine the issue, what would you do next?
+    type: single_choice
+    construct: low_confidence_next_action
+    required: true
+    options:
+      - id: rerecord_as_guided
+        label: Follow the recording guidance and submit a new sample
+      - id: continue_only_safe_neutral
+        label: Continue only with neutral, low-risk practice while gathering evidence
+      - id: seek_teacher_review
+        label: Send the evidence to a teacher or qualified reviewer
+      - id: ignore_result
+        label: Ignore this result and continue my existing routine
+      - id: stop_using_product
+        label: Stop using the product
+
+  - id: q7_user_disagreement_ab
+    prompt: "User-disagreement A/B: You believe the highlighted phrase is an intentional style choice. A repeats the diagnosis and offers no challenge path. B lets you mark it disputed, state why, submit another sample, and preserves the original and revised results. Which behavior would keep you engaged?"
+    type: single_choice
+    construct: user_disagreement_handling
+    required: true
+    askRationale: true
+    options:
+      - id: a_is_acceptable
+        label: A is acceptable; the model should hold its position
+      - id: b_continue
+        label: B would let me continue using the product
+      - id: b_but_verify
+        label: B helps, but I would still verify externally
+      - id: no_repair
+        label: Neither would restore enough trust
+
+  - id: q8_user_disagreement_behavior
+    prompt: After marking the result disputed under B, the reassessment lowers confidence but does not fully reverse the finding. What would you do?
+    type: single_choice
+    construct: disputed_result_adoption_boundary
+    required: true
+    options:
+      - id: use_cautiously
+        label: Use the exercise cautiously and monitor the result
+      - id: collect_more_samples
+        label: Collect more samples before changing practice
+      - id: seek_human_judgement
+        label: Seek qualified human judgement
+      - id: keep_current_practice
+        label: Keep my current practice and leave the result disputed
+      - id: abandon_product
+        label: Abandon the product because the conflict remains
+
+  - id: q9_teacher_conflict_ab
+    prompt: "Teacher-conflict A/B: The AI recommends reducing vocal weight, while your teacher intentionally uses the phrase for controlled strengthening. A presents the AI recommendation as final. B marks a conflict, exports the evidence, lets the teacher annotate or override it, and preserves both views. What would you do?"
+    type: single_choice
+    construct: teacher_conflict_behavior
+    required: true
+    askRationale: true
+    options:
+      - id: follow_ai_a
+        label: Follow A's AI recommendation over the teacher
+      - id: follow_teacher_without_tool
+        label: Follow the teacher and stop using the tool for this issue
+      - id: use_b_teacher_override
+        label: Use B and let the teacher review or override before practice changes
+      - id: use_b_retest_neutral
+        label: Use B, pause the disputed exercise, and gather a neutral retest
+      - id: reject_product
+        label: Reject the product because teacher conflict is unacceptable
+
+  - id: q10_teacher_override_effect
+    prompt: If a teacher override is visible to the student, preserves the AI evidence, records who changed the plan, and can be revisited after reassessment, how does that affect adoption?
+    type: single_choice
+    construct: teacher_override_adoption_effect
+    required: true
+    options:
+      - id: enables_professional_use
+        label: It makes professional or student use acceptable
+      - id: useful_with_limits
+        label: It helps, but only for selected low-risk issues
+      - id: consumer_help_only
+        label: It is useful for consumers but not professional workflows
+      - id: human_review_every_case
+        label: It is acceptable only if a human reviews every case
+      - id: no_effect
+        label: It does not make adoption more acceptable
+
+  - id: q11_professional_control
+    prompt: Which control is most important before a teacher, coach, or institution permits student use?
+    type: single_choice
+    construct: professional_control_priority
+    required: true
+    options:
+      - id: preapproval
+        label: Teacher approval before a student sees or acts on a plan
+      - id: annotate_override
+        label: Ability to annotate, replace, or disable a recommendation
+      - id: evidence_audit
+        label: Access to original evidence, confidence, and change history
+      - id: scope_limits
+        label: Configurable limits on issues and exercises the AI may handle
+      - id: outcome_monitoring
+        label: Reassessment and alerts when progress or safety signals worsen
+      - id: none_sufficient
+        label: No product control would be sufficient
+
+  - id: q12_known_error_repair_ab
+    prompt: "Trust-repair A/B: After you followed a low-risk exercise, the company learns that the diagnosis was wrong. A silently changes the report. B notifies you, explains what changed and why, restores the prior record, stops the mismatched plan, requests reassessment, and offers human review. Which response is acceptable?"
+    type: single_choice
+    construct: known_error_repair_preference
+    required: true
+    askRationale: true
+    options:
+      - id: a_acceptable
+        label: A is acceptable if the new answer is correct
+      - id: b_restores_trust
+        label: B would substantially restore trust
+      - id: b_partial_repair
+        label: B is necessary but trust would remain reduced
+      - id: human_followup_required
+        label: B plus direct qualified human follow-up is required
+      - id: no_repair_possible
+        label: I would stop using it regardless of the response
+
+  - id: q13_post_error_behavior
+    prompt: After the full B repair flow, what would you realistically do during the next month?
+    type: single_choice
+    construct: post_error_retention_behavior
+    required: true
+    options:
+      - id: resume_normally
+        label: Resume normal use after reassessment
+      - id: resume_low_risk_only
+        label: Use it only for low-risk issues with visible evidence
+      - id: require_human_review
+        label: Continue only with teacher or qualified human review
+      - id: observe_without_acting
+        label: Keep the account but do not act on recommendations
+      - id: stop_use
+        label: Stop using the product
+
+  - id: q14_accuracy_claim_ab
+    prompt: "Accuracy-claim A/B: Independent evaluation shows high aggregate accuracy. A markets the model as 'always right'. B says it is highly accurate on validated conditions but not infallible, shows case confidence, and routes uncertain or conflicting cases to review. Which statement would support responsible adoption?"
+    type: single_choice
+    construct: accuracy_claim_acceptance
+    required: true
+    askRationale: true
+    options:
+      - id: prefer_a
+        label: A, because certainty makes the product easier to use
+      - id: prefer_b
+        label: B, because aggregate accuracy does not guarantee each case
+      - id: b_only_with_public_validation
+        label: B only if the validation methods and limits are public
+      - id: no_ai_claim_sufficient
+        label: Neither statement is sufficient for adoption
+
+  - id: q15_adoption_boundary
+    prompt: What is the highest-impact decision you would allow this product to make without prior human confirmation?
+    type: single_choice
+    construct: autonomous_adoption_boundary
+    required: true
+    options:
+      - id: explain_only
+        label: Explain evidence only; make no practice recommendation
+      - id: low_risk_exercise
+        label: Recommend a low-risk exercise for one clearly evidenced issue
+      - id: one_week_plan
+        label: Set a one-week plan with reassessment and stop conditions
+      - id: broader_curriculum
+        label: Adapt a broader curriculum based on repeated high-confidence results
+      - id: professional_decisions
+        label: Support professional decisions if teacher review and override exist
+      - id: none
+        label: I would not allow it to influence any vocal-training decision
+
+  - id: q16_professional_acceptance
+    prompt: For students, clients, or serious personal training, how acceptable is a workflow with source evidence, case confidence, uncertainty admission, dispute handling, and teacher review or override?
+    type: likert
+    construct: professional_workflow_acceptance
+    required: true
+    askRationale: true
+    minValue: 1
+    maxValue: 5
+
+  - id: q17_final_trust
+    prompt: After all proposed safeguards and conflict flows, how willing would you be to use or permit the product for a one-week targeted trial?
+    type: likert
+    construct: post_safeguard_trial_trust
+    required: true
+    askRationale: true
+    minValue: 1
+    maxValue: 5
+
+  - id: q18_decisive_boundary
+    prompt: In two or three sentences, describe one conflict the product could recover from, one conflict that requires a human decision, and what would permanently destroy your trust.
+    type: free_text
+    construct: trust_repair_and_human_boundary
+    required: true
+

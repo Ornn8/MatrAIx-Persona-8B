@@ -61,6 +61,8 @@ def test_options_knob_values_match_allowed(config_manager):
     assert "anthropic/claude-opus-4-8" in PERSONA_MODEL_OPTIONS
     assert "dashscope/qwen3.7-max" in PERSONA_MODEL_OPTIONS
     assert "dashscope/deepseek-v4-pro" in PERSONA_MODEL_OPTIONS
+    assert "dashscope/deepseek-v4-flash" in PERSONA_MODEL_OPTIONS
+    assert "deepseek/deepseek-v4-flash" in PERSONA_MODEL_OPTIONS
     assert "openai/gpt-5.4" in PERSONA_MODEL_OPTIONS
     assert "openai/gpt-5.5" in PERSONA_MODEL_OPTIONS
 

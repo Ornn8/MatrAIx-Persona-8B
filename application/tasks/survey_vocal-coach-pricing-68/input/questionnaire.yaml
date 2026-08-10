@@ -1,0 +1,183 @@
+schemaVersion: "1.0"
+id: vocal_coach_pricing_68_v1
+title: AI Vocal Coach CNY 68 Pricing and Packaging
+description: A 15-question pricing test with conversion, cancellation, Van Westendorp, and discrete-choice measures.
+questions:
+  - id: q0_research_role
+    prompt: Which role should this pricing decision represent?
+    type: single_choice
+    construct: research_role
+    required: true
+    options:
+      - {id: beginner, label: "Beginner with little or no structured training"}
+      - {id: casual_enthusiast, label: "KTV or casual singing enthusiast"}
+      - {id: self_taught_hobbyist, label: "Self-taught or serious hobbyist"}
+      - {id: student_candidate, label: "Vocal student, music major, or exam candidate"}
+      - {id: creator_performer, label: "Creator, choir or band singer, or performer"}
+      - {id: teacher_coach, label: "Vocal teacher, coach, or voice professional"}
+      - {id: institution_buyer, label: "Studio, school, choir, or institution buyer"}
+      - {id: low_need_control, label: "Music-interested person with little current need"}
+
+  - id: q1_likely_payer
+    prompt: If this package were purchased for the role above, who would most likely pay?
+    type: single_choice
+    construct: likely_payer
+    required: true
+    options:
+      - {id: self, label: "I would pay for myself"}
+      - {id: parent_family, label: "A parent, partner, or family member"}
+      - {id: teacher_studio, label: "A teacher or studio"}
+      - {id: school_employer, label: "A school, institution, or employer"}
+      - {id: student_client, label: "A student or client would pay directly"}
+      - {id: nobody, label: "Nobody is realistically likely to pay"}
+
+  - id: q2_price_perception_68
+    prompt: After reading the exact seven-day trial and core package, how does CNY 68 per month feel?
+    type: single_choice
+    construct: featured_price_perception
+    required: true
+    askRationale: true
+    options:
+      - {id: suspiciously_cheap, label: "So cheap that I would question quality or completeness"}
+      - {id: good_value, label: "Good value for the promised package"}
+      - {id: fair, label: "Fair and unsurprising"}
+      - {id: slightly_expensive, label: "Somewhat expensive but defensible after proof"}
+      - {id: too_expensive, label: "Too expensive for this use"}
+
+  - id: q3_meaningful_comparison
+    prompt: Which comparison most strongly determines whether CNY 68 per month is worthwhile?
+    type: single_choice
+    construct: price_comparison_anchor
+    required: true
+    askRationale: true
+    options:
+      - {id: human_lesson, label: "A private vocal lesson or teacher feedback"}
+      - {id: ktv_membership, label: "KTV spending or a singing-entertainment membership"}
+      - {id: practice_app, label: "A general music or practice app subscription"}
+      - {id: free_content, label: "Free videos, social content, or self-practice"}
+      - {id: professional_tool, label: "A professional assessment or teaching tool"}
+      - {id: no_comparable, label: "None is meaningfully comparable"}
+
+  - id: q4_post_trial_action
+    prompt: Suppose you completed the first week and noticed a clear improvement in the targeted issue. What would you most realistically do next?
+    type: single_choice
+    construct: improvement_conditioned_conversion
+    required: true
+    askRationale: true
+    options:
+      - {id: start_monthly_68, label: "Start the CNY 68 monthly plan"}
+      - {id: choose_quarter_if_discounted, label: "Pay only if a discounted quarterly plan is available"}
+      - {id: buy_one_off, label: "Buy another diagnosis or plan only when needed"}
+      - {id: seek_human, label: "Take the evidence to a teacher or other human service"}
+      - {id: continue_free, label: "Continue only with free materials"}
+      - {id: stop_after_trial, label: "Stop even after that improvement"}
+
+  - id: q5_primary_cancellation_reason
+    prompt: After converting to a paid plan, which single event would be most likely to make you cancel?
+    type: single_choice
+    construct: cancellation_driver
+    required: true
+    options:
+      - {id: progress_stalls, label: "No further noticeable progress after the first issue"}
+      - {id: advice_repeats, label: "Exercises or feedback become repetitive or generic"}
+      - {id: diagnosis_wrong, label: "A diagnosis seems wrong or conflicts with trusted evidence"}
+      - {id: practice_burden, label: "I cannot maintain the required practice routine"}
+      - {id: low_usage, label: "I sing or teach too infrequently to justify a subscription"}
+      - {id: cheaper_alternative, label: "A cheaper app or free content is sufficient"}
+      - {id: human_preferred, label: "I would rather spend the money on human instruction"}
+      - {id: privacy_safety, label: "A privacy or vocal-safety concern arises"}
+
+  - id: q6_payment_format_choice
+    prompt: For the same core functions, which payment format would you choose after the free week?
+    type: single_choice
+    construct: payment_format_choice
+    required: true
+    askRationale: true
+    options:
+      - {id: monthly_68, label: "CNY 68 monthly, cancel any month"}
+      - {id: quarterly_168, label: "CNY 168 every three months, equivalent to CNY 56 monthly"}
+      - {id: one_off_29, label: "CNY 29 per diagnosis plus one seven-day plan, with no ongoing progress features"}
+      - {id: none, label: "None of these"}
+
+  - id: q7_package_choice
+    prompt: Which package would you choose if all had the same privacy and safety rules?
+    type: single_choice
+    construct: discrete_package_choice
+    required: true
+    askRationale: true
+    options:
+      - {id: lite_39, label: "Lite CNY 39/month - diagnosis and exercises, but no complete curriculum or longitudinal progress"}
+      - {id: core_68, label: "Core CNY 68/month - the complete package in the brief"}
+      - {id: plus_98, label: "Plus CNY 98/month - Core plus teacher-shareable reports and priority re-analysis"}
+      - {id: none, label: "Choose none"}
+
+  - id: q8_tradeoff_choice
+    prompt: If you had CNY 68 available for singing improvement this month, where would it most realistically go?
+    type: single_choice
+    construct: share_of_wallet_choice
+    required: true
+    options:
+      - {id: vocal_coach_subscription, label: "This AI vocal-coach monthly package"}
+      - {id: save_for_human_lesson, label: "Save it toward a human vocal lesson"}
+      - {id: ktv_or_entertainment, label: "Spend it on KTV or singing entertainment"}
+      - {id: another_practice_app, label: "Spend it on another music or practice app"}
+      - {id: free_options, label: "Use free options and spend the money elsewhere"}
+
+  - id: q9_vw_too_cheap
+    prompt: At what monthly price would the complete core package feel so cheap that you would question its quality?
+    type: single_choice
+    construct: van_westendorp_too_cheap
+    required: true
+    options: &price_points
+      - {id: cny_9, label: "CNY 9"}
+      - {id: cny_19, label: "CNY 19"}
+      - {id: cny_29, label: "CNY 29"}
+      - {id: cny_39, label: "CNY 39"}
+      - {id: cny_49, label: "CNY 49"}
+      - {id: cny_68, label: "CNY 68"}
+      - {id: cny_88, label: "CNY 88"}
+      - {id: cny_108, label: "CNY 108"}
+      - {id: cny_138, label: "CNY 138"}
+      - {id: cny_168, label: "CNY 168"}
+      - {id: cny_198, label: "CNY 198"}
+      - {id: cny_268, label: "CNY 268"}
+
+  - id: q10_vw_bargain
+    prompt: At what monthly price would the complete core package feel like a bargain while still credible?
+    type: single_choice
+    construct: van_westendorp_bargain
+    required: true
+    options: *price_points
+
+  - id: q11_vw_expensive
+    prompt: At what monthly price would it start to feel expensive, but you would still consider subscribing?
+    type: single_choice
+    construct: van_westendorp_expensive_but_consider
+    required: true
+    options: *price_points
+
+  - id: q12_vw_too_expensive
+    prompt: At what monthly price would it become too expensive to consider?
+    type: single_choice
+    construct: van_westendorp_too_expensive
+    required: true
+    options: *price_points
+
+  - id: q13_conversion_proof
+    prompt: Besides one noticeable first-week improvement, what would most strengthen your decision to keep paying CNY 68 monthly?
+    type: single_choice
+    construct: retention_proof
+    required: true
+    options:
+      - {id: repeated_progress, label: "Visible progress on a second and third issue"}
+      - {id: teacher_agreement, label: "Agreement from a trusted vocal teacher"}
+      - {id: transparent_evidence, label: "Consistently clear evidence clips and confidence levels"}
+      - {id: curriculum_fit, label: "A curriculum that adapts to my goals and available practice time"}
+      - {id: student_results, label: "Better student outcomes or teaching efficiency"}
+      - {id: no_sufficient_proof, label: "Nothing would make monthly payment worthwhile"}
+
+  - id: q14_decision_explanation
+    prompt: In two or three sentences, explain who should buy this package, whether CNY 68 matches the value, and the one packaging change most likely to alter your decision.
+    type: free_text
+    construct: pricing_decision_explanation
+    required: true

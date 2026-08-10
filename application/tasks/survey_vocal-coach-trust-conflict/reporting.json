@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response"
+      },
+      "summaryAnalyses": [
+        {
+          "id": "vocal_trust_conflict.reason_by_response",
+          "targetFacetKey": "reason",
+          "groupByFacetKey": "response",
+          "groupByMode": "categorical",
+          "summaryKind": "llm_bucket_summary"
+        }
+      ],
+      "signalScans": [
+        {
+          "id": "vocal_trust_conflict.boundary_signal_scan",
+          "targetFacetKey": "reason",
+          "groupByFacetKey": "response",
+          "groupByMode": "categorical",
+          "judgeKind": "llm_signal_judge",
+          "prompt": "Identify explicit trust and adoption boundaries in the response. Do not infer acceptance merely because the respondent prefers B over A.",
+          "rubric": "Mark a signal true only when the rationale directly supports it. Conditional acceptance is not unconditional trust, and preference for transparency is not proof of willingness to act.",
+          "signals": [
+            {
+              "key": "source_evidence_required",
+              "label": "Source evidence required",
+              "valueType": "boolean"
+            },
+            {
+              "key": "uncertainty_admission_builds_trust",
+              "label": "Uncertainty admission builds trust",
+              "valueType": "boolean"
+            },
+            {
+              "key": "user_dispute_control_required",
+              "label": "User dispute control required",
+              "valueType": "boolean"
+            },
+            {
+              "key": "human_confirmation_boundary",
+              "label": "Human confirmation boundary",
+              "valueType": "boolean"
+            },
+            {
+              "key": "teacher_authority_required",
+              "label": "Teacher authority required",
+              "valueType": "boolean"
+            },
+            {
+              "key": "error_repair_can_restore_trust",
+              "label": "Error repair can restore trust",
+              "valueType": "boolean"
+            },
+            {
+              "key": "professional_workflow_acceptable",
+              "label": "Professional workflow acceptable",
+              "valueType": "boolean"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

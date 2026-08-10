@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response"
+      },
+      "summaryAnalyses": [
+        {
+          "id": "vocal_concept.reason_by_response",
+          "targetFacetKey": "reason",
+          "groupByFacetKey": "response",
+          "groupByMode": "categorical",
+          "summaryKind": "llm_bucket_summary"
+        }
+      ],
+      "signalScans": [
+        {
+          "id": "vocal_concept.adoption_signal_scan",
+          "targetFacetKey": "reason",
+          "groupByFacetKey": "response",
+          "groupByMode": "categorical",
+          "judgeKind": "llm_signal_judge",
+          "prompt": "Identify clearly stated reasons for demand, trust, hesitation, privacy acceptance, trial intent, and payment intent. Do not infer signals that the respondent did not express.",
+          "rubric": "Mark a signal true only when the rationale explicitly supports it; uncertainty or mixed sentiment is not a positive signal.",
+          "signals": [
+            {
+              "key": "evidence_increases_trust",
+              "label": "Evidence increases trust",
+              "valueType": "boolean"
+            },
+            {
+              "key": "requires_human_validation",
+              "label": "Requires human validation",
+              "valueType": "boolean"
+            },
+            {
+              "key": "privacy_is_blocking",
+              "label": "Privacy is blocking",
+              "valueType": "boolean"
+            },
+            {
+              "key": "credible_trial_intent",
+              "label": "Credible trial intent",
+              "valueType": "boolean"
+            },
+            {
+              "key": "credible_payment_intent",
+              "label": "Credible payment intent",
+              "valueType": "boolean"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

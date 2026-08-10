@@ -1,0 +1,119 @@
+persona_id: '0189'
+version: '1.0'
+source: cgss
+display_name: Wei Zhang
+dimensions:
+  accessibility_needs: None
+  age_bracket: 25-34
+  att_government_regulation: Skeptical
+  att_traditional_gender_roles: Neutral
+  bfi2_domain_negative_emotionality: Low
+  bfi2_facet_depression: Very low
+  bfi2_facet_trust: Average
+  big5_depression: Low
+  big5_trust: Average
+  cog_abstraction: Concrete
+  cog_ambiguity_tolerance: Moderate
+  cog_assertiveness: Moderate
+  cog_attention_span: Short
+  cog_big_picture_vs_detail: Detail
+  cog_curiosity: Low
+  cog_detail_orientation: Low
+  cog_directness: Direct
+  cog_emoji_use: Never
+  cog_emotional_expressiveness: Low
+  cog_formality: Neutral
+  cog_humor: Serious
+  cog_multitasking: Some
+  cog_numeracy_comfort: Low
+  cog_open_mindedness: Moderate
+  cog_optimism: Moderate
+  cog_politeness: Polite
+  cog_precision_of_language: Precise
+  cog_reading_vs_watching: Prefers reading
+  cog_skepticism: Moderate
+  cog_use_of_jargon: Avoids jargon
+  cog_verbosity: Terse
+  company_size: Solo / freelance
+  demo_children_count: 2 children
+  demo_employment_status: Self-employed
+  demo_ethnicity_broad: East Asian
+  demo_housing_status: Own outright
+  demo_marital_status: Married
+  demo_parental_status: Parent of minors
+  demo_religion_affiliation: None
+  dominant_trait: Balanced
+  gender_identity: Man
+  health_assistive_tech: None
+  health_caregiver_status: Child caregiver
+  health_contrast_need: No
+  health_energy_level: High
+  health_general_health: Good
+  health_mental_health: Stable
+  health_mobility: Full
+  health_neurodivergence: Neurotypical
+  health_text_size_need: No
+  highest_education: Secondary
+  lang_mandarin: Native
+  life_stage: Early career
+  lifex_career_path_shape: Entrepreneurial
+  lifex_cultural_exposure: Monocultural
+  lifex_education_journey: Dropped out
+  lifex_entrepreneurship_history: Founded once
+  lifex_faith_journey: Lifelong faith
+  lifex_formative_decade: 2000s
+  lifex_geographic_mobility: Never left hometown
+  lifex_health_journey: No major events
+  lifex_hometown_tie: Still there
+  lifex_immigration_generation: Native multi-generational
+  lifex_languages_lifetime: One
+  lifex_loss_experience: No major loss
+  lifex_military_history: Never served
+  lifex_parenting_journey: Young children
+  lifex_public_recognition: Private life
+  lifex_relationship_history: Married once
+  lifex_service_history: None
+  lstyle_cooking_freq: Rarely
+  lstyle_exercise_freq: Rarely
+  lstyle_household_size: 3-4 people
+  lstyle_music_listening: Sometimes
+  lstyle_news_freq: Daily
+  lstyle_payment_pref: Mobile wallet
+  lstyle_podcast_listening: Monthly
+  lstyle_reading_freq: Monthly
+  media_diet: Social-media-heavy
+  multilingualism: Monolingual
+  primary_language: Mandarin
+  region: East Asia
+  religiosity: Secular
+  seniority: Entry
+  socioeconomic_band: Lower-middle
+  tech_savviness: Comfortable
+  topic_parenting: Interested
+  topic_religion: Interested
+  topic_social_media: Interested
+  topic_spirituality: Indifferent
+  topic_technology: Interested
+  trait_adaptability: Moderate
+  trait_ambition: Moderate
+  trait_capacity_for_love: Strong
+  trait_curiosity: Moderate
+  trait_discipline: Moderate
+  trait_hope_optimism: Strong
+  trait_love_of_learning: Slight
+  trait_loyalty: Strong
+  trait_open_mindedness: Moderate
+  trait_perseverance: Moderate
+  trait_prudence: Moderate
+  trait_resilience: Moderate
+  trait_self_regulation: Strong
+  trait_spirituality: Slight
+  trait_zest: Moderate
+  trust_level: Verifying
+  val_family: Important
+  val_health: Important
+  val_spirituality_faith: Important
+  val_tradition: Important
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
+  origin_persona_id: cgss2017-9338

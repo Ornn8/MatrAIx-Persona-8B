@@ -1,0 +1,16 @@
+{
+  "id": "cgss2017_core_module",
+  "source": {
+    "type": "official_survey_reference",
+    "url": "https://www.cnsda.org/index.php?r=projects/view&id=94525591",
+    "project_name": "Chinese General Social Survey 2017",
+    "sample": 12582,
+    "variables": 786
+  },
+  "dimensions_claimed": 44,
+  "format": "stata_dta_value_labels",
+  "license": "official-survey-terms-cnsda-registration",
+  "gated": true,
+  "notes": "CGSS2017 nationally representative mainland-China household survey. Observed-only crosswalk at scripts/crosswalks/cgss.py maps 44 schema dims (demographics, family/life events, employment/career, media/internet, attitudes). All question numbers verified against the actual CGSS2017 .dta: a2 sex, a31 birth year (NOT a3a), a4 ethnicity, a7a education, a69 marital, a51-a521 religion multi-select, a6 attendance, a15 health, v458 trust, a43e SES, a301-a3012 leisure, a29 media, a30c news minutes, a30g/h mobile payment, a53/a54/a59a-e-f-j-l employment, c32/c34/c491-c4911/c58/c621-c625 attitudes, d131/d161-d164/d202/d381-d386/d61a/d62a/d3a-c-e/d4/d5a-b family. 12,582 respondents extracted (44 dims, avg 29.3 grounded dims/persona; validate_extraction.py: 0 errors). Faithfulness: non-Han ethnicity, 'graduate and above' education, hukou, party membership, mortgage-vs-ownoutright, and fabricated frequency->duration mappings (a284->streaming hours, a30c->screen time, a301/a302->interest) deliberately left null/unmapped.",
+  "pilot_output": "persona/curation/existing_data/outputs/cgss2017_pilot/extraction_real.jsonl.gz"
+}

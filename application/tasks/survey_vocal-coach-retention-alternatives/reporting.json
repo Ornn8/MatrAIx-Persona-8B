@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response"
+      },
+      "summaryAnalyses": [
+        {
+          "id": "vocal_retention.reason_by_response",
+          "targetFacetKey": "reason",
+          "groupByFacetKey": "response",
+          "groupByMode": "categorical",
+          "summaryKind": "llm_bucket_summary"
+        }
+      ],
+      "signalScans": [
+        {
+          "id": "vocal_retention.behavior_signal_scan",
+          "targetFacetKey": "reason",
+          "groupByFacetKey": "response",
+          "groupByMode": "categorical",
+          "judgeKind": "llm_signal_judge",
+          "prompt": "Identify only explicit diary behavior: practice completion, recovery after a miss or failure, churn, paid continuation, safe pause, reassessment, sharing, teacher collaboration, and disagreement feedback. Treat safety-compliant rest as a pause, not churn. Do not convert positive opinions into completed behavior.",
+          "rubric": "A signal is true only when the selected response or rationale states that the action occurred in the simulated diary. Inactive and hypothetical actions are false.",
+          "signals": [
+            {
+              "key": "completed_practice",
+              "label": "Completed assigned practice",
+              "valueType": "boolean"
+            },
+            {
+              "key": "recovered_after_friction",
+              "label": "Returned after failure, miss, or plateau",
+              "valueType": "boolean"
+            },
+            {
+              "key": "churned",
+              "label": "Stopped or cancelled",
+              "valueType": "boolean"
+            },
+            {
+              "key": "paid_conversion",
+              "label": "Paid CNY 68 to continue",
+              "valueType": "boolean"
+            },
+            {
+              "key": "safety_pause_retained",
+              "label": "Paused safely without product churn",
+              "valueType": "boolean"
+            },
+            {
+              "key": "completed_reassessment",
+              "label": "Completed a reassessment",
+              "valueType": "boolean"
+            },
+            {
+              "key": "shared_report",
+              "label": "Shared or exported evidence report",
+              "valueType": "boolean"
+            },
+            {
+              "key": "teacher_collaboration",
+              "label": "Consulted or shared with teacher",
+              "valueType": "boolean"
+            },
+            {
+              "key": "submitted_disagreement",
+              "label": "Marked teacher conflict or submitted feedback",
+              "valueType": "boolean"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

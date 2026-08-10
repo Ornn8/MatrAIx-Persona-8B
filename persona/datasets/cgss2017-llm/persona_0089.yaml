@@ -1,0 +1,118 @@
+persona_id: '0089'
+version: '1.0'
+source: cgss
+display_name: Min Ho
+dimensions:
+  accessibility_needs: None
+  age_bracket: 35-44
+  att_government_regulation: Skeptical
+  att_traditional_gender_roles: Skeptical
+  bfi2_domain_negative_emotionality: Low
+  bfi2_facet_depression: Average
+  bfi2_facet_trust: High
+  big5_depression: Low
+  big5_trust: High
+  cog_abstraction: Concrete
+  cog_detail_orientation: Low
+  cog_directness: Direct
+  cog_emoji_use: Never
+  cog_emotional_expressiveness: Low
+  cog_formality: Neutral
+  cog_humor: Serious
+  cog_open_mindedness: Moderate
+  cog_optimism: Moderate
+  cog_politeness: Polite
+  cog_precision_of_language: Precise
+  cog_reading_vs_watching: Prefers reading
+  cog_skepticism: Moderate
+  cog_use_of_jargon: Avoids jargon
+  cog_verbosity: Concise
+  demo_children_count: 3+ children
+  demo_employment_status: Homemaker
+  demo_ethnicity_broad: East Asian
+  demo_housing_status: Renting
+  demo_marital_status: Married
+  demo_parental_status: Parent of minors
+  demo_religion_affiliation: None
+  dominant_trait: Balanced
+  gender_identity: Woman
+  health_assistive_tech: None
+  health_caregiver_status: Child caregiver
+  health_contrast_need: No
+  health_energy_level: High
+  health_general_health: Good
+  health_mental_health: Stable
+  health_mobility: Full
+  health_neurodivergence: Neurotypical
+  health_stress_level: Moderate
+  health_text_size_need: No
+  highest_education: Associate's
+  lang_mandarin: Native
+  life_stage: Mid-life
+  lifex_career_path_shape: Just starting
+  lifex_education_journey: Traditional track
+  lifex_faith_journey: Always secular
+  lifex_financial_trajectory: Stable
+  lifex_formative_decade: 1990s
+  lifex_geographic_mobility: Moved nationally
+  lifex_health_journey: No major events
+  lifex_hometown_tie: Rarely returns
+  lifex_immigration_generation: Native multi-generational
+  lifex_languages_lifetime: One
+  lifex_loss_experience: No major loss
+  lifex_military_history: Never served
+  lifex_parenting_journey: Young children
+  lifex_public_recognition: Private life
+  lifex_relationship_history: Married once
+  lstyle_cooking_freq: Daily
+  lstyle_exercise_freq: Monthly
+  lstyle_household_size: 3-4 people
+  lstyle_music_listening: Daily
+  lstyle_news_freq: Constant
+  lstyle_payment_pref: Mobile wallet
+  lstyle_podcast_listening: Monthly
+  lstyle_reading_freq: Monthly
+  media_diet: Social-media-heavy
+  multilingualism: Monolingual
+  primary_language: Mandarin
+  region: East Asia
+  religiosity: Secular
+  socioeconomic_band: Middle
+  tech_savviness: Digital native
+  topic_cooking: Interested
+  topic_parenting: Interested
+  topic_real_estate: Interested
+  topic_religion: Neutral
+  topic_social_media: Interested
+  topic_spirituality: Interested
+  topic_technology: Interested
+  trait_adaptability: Moderate
+  trait_capacity_for_love: Strong
+  trait_curiosity: Moderate
+  trait_discipline: Moderate
+  trait_fairness: Moderate
+  trait_hope_optimism: Strong
+  trait_love_of_learning: Moderate
+  trait_loyalty: Strong
+  trait_open_mindedness: Moderate
+  trait_playfulness: Moderate
+  trait_prudence: Moderate
+  trait_resilience: Moderate
+  trait_self_regulation: Moderate
+  trait_spirituality: Slight
+  trait_zest: Moderate
+  trust_level: Trusting
+  val_achievement: Moderate
+  val_career_success: Minor
+  val_community: Moderate
+  val_family: Important
+  val_fun_enjoyment: Moderate
+  val_health: Important
+  val_security_stability: Important
+  val_social_status: Moderate
+  val_spirituality_faith: Minor
+  val_tradition: Important
+  val_wealth: Moderate
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
+  origin_persona_id: cgss2017-2507

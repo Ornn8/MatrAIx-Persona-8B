@@ -1,0 +1,79 @@
+persona_id: '0084'
+version: '1.0'
+source: cgss
+display_name: Min Ho
+dimensions:
+  age_bracket: 55-64
+  att_traditional_gender_roles: Neutral
+  bfi2_domain_negative_emotionality: Low
+  bfi2_facet_anxiety: Low
+  bfi2_facet_depression: Low
+  bfi2_facet_trust: High
+  big5_anxiety: Low
+  big5_depression: Low
+  big5_trust: High
+  cog_abstraction: Concrete
+  cog_big_picture_vs_detail: Big-picture
+  cog_curiosity: Low
+  cog_detail_orientation: Low
+  cog_directness: Direct
+  cog_emoji_use: Never
+  cog_emotional_expressiveness: Low
+  cog_formality: Neutral
+  cog_humor: Serious
+  cog_multitasking: Prefers single-task
+  cog_numeracy_comfort: Low
+  cog_open_mindedness: Moderate
+  cog_optimism: Moderate
+  cog_politeness: Polite
+  cog_precision_of_language: Average
+  cog_question_asking: Rarely asks
+  cog_reading_vs_watching: Prefers video
+  cog_risk_framing: Balanced
+  cog_skepticism: Low
+  cog_storytelling: Low
+  cog_use_of_jargon: Avoids jargon
+  cog_verbosity: Terse
+  cog_visual_vs_verbal: Visual
+  demo_ethnicity_broad: East Asian
+  demo_marital_status: Married
+  demo_religion_affiliation: None
+  dominant_trait: Balanced
+  gender_identity: Man
+  health_energy_level: Moderate
+  health_general_health: Fair
+  health_mental_health: Stable
+  highest_education: Secondary
+  ind_telecommunications: None
+  lang_mandarin: Native
+  life_stage: Retirement
+  lifex_education_journey: Dropped out
+  lifex_faith_journey: Lifelong faith
+  lifex_geographic_mobility: Moved nationally
+  lifex_health_journey: No major events
+  lifex_hometown_tie: Rarely returns
+  lifex_immigration_generation: Native multi-generational
+  lifex_languages_lifetime: One
+  lifex_public_recognition: Private life
+  lifex_relationship_history: Married once
+  lstyle_exercise_freq: Never
+  lstyle_music_listening: Rarely
+  lstyle_news_freq: Avoids news
+  lstyle_podcast_listening: Never
+  lstyle_reading_freq: Never
+  media_diet: Video-first
+  multilingualism: Monolingual
+  primary_language: Mandarin
+  region: East Asia
+  religiosity: Secular
+  socioeconomic_band: Middle
+  tech_savviness: Avoidant
+  topic_religion: Indifferent
+  topic_social_media: Indifferent
+  topic_spirituality: Interested
+  trust_level: Trusting
+  val_health: Moderate
+  val_spirituality_faith: Irrelevant
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
+  origin_persona_id: cgss2017-2411

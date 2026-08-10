@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 
 from backend.service.harbor_job_service import HarborJobService, HarborLaunchRecord
 
@@ -185,6 +186,10 @@ def test_retry_failed_reruns_only_failed_trials(tmp_path, monkeypatch):
         "persona_id: '0001'\nversion: '1.0'\nsource: Nemotron\ndimensions: {}\n",
         encoding="utf-8",
     )
+    (pool / "persona_0002.yaml").write_text(
+        "persona_id: '0002'\nversion: '1.0'\nsource: OASIS\ndimensions: {}\n",
+        encoding="utf-8",
+    )
 
     monkeypatch.setattr("playground.harbor.playground._repo_root", lambda: repo)
     service = HarborJobService(
@@ -198,7 +203,7 @@ def test_retry_failed_reruns_only_failed_trials(tmp_path, monkeypatch):
 
     job_name = service.launch(
         task_path="application/tasks/example-survey_product-feedback",
-        persona_ids=["0001"],
+        persona_ids=["0001", "0002"],
         persona_model="anthropic/claude-haiku-4-5",
         job_name="retry-job",
     )
@@ -214,10 +219,34 @@ def test_retry_failed_reruns_only_failed_trials(tmp_path, monkeypatch):
     ok_dir = job_dir / "trial-ok"
     ok_dir.mkdir(parents=True)
     (ok_dir / "result.json").write_text("{}", encoding="utf-8")
+    (ok_dir / "config.json").write_text(
+        json.dumps(
+            {
+                "agent": {
+                    "kwargs": {
+                        "persona_path": "persona/datasets/matraix-persona-dev-sample/persona_0001.yaml"
+                    }
+                }
+            }
+        ),
+        encoding="utf-8",
+    )
     fail_dir = job_dir / "trial-fail"
     fail_dir.mkdir(parents=True)
     (fail_dir / "result.json").write_text(
         json.dumps({"exception_info": {"exception_message": "boom"}}),
+        encoding="utf-8",
+    )
+    (fail_dir / "config.json").write_text(
+        json.dumps(
+            {
+                "agent": {
+                    "kwargs": {
+                        "persona_path": "persona/datasets/matraix-persona-dev-sample/persona_0002.yaml"
+                    }
+                }
+            }
+        ),
         encoding="utf-8",
     )
     (job_dir / "result.json").write_text(
@@ -237,6 +266,10 @@ def test_retry_failed_reruns_only_failed_trials(tmp_path, monkeypatch):
     assert not (job_dir / "result.json").exists()
     # A fresh dispatch was submitted and the record is active again.
     assert len(service._executor.calls) == 2
+    _, retry_args, _ = service._executor.calls[1]
+    retry_agents = retry_args[1]["agents"]
+    assert len(retry_agents) == 1
+    assert retry_agents[0]["kwargs"]["persona_path"].endswith("persona_0002.yaml")
     assert service._launches[job_name].status == "queued"
 
     service.shutdown()
@@ -413,7 +446,7 @@ def test_launch_auto_chat_uses_local_distributed_executor(tmp_path, monkeypatch)
     env = calls[0]["env"]
     assert isinstance(env, dict)
     assert env["MATRIX_CHATBOT_TASK_PATH"] == "application/tasks/chat_recai"
-    pythonpath = env["PYTHONPATH"].split(":")
+    pythonpath = env["PYTHONPATH"].split(os.pathsep)
     assert str(repo) in pythonpath
     assert str(repo / "src") in pythonpath
     assert str(repo / "environment" / "runtime") in pythonpath

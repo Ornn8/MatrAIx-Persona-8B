@@ -17,6 +17,7 @@ from playground.openai_client import (
 )
 
 DASHSCOPE_DEFAULT_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+DEEPSEEK_DEFAULT_BASE_URL = "https://api.deepseek.com"
 
 
 def dashscope_model_id(model: str) -> str:
@@ -41,6 +42,31 @@ def dashscope_openai_client_kwargs(model: str) -> Dict[str, str]:
     ).strip()
     return {
         "model": dashscope_model_id(model),
+        "api_key": api_key,
+        "base_url": base_url,
+    }
+
+
+def deepseek_model_id(model: str) -> str:
+    """Return the bare DeepSeek model id from a provider-prefixed value."""
+    value = (model or "").strip()
+    if value.startswith("deepseek/"):
+        return value.split("/", 1)[1]
+    return value
+
+
+def deepseek_openai_client_kwargs(model: str) -> Dict[str, str]:
+    """OpenAI SDK kwargs for the official DeepSeek OpenAI-compatible API."""
+    api_key = (os.environ.get("DEEPSEEK_API_KEY") or "").strip()
+    if not api_key:
+        raise RuntimeError(
+            "DEEPSEEK_API_KEY is required for persona model {!r}".format(model)
+        )
+    base_url = (
+        os.environ.get("DEEPSEEK_API_BASE") or DEEPSEEK_DEFAULT_BASE_URL
+    ).strip()
+    return {
+        "model": deepseek_model_id(model),
         "api_key": api_key,
         "base_url": base_url,
     }
@@ -157,6 +183,14 @@ def build_json_client(model: str, *, temperature: float = 0.7) -> Any:
         return AnthropicJSONClient(value.split("/", 1)[1], temperature=temperature)
     if value.startswith("dashscope/"):
         kwargs = dashscope_openai_client_kwargs(value)
+        return OpenAIChatClient(
+            model=kwargs["model"],
+            api_key=kwargs["api_key"],
+            base_url=kwargs["base_url"],
+            temperature=temperature,
+        )
+    if value.startswith("deepseek/"):
+        kwargs = deepseek_openai_client_kwargs(value)
         return OpenAIChatClient(
             model=kwargs["model"],
             api_key=kwargs["api_key"],

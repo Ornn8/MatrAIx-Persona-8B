@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response"
+      },
+      "summaryAnalyses": [
+        {
+          "id": "vocal_full_v3.reason_by_response",
+          "targetFacetKey": "reason",
+          "groupByFacetKey": "response",
+          "groupByMode": "categorical",
+          "summaryKind": "llm_bucket_summary"
+        }
+      ],
+      "signalScans": [
+        {
+          "id": "vocal_full_v3.adoption_subscription_signal_scan",
+          "targetFacetKey": "reason",
+          "groupByFacetKey": "response",
+          "groupByMode": "categorical",
+          "judgeKind": "llm_signal_judge",
+          "prompt": "Identify only explicitly stated signals about core value, evidence and confidence trust, one-week improvement credibility, realistic free-week behavior, CNY 68 subscription intent, retention conditions, teacher conflict, and safety concerns.",
+          "rubric": "Mark a signal true only when the respondent explicitly supports it. Mixed, conditional, or uncertain sentiment is not an unconditional positive signal.",
+          "signals": [
+            {
+              "key": "evidence_confidence_increases_trust",
+              "label": "Evidence and confidence handling increase trust",
+              "valueType": "boolean"
+            },
+            {
+              "key": "complete_curriculum_adds_value",
+              "label": "Complete curriculum adds value",
+              "valueType": "boolean"
+            },
+            {
+              "key": "one_week_claim_requires_proof",
+              "label": "One-week claim requires proof",
+              "valueType": "boolean"
+            },
+            {
+              "key": "credible_full_week_trial",
+              "label": "Credible full-week trial intent",
+              "valueType": "boolean"
+            },
+            {
+              "key": "credible_cny_68_payment",
+              "label": "Credible CNY 68 payment intent",
+              "valueType": "boolean"
+            },
+            {
+              "key": "teacher_validation_or_override_needed",
+              "label": "Teacher validation or override needed",
+              "valueType": "boolean"
+            },
+            {
+              "key": "safety_stop_increases_trust",
+              "label": "Safety stop increases trust",
+              "valueType": "boolean"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

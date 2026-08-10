@@ -1,0 +1,99 @@
+persona_id: '0133'
+version: '1.0'
+source: cgss
+display_name: Min Ho
+dimensions:
+  age_bracket: 45-54
+  att_traditional_gender_roles: Skeptical
+  bfi2_facet_depression: Low
+  bfi2_facet_trust: High
+  big5_depression: Low
+  big5_trust: High
+  cog_abstraction: Concrete
+  cog_detail_orientation: Low
+  cog_directness: Direct
+  cog_emoji_use: Never
+  cog_emotional_expressiveness: Low
+  cog_formality: Neutral
+  cog_humor: Serious
+  cog_optimism: Moderate
+  cog_politeness: Polite
+  cog_precision_of_language: Precise
+  cog_reading_vs_watching: Prefers reading
+  cog_skepticism: Moderate
+  cog_use_of_jargon: Avoids jargon
+  cog_verbosity: Terse
+  demo_employment_status: Full-time
+  demo_ethnicity_broad: East Asian
+  demo_housing_status: Renting
+  demo_marital_status: Married
+  demo_religion_affiliation: None
+  domain_characteristics: Practitioner
+  dominant_trait: Balanced
+  gender_identity: Woman
+  health_assistive_tech: None
+  health_contrast_need: No
+  health_energy_level: Very high
+  health_general_health: Fair
+  health_mental_health: Stable
+  health_mobility: Full
+  health_pain_level: None
+  health_text_size_need: No
+  highest_education: Secondary
+  lang_mandarin: Native
+  life_stage: Mid-life
+  lifex_adversity_level: Minor setbacks
+  lifex_career_path_shape: Linear climb
+  lifex_cultural_exposure: Monocultural
+  lifex_education_journey: Traditional track
+  lifex_entrepreneurship_history: Never considered
+  lifex_faith_journey: Lifelong faith
+  lifex_financial_trajectory: Stable
+  lifex_formative_decade: 1980s
+  lifex_geographic_mobility: Never left hometown
+  lifex_health_journey: No major events
+  lifex_hometown_tie: Still there
+  lifex_immigration_generation: Native multi-generational
+  lifex_languages_lifetime: One
+  lifex_military_history: Never served
+  lifex_public_recognition: Private life
+  lifex_relationship_history: Married once
+  lifex_service_history: None
+  lstyle_exercise_freq: Rarely
+  lstyle_music_listening: Daily
+  lstyle_news_freq: Constant
+  lstyle_payment_pref: Mobile wallet
+  lstyle_podcast_listening: Rarely
+  lstyle_reading_freq: Rarely
+  media_diet: Social-media-heavy
+  primary_language: Mandarin
+  region: East Asia
+  religiosity: Secular
+  seniority: Mid
+  socioeconomic_band: Lower-middle
+  tech_savviness: Digital native
+  topic_religion: Indifferent
+  topic_social_media: Interested
+  topic_spirituality: Interested
+  topic_technology: Interested
+  trait_adaptability: Moderate
+  trait_ambition: Moderate
+  trait_curiosity: Moderate
+  trait_discipline: Strong
+  trait_hope_optimism: Moderate
+  trait_leadership: Slight
+  trait_love_of_learning: Moderate
+  trait_loyalty: Strong
+  trait_open_mindedness: Moderate
+  trait_perseverance: Strong
+  trait_resilience: Strong
+  trait_self_regulation: Strong
+  trait_spirituality: Absent
+  trait_zest: Moderate
+  trust_level: Trusting
+  val_health: Moderate
+  val_spirituality_faith: Minor
+  years_experience: 20+
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
+  origin_persona_id: cgss2017-5393

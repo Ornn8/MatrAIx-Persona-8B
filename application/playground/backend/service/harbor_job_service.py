@@ -493,7 +493,11 @@ class HarborJobService:
     command_runner: Callable[..., int] = _run_subprocess
     harbor_command: tuple[str, ...] = field(default_factory=lambda: tuple(_default_harbor_command()))
     remote_runner_client: Any | None = None
-    _executor: ThreadPoolExecutor = field(default_factory=lambda: ThreadPoolExecutor(max_workers=2))
+    _executor: ThreadPoolExecutor = field(
+        default_factory=lambda: ThreadPoolExecutor(
+            max_workers=max(1, int(os.environ.get("MATRIX_HARBOR_JOB_WORKERS", "2")))
+        )
+    )
     _launches: dict[str, HarborLaunchRecord] = field(default_factory=dict)
     _reporting_jobs: set[str] = field(default_factory=set)
     _guard: threading.Lock = field(default_factory=threading.Lock)
@@ -1291,7 +1295,12 @@ class HarborJobService:
     ) -> dict[str, str]:
         env = {} if for_remote else dict(os.environ)
         existing = env.get("PYTHONPATH", "")
-        path_entries = [entry for entry in existing.split(":") if entry]
+        # Local workers inherit the host separator (``;`` on Windows, ``:``
+        # on POSIX). Remote Harbor workers run in Linux containers, so their
+        # payload must always use ``:`` even when Playground is hosted on
+        # Windows.
+        path_separator = ":" if for_remote else os.pathsep
+        path_entries = [entry for entry in existing.split(path_separator) if entry]
         required_paths = [
             str(self.repo_root),
             str(self.repo_root / "src"),
@@ -1311,7 +1320,7 @@ class HarborJobService:
         for path in reversed(required_paths):
             if path not in path_entries:
                 path_entries.insert(0, path)
-        env["PYTHONPATH"] = ":".join(path_entries)
+        env["PYTHONPATH"] = path_separator.join(path_entries)
         if survey_task_path:
             env["MATRIX_SURVEY_TASK_PATH"] = survey_task_path
         if trial_profile == "user_sim_chat":
@@ -1891,6 +1900,38 @@ class HarborJobService:
                 "Cannot retry: generated config is unavailable for {}".format(job_name)
             )
 
+        retry_job_config: dict[str, Any] | None = None
+        if meta.get("useLocalDistributed"):
+            failed_persona_paths: set[str] = set()
+            for trial_dir in failed_dirs:
+                trial_config = self._read_json(trial_dir / "config.json")
+                agent_config = trial_config.get("agent") if isinstance(trial_config, dict) else None
+                kwargs = agent_config.get("kwargs") if isinstance(agent_config, dict) else None
+                persona_path = kwargs.get("persona_path") if isinstance(kwargs, dict) else None
+                if isinstance(persona_path, str) and persona_path.strip():
+                    failed_persona_paths.add(persona_path.strip().replace("\\", "/"))
+
+            original_job_config = meta.get("jobConfig") or {}
+            original_agents = original_job_config.get("agents") or []
+            retry_agents = []
+            for agent in original_agents:
+                kwargs = agent.get("kwargs") if isinstance(agent, dict) else None
+                persona_path = kwargs.get("persona_path") if isinstance(kwargs, dict) else None
+                normalized = (
+                    persona_path.strip().replace("\\", "/")
+                    if isinstance(persona_path, str)
+                    else ""
+                )
+                if normalized in failed_persona_paths:
+                    retry_agents.append(agent)
+
+            if not failed_persona_paths or len(retry_agents) != len(failed_persona_paths):
+                raise ValueError(
+                    "Cannot retry only failed local trials: persona metadata is incomplete"
+                )
+            retry_job_config = dict(original_job_config)
+            retry_job_config["agents"] = retry_agents
+
         for trial_dir in failed_dirs:
             shutil.rmtree(trial_dir, ignore_errors=True)
         # Reset job-level completion + reporting so status and reporting recompute.
@@ -1913,7 +1954,7 @@ class HarborJobService:
             self._executor.submit(
                 self._run_local_distributed,
                 job_name,
-                meta.get("jobConfig") or {},
+                retry_job_config or {},
                 meta.get("surveyTaskPath"),
                 meta.get("chatTaskPath"),
                 meta.get("chatDomain"),

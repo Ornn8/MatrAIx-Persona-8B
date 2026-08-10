@@ -1,0 +1,105 @@
+persona_id: '0108'
+version: '1.0'
+source: cgss
+display_name: Yuki Sato
+dimensions:
+  age_bracket: 45-54
+  att_government_regulation: Neutral
+  att_traditional_gender_roles: Skeptical
+  bfi2_domain_negative_emotionality: Low
+  bfi2_facet_depression: Low
+  bfi2_facet_trust: Low
+  big5_depression: Low
+  big5_trust: Low
+  cog_abstraction: Concrete
+  cog_ambiguity_tolerance: Low
+  cog_assertiveness: Moderate
+  cog_big_picture_vs_detail: Big-picture
+  cog_confidence_calibration: Cautious
+  cog_conflict_approach: Avoidant
+  cog_curiosity: Low
+  cog_decision_speed: Balanced
+  cog_detail_orientation: Low
+  cog_directness: Direct
+  cog_emoji_use: Never
+  cog_emotional_expressiveness: Low
+  cog_empathy_expression: Low
+  cog_formality: Neutral
+  cog_humor: Serious
+  cog_multitasking: Prefers single-task
+  cog_numeracy_comfort: Low
+  cog_open_mindedness: Low
+  cog_optimism: Low
+  cog_politeness: Polite
+  cog_precision_of_language: Average
+  cog_question_asking: Rarely asks
+  cog_reading_vs_watching: Prefers video
+  cog_risk_framing: Threat-focused
+  cog_skepticism: High
+  cog_storytelling: Low
+  cog_use_of_jargon: Avoids jargon
+  cog_verbosity: Terse
+  cog_visual_vs_verbal: Visual
+  demo_children_count: Adult children
+  demo_ethnicity_broad: East Asian
+  demo_marital_status: Married
+  demo_parental_status: Parent of adults
+  demo_religion_affiliation: None
+  dominant_trait: Balanced
+  gender_identity: Woman
+  health_caregiver_status: Child caregiver
+  health_energy_level: Moderate
+  health_general_health: Poor
+  health_mental_health: Stable
+  highest_education: Primary
+  ind_telecommunications: None
+  lang_mandarin: Native
+  life_stage: Mid-life
+  lifex_adversity_level: Significant struggles
+  lifex_career_path_shape: Just starting
+  lifex_cultural_exposure: Monocultural
+  lifex_education_journey: Dropped out
+  lifex_faith_journey: Lifelong faith
+  lifex_formative_decade: 1990s
+  lifex_geographic_mobility: Never left hometown
+  lifex_health_journey: Manages chronic condition
+  lifex_hometown_tie: Still there
+  lifex_immigration_generation: Native multi-generational
+  lifex_languages_lifetime: One
+  lifex_loss_experience: Multiple bereavements
+  lifex_military_history: Never served
+  lifex_parenting_journey: Grown children
+  lifex_public_recognition: Private life
+  lifex_relationship_history: Married once
+  lifex_service_history: None
+  lstyle_cooking_freq: Daily
+  lstyle_exercise_freq: Never
+  lstyle_household_size: 2 people
+  lstyle_music_listening: Rarely
+  lstyle_news_freq: Avoids news
+  lstyle_podcast_listening: Never
+  lstyle_reading_freq: Never
+  major_life_events: None notable
+  media_diet: Video-first
+  multilingualism: Monolingual
+  primary_language: Mandarin
+  region: East Asia
+  religiosity: Secular
+  socioeconomic_band: Middle
+  tech_savviness: Avoidant
+  topic_cooking: Interested
+  topic_parenting: Interested
+  topic_religion: Interested
+  topic_social_media: Indifferent
+  topic_spirituality: Indifferent
+  topic_technology: Indifferent
+  topic_tv_series: Interested
+  trait_hope_optimism: Strong
+  trait_spirituality: Slight
+  trust_level: Skeptical
+  val_family: Important
+  val_health: Important
+  val_spirituality_faith: Moderate
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
+  origin_persona_id: cgss2017-3782

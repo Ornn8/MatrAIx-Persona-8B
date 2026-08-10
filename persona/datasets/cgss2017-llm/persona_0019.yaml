@@ -1,0 +1,123 @@
+persona_id: '0019'
+version: '1.0'
+source: cgss
+display_name: Yuki Sato
+dimensions:
+  accessibility_needs: None
+  age_bracket: 35-44
+  att_traditional_gender_roles: Opposed
+  bfi2_domain_negative_emotionality: Low
+  bfi2_facet_anxiety: Low
+  bfi2_facet_depression: Low
+  bfi2_facet_trust: High
+  big5_anxiety: Low
+  big5_depression: Low
+  big5_trust: High
+  cog_abstraction: Concrete
+  cog_ambiguity_tolerance: Moderate
+  cog_assertiveness: Moderate
+  cog_attention_span: Average
+  cog_big_picture_vs_detail: Both
+  cog_confidence_calibration: Well-calibrated
+  cog_conflict_approach: Collaborative
+  cog_curiosity: Moderate
+  cog_decision_speed: Balanced
+  cog_detail_orientation: Moderate
+  cog_directness: Direct
+  cog_emoji_use: Rare
+  cog_emotional_expressiveness: Low
+  cog_empathy_expression: Moderate
+  cog_feedback_receptiveness: Moderate
+  cog_formality: Neutral
+  cog_humor: Serious
+  cog_learning_pace: Average
+  cog_multitasking: Some
+  cog_numeracy_comfort: Moderate
+  cog_open_mindedness: Moderate
+  cog_optimism: High
+  cog_patience: Moderate
+  cog_perfectionism: Moderate
+  cog_politeness: Polite
+  cog_precision_of_language: Precise
+  cog_procrastination: Low
+  cog_question_asking: Sometimes
+  cog_reading_vs_watching: Prefers video
+  cog_risk_framing: Balanced
+  cog_skepticism: Moderate
+  cog_storytelling: Low
+  cog_use_of_jargon: Light
+  cog_verbosity: Balanced
+  cog_visual_vs_verbal: Visual
+  company_size: Public sector
+  demo_employment_status: Full-time
+  demo_ethnicity_broad: East Asian
+  demo_housing_status: Own outright
+  demo_marital_status: Married
+  demo_religion_affiliation: None
+  domain_characteristics: Practitioner
+  dominant_trait: Balanced
+  gender_identity: Woman
+  health_energy_level: Very high
+  health_general_health: Good
+  health_mental_health: Stable
+  health_mobility: Full
+  highest_education: Bachelor's
+  ind_telecommunications: None
+  lang_mandarin: Native
+  life_stage: Mid-life
+  lifex_adversity_level: Minor setbacks
+  lifex_career_path_shape: Linear climb
+  lifex_cultural_exposure: Monocultural
+  lifex_education_journey: Traditional track
+  lifex_entrepreneurship_history: Never considered
+  lifex_faith_journey: Always secular
+  lifex_financial_trajectory: Steady upward
+  lifex_formative_decade: 1990s
+  lifex_geographic_mobility: Moved within region
+  lifex_health_journey: No major events
+  lifex_hometown_tie: Still there
+  lifex_immigration_generation: Native multi-generational
+  lifex_languages_lifetime: One
+  lifex_military_history: Never served
+  lifex_public_recognition: Private life
+  lifex_relationship_history: Married once
+  lstyle_exercise_freq: Weekly
+  lstyle_music_listening: Sometimes
+  lstyle_news_freq: Daily
+  lstyle_payment_pref: Mobile wallet
+  lstyle_podcast_listening: Rarely
+  lstyle_reading_freq: Monthly
+  media_diet: Video-first
+  primary_language: Mandarin
+  region: East Asia
+  religiosity: Secular
+  seniority: Manager
+  socioeconomic_band: Middle
+  tech_savviness: Digital native
+  topic_religion: Indifferent
+  topic_social_media: Interested
+  topic_spirituality: Indifferent
+  topic_technology: Interested
+  trait_adaptability: Moderate
+  trait_ambition: Moderate
+  trait_curiosity: Moderate
+  trait_discipline: Strong
+  trait_hope_optimism: Moderate
+  trait_leadership: Strong
+  trait_love_of_learning: Moderate
+  trait_open_mindedness: Moderate
+  trait_perseverance: Strong
+  trait_prudence: Moderate
+  trait_resilience: Strong
+  trait_self_regulation: Strong
+  trait_social_intelligence: Moderate
+  trait_spirituality: Slight
+  trait_zest: Moderate
+  trust_level: Trusting
+  val_career_success: Important
+  val_health: Important
+  val_spirituality_faith: Minor
+  years_experience: 11-20
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
+  origin_persona_id: cgss2017-11316

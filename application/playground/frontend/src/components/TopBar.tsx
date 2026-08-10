@@ -8,6 +8,7 @@ import { PreflightChip } from "./PreflightChip";
 import { FOCUS_RING, Sym } from "./cockpit/cockpitShared";
 import { MatrAIxLogo } from "./studio/MatrAIxLogo";
 import { useTheme } from "@/hooks/useTheme";
+import { useI18n } from "@/i18n/I18nProvider";
 
 export type StudioMode = "home" | "playground";
 
@@ -38,23 +39,45 @@ export function TopBar({
   variant = "solid",
 }: TopBarProps) {
   const { theme, toggle } = useTheme();
+  const { locale, t, toggleLocale } = useI18n();
   const nextIsLight = theme === "dark";
   const overlayActive = runsActive || galleryActive || storeActive;
 
   const nav: Array<{ key: string; label: string; active: boolean; onClick: () => void }> = [
-    { key: "store", label: "Persona World", active: storeActive, onClick: onOpenPersonaStore },
-    { key: "gallery", label: "Task Gallery", active: galleryActive, onClick: onOpenTaskGallery },
-    { key: "home", label: "Home", active: mode === "home" && !overlayActive, onClick: onOpenHome },
+    {
+      key: "store",
+      label: t("shell.nav.personaWorld", "Persona World"),
+      active: storeActive,
+      onClick: onOpenPersonaStore,
+    },
+    {
+      key: "gallery",
+      label: t("shell.nav.taskGallery", "Task Gallery"),
+      active: galleryActive,
+      onClick: onOpenTaskGallery,
+    },
+    {
+      key: "home",
+      label: t("shell.nav.home", "Home"),
+      active: mode === "home" && !overlayActive,
+      onClick: onOpenHome,
+    },
     {
       key: "playground",
-      label: "Playground",
+      label: t("shell.nav.playground", "Playground"),
       active: mode === "playground" && !overlayActive,
       onClick: () => onModeChange("playground"),
     },
-    { key: "runs", label: "Runs", active: runsActive, onClick: onOpenRuns },
+    {
+      key: "runs",
+      label: t("shell.nav.runs", "Runs"),
+      active: runsActive,
+      onClick: onOpenRuns,
+    },
   ];
 
   const glass = variant === "glass";
+  const switchToEnglish = locale === "zh-CN";
 
   return (
     <header
@@ -69,7 +92,7 @@ export function TopBar({
 
         <nav
           className="nasa-glass-pill hidden items-center rounded-full p-1 backdrop-blur md:flex"
-          aria-label="Application"
+          aria-label={t("shell.nav.application", "Application")}
         >
           <div className="grid grid-cols-5 items-center">
             {nav.map(({ key, label, active, onClick }) => (
@@ -96,9 +119,33 @@ export function TopBar({
 
           <button
             type="button"
+            onClick={toggleLocale}
+            aria-label={
+              switchToEnglish
+                ? t("shell.locale.switchToEnglish", "Switch to English")
+                : t("shell.locale.switchToChinese", "Switch to Chinese")
+            }
+            title={
+              switchToEnglish
+                ? t("shell.locale.switchToEnglish", "Switch to English")
+                : t("shell.locale.switchToChinese", "Switch to Chinese")
+            }
+            className={`nasa-glass-pill flex h-9 min-w-9 flex-none items-center justify-center rounded-full px-2 text-[11px] font-semibold text-text-variant transition hover:bg-surface-high/40 hover:text-text-main active:scale-95 ${FOCUS_RING}`}
+          >
+            {switchToEnglish
+              ? t("shell.locale.english", "English")
+              : t("shell.locale.chinese", "Chinese")}
+          </button>
+
+          <button
+            type="button"
             onClick={toggle}
-            aria-label={nextIsLight ? "Switch to light theme" : "Switch to dark theme"}
-            title="Toggle light / dark"
+            aria-label={
+              nextIsLight
+                ? t("shell.theme.switchToLight", "Switch to light theme")
+                : t("shell.theme.switchToDark", "Switch to dark theme")
+            }
+            title={t("shell.theme.toggle", "Toggle light / dark")}
             className={`nasa-glass-pill grid h-9 w-9 flex-none place-items-center rounded-full text-text-variant transition hover:bg-surface-high/40 hover:text-text-main active:scale-95 ${FOCUS_RING}`}
           >
             <Sym name={nextIsLight ? "light_mode" : "dark_mode"} size={18} />

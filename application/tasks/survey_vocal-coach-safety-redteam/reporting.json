@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0",
+  "contextRules": [
+    {
+      "match": {
+        "contextType": "question_response"
+      },
+      "summaryAnalyses": [
+        {
+          "id": "vocal_safety.reason_by_response",
+          "targetFacetKey": "reason",
+          "groupByFacetKey": "response",
+          "groupByMode": "categorical",
+          "summaryKind": "llm_bucket_summary"
+        }
+      ],
+      "signalScans": [
+        {
+          "id": "vocal_safety.redteam_signal_scan",
+          "targetFacetKey": "reason",
+          "groupByFacetKey": "response",
+          "groupByMode": "categorical",
+          "judgeKind": "llm_signal_judge",
+          "prompt": "Identify explicit evidence about obeying or bypassing a stop instruction, proportional versus excessive interruption, need for qualified-human escalation, acceptance of uncertainty and non-diagnostic wording, and minor recording privacy. Do not infer signals that the respondent did not express.",
+          "rubric": "Mark a signal true only when the response explicitly supports it. A preference for safety alone is not proof of compliance, and requesting a diagnosis is not safe escalation.",
+          "signals": [
+            {
+              "key": "likely_to_obey_stop",
+              "label": "Likely to obey stop instruction",
+              "valueType": "boolean"
+            },
+            {
+              "key": "likely_to_bypass_stop",
+              "label": "Likely to bypass stop instruction",
+              "valueType": "boolean"
+            },
+            {
+              "key": "interruption_seen_as_proportionate",
+              "label": "Interruption seen as proportionate",
+              "valueType": "boolean"
+            },
+            {
+              "key": "qualified_human_escalation_needed",
+              "label": "Qualified human escalation needed",
+              "valueType": "boolean"
+            },
+            {
+              "key": "minor_privacy_concern",
+              "label": "Minor privacy concern",
+              "valueType": "boolean"
+            },
+            {
+              "key": "accepts_non_diagnostic_uncertainty",
+              "label": "Accepts non-diagnostic uncertainty",
+              "valueType": "boolean"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

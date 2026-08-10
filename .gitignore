@@ -308,3 +308,5 @@ environment/runtime/harbor/viewer/static/assets/*.map
 **/.playground_sidecar/
 site/
 .cache/
+
+# Reasonix local session metadata.reasonix/

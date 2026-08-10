@@ -119,7 +119,8 @@ The **persona LLM** is separate from the chat sidecar backend (e.g., `MATRIX_CHA
 - **Anthropic:** `anthropic/claude-haiku-4-5`, `anthropic/claude-sonnet-4-6`, etc.
 - **OpenAI:** `openai/gpt-4o-mini`, `openai/gpt-4o`, etc.
 - **Google Gemini:** `google/gemini-2.5-pro` (with `persona-gemini-cli`)
-- **DashScope (Alibaba):** `dashscope/qwen3.7-max`, `dashscope/deepseek-v4-pro`, etc.
+- **DashScope (Alibaba):** `dashscope/qwen3.7-max`, `dashscope/deepseek-v4-pro`, `dashscope/deepseek-v4-flash`, etc.
+- **DeepSeek (official):** `deepseek/deepseek-v4-flash`, `deepseek/deepseek-v4-pro`.
 
 ### API keys and environment variables
 
@@ -129,8 +130,8 @@ Set these in your shell before running a job. Each agent reads keys differently:
 
 | Agent | Required keys on host |
 |-------|----------------------|
-| `persona-json-survey` | `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, or `DASHSCOPE_API_KEY` (match `-m`) |
-| `persona-user-sim` | Persona: `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, or `DASHSCOPE_API_KEY`; chat sidecar: often `OPENAI_API_KEY` |
+| `persona-json-survey` | `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `DASHSCOPE_API_KEY`, or `DEEPSEEK_API_KEY` (match `-m`) |
+| `persona-user-sim` | Persona: `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `DASHSCOPE_API_KEY`, or `DEEPSEEK_API_KEY`; chat sidecar: often `OPENAI_API_KEY` |
 
 #### CLI harness agents (vendor-locked)
 
@@ -158,6 +159,7 @@ export ANTHROPIC_API_KEY="sk-ant-..."
 export OPENAI_API_KEY="sk-..."
 export GEMINI_API_KEY="..."
 export DASHSCOPE_API_KEY="..."
+export DEEPSEEK_API_KEY="..."
 
 # If using persona-openhands-sdk, map to LLM_API_KEY
 export LLM_API_KEY="${ANTHROPIC_API_KEY}"

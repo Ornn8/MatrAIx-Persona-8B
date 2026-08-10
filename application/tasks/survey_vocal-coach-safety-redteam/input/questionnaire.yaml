@@ -1,0 +1,233 @@
+schemaVersion: "1.0"
+id: vocal_coach_safety_redteam_v1
+title: AI Vocal Coach Safety Red Team
+description: A 15-question scenario study of stop rules, compliance, interruption burden, safety copy, human escalation, and minors' privacy.
+questions:
+  - id: q0_research_role
+    prompt: Which role should guide your answers to these vocal-safety scenarios?
+    type: single_choice
+    construct: research_role
+    required: true
+    options:
+      - id: beginner
+        label: Beginner with little or no structured vocal training
+      - id: casual_hobbyist
+        label: KTV, social, casual, or self-taught hobby singer
+      - id: advanced_student_performer
+        label: Advanced student, music major, creator, or performer
+      - id: teacher_coach
+        label: Vocal teacher, coach, or voice professional
+      - id: institution_guardian
+        label: School, studio, choir, or guardian decision-maker
+
+  - id: q1_pain_scenario
+    prompt: During a high-note exercise, the user reports sharp throat pain but wants to finish for a streak. The product stops the session, says not to push through pain, offers no diagnosis, and recommends an appropriate qualified human before resuming. What would you most likely do?
+    type: single_choice
+    construct: pain_stop_compliance
+    required: true
+    askRationale: true
+    options:
+      - id: stop_and_seek_help
+        label: Stop and arrange qualified human assessment
+      - id: stop_and_monitor
+        label: Stop now and monitor; seek help if it does not resolve
+      - id: switch_to_easier_practice
+        label: Ignore the lock and switch to an easier vocal exercise
+      - id: bypass_and_continue
+        label: Bypass the warning and continue the high-note exercise
+      - id: leave_product
+        label: Stop using the product because the interruption feels excessive
+
+  - id: q2_persistent_hoarseness_scenario
+    prompt: A user reports hoarseness that has persisted for days. The product stops voice training, says it cannot determine the cause, avoids naming a disease, and recommends qualified human assessment. How appropriate is this response?
+    type: likert
+    construct: persistent_hoarseness_response_appropriateness
+    required: true
+    askRationale: true
+    minValue: 1
+    maxValue: 5
+
+  - id: q3_fatigue_scenario
+    prompt: After a long KTV night, the voice sounds tired but there is no pain and no persistent hoarseness. Which product response is the best balance of safety and avoiding unnecessary disruption?
+    type: single_choice
+    construct: fatigue_interruption_threshold
+    required: true
+    askRationale: true
+    options:
+      - id: hard_stop_human
+        label: Hard-stop all training and require human clearance
+      - id: stop_today_recovery
+        label: Stop demanding exercises for today, give recovery guidance, and escalate if symptoms persist or worsen
+      - id: low_load_only
+        label: Allow only low-load exercises with repeated monitoring
+      - id: warning_continue
+        label: Warn once but allow the planned session to continue
+      - id: no_interruption
+        label: Do not interrupt because fatigue is expected after singing
+
+  - id: q4_extreme_high_note_scenario
+    prompt: The user repeatedly attempts an extreme high note; the evidence clip shows increasing strain, but the finding is only medium confidence. The product labels it "possible risk," stops the drill, admits uncertainty, and offers a safer range exercise. What would you most likely do?
+    type: single_choice
+    construct: extreme_note_uncertain_stop_compliance
+    required: true
+    askRationale: true
+    options:
+      - id: accept_safer_alternative
+        label: Accept the stop and use the safer alternative
+      - id: review_evidence_then_decide
+        label: Review the evidence clip, then decide whether to stop
+      - id: ask_teacher_before_resume
+        label: Stop and ask a teacher or coach before resuming
+      - id: retry_to_disprove
+        label: Retry the note to see whether the warning was wrong
+      - id: bypass_warning
+        label: Disable or bypass the warning and continue
+
+  - id: q5_harmful_imitation_scenario
+    prompt: A beginner imitates a celebrity's rasp or scream from a short clip. The product cannot verify the technique, detects possible strain, stops the imitation, and recommends supervised instruction rather than guessing. How would this affect your trust?
+    type: single_choice
+    construct: harmful_imitation_trust
+    required: true
+    askRationale: true
+    options:
+      - id: trust_increases
+        label: Trust increases because the product respects its limits
+      - id: trust_unchanged
+        label: Trust is unchanged; this is expected safety behavior
+      - id: trust_mixed
+        label: Mixed; safe, but not useful enough without an alternative
+      - id: trust_decreases
+        label: Trust decreases because the product should teach the sound
+      - id: likely_bypass
+        label: I would likely seek instructions elsewhere and bypass the restriction
+
+  - id: q6_minor_privacy_scenario
+    prompt: A 15-year-old uploads a singing sample from a shared school device and tries to make the report public. Guardian or institutional consent is unclear. What must the product do first?
+    type: single_choice
+    construct: minor_privacy_first_action
+    required: true
+    askRationale: true
+    options:
+      - id: block_share_verify_consent
+        label: Block public sharing, protect the recording, and verify required consent and account authority
+      - id: allow_private_report
+        label: Allow a private report immediately but delay public sharing
+      - id: ask_minor_consent
+        label: Ask only the minor for consent and continue
+      - id: anonymize_and_continue
+        label: Remove the name and continue processing and model improvement
+      - id: allow_with_warning
+        label: Allow sharing after a plain-language warning
+
+  - id: q7_stop_rule_risk_reduction
+    prompt: Across the pain, persistent-hoarseness, fatigue, extreme-note, and imitation cases, how much would the stated stop-and-escalate rules reduce the chance that you or your students push through a meaningful warning sign?
+    type: likert
+    construct: perceived_risk_reduction
+    required: true
+    askRationale: true
+    minValue: 1
+    maxValue: 5
+
+  - id: q8_likely_compliance
+    prompt: In real practice, how likely are you to obey a product stop instruction when it conflicts with a goal, streak, audition deadline, or desired high note?
+    type: likert
+    construct: realistic_stop_compliance
+    required: true
+    askRationale: true
+    minValue: 1
+    maxValue: 5
+
+  - id: q9_over_interruption
+    prompt: In which situation would a hard stop be most likely to feel unnecessarily disruptive?
+    type: single_choice
+    construct: over_interruption_risk
+    required: true
+    askRationale: true
+    options:
+      - id: sharp_pain
+        label: Sharp pain during a demanding exercise
+      - id: persistent_hoarseness
+        label: Hoarseness persisting for days
+      - id: ordinary_post_session_fatigue
+        label: Mild, ordinary fatigue after a long session with no pain
+      - id: repeated_uncertain_high_note
+        label: Repeated extreme high-note attempts with a medium-confidence strain signal
+      - id: unverified_rasp_scream
+        label: Unsupervised rasp or scream imitation that the product cannot verify
+      - id: none
+        label: A hard stop is proportionate in all five situations
+
+  - id: q10_effective_message
+    prompt: Which stop message would be most likely to make you comply without making you feel diagnosed or frightened?
+    type: single_choice
+    construct: effective_safety_copy
+    required: true
+    askRationale: true
+    options:
+      - id: direct_boundary
+        label: "Stop this exercise now. Do not push through pain or persistent voice change. We cannot determine the cause; seek a qualified human before resuming."
+      - id: evidence_uncertainty
+        label: "We found a possible risk in this exact clip. Confidence is limited, so the safer choice is to stop and get qualified human guidance."
+      - id: supportive_goal
+        label: "Protecting your voice matters more than today's streak. Pause now; a qualified human can help you decide when and how to resume."
+      - id: minimal_warning
+        label: "Possible vocal risk detected. Training paused."
+      - id: strong_alarm
+        label: "Danger: continuing may permanently damage your voice. Seek immediate medical treatment."
+
+  - id: q11_mandatory_human_escalation
+    prompt: Which situations must trigger human escalation rather than automated exercises alone? Select all that apply.
+    type: multi_choice
+    construct: mandatory_human_escalation
+    required: true
+    askRationale: true
+    options:
+      - id: severe_or_sudden_pain
+        label: Severe or sudden pain during or after singing
+      - id: persistent_or_worsening_hoarseness
+        label: Hoarseness or voice change that persists or worsens
+      - id: breathing_swallowing_emergency_signs
+        label: Breathing, swallowing, bleeding, or other urgent warning signs
+      - id: repeated_fatigue_not_recovering
+        label: Repeated unusual fatigue that does not recover normally
+      - id: unresolved_teacher_conflict
+        label: Safety advice conflicts materially with a qualified teacher's observation
+      - id: minor_consent_or_access_unclear
+        label: A minor's consent, guardian authority, school access, or sharing status is unclear
+      - id: low_confidence_technical_issue
+        label: A low-confidence technical issue with no symptom or safety warning
+      - id: ordinary_mild_fatigue
+        label: Mild expected fatigue that resolves with normal rest
+
+  - id: q12_false_positive_tradeoff
+    prompt: Which operating rule best balances missed risk against excessive false alarms?
+    type: single_choice
+    construct: conservative_threshold_preference
+    required: true
+    askRationale: true
+    options:
+      - id: conservative_tiered
+        label: "Conservative tiered response: hard stop for symptoms or strong risk, temporary pause and recheck for weaker signals"
+      - id: hard_stop_any_signal
+        label: Hard-stop training for any possible risk, even at low confidence
+      - id: user_override_default
+        label: Warn, but let the user override every stop by default
+      - id: high_confidence_only
+        label: Intervene only when the model is highly confident
+      - id: human_review_every_alert
+        label: Require human review for every alert before the product responds
+
+  - id: q13_policy_acceptance
+    prompt: Overall, how acceptable is this safety policy for a CNY 68/month AI vocal-training product with a free first week?
+    type: likert
+    construct: overall_safety_policy_acceptance
+    required: true
+    askRationale: true
+    minValue: 1
+    maxValue: 5
+
+  - id: q14_redteam_reaction
+    prompt: In two or three sentences, identify the easiest way a user might ignore or work around these safeguards, the single most important wording improvement, and one case that must always reach a qualified human.
+    type: free_text
+    construct: bypass_copy_and_escalation_redteam
+    required: true

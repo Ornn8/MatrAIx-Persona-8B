@@ -1,0 +1,116 @@
+persona_id: '0067'
+version: '1.0'
+source: cgss
+display_name: Aiko Nakamura
+dimensions:
+  accessibility_needs: Cognitive / neurodivergent
+  age_bracket: 75-84
+  att_remote_work: Enthusiast
+  att_traditional_gender_roles: Neutral
+  bfi2_domain_negative_emotionality: Average
+  bfi2_facet_depression: Average
+  bfi2_facet_trust: Low
+  big5_depression: Average
+  big5_self_efficacy: High
+  big5_trust: Low
+  cog_abstraction: Concrete
+  cog_ambiguity_tolerance: Low
+  cog_assertiveness: Moderate
+  cog_big_picture_vs_detail: Big-picture
+  cog_confidence_calibration: Cautious
+  cog_conflict_approach: Avoidant
+  cog_curiosity: Low
+  cog_decision_speed: Deliberate
+  cog_detail_orientation: Low
+  cog_directness: Direct
+  cog_emoji_use: Never
+  cog_emotional_expressiveness: Low
+  cog_empathy_expression: Low
+  cog_formality: Neutral
+  cog_humor: Serious
+  cog_multitasking: Prefers single-task
+  cog_numeracy_comfort: Low
+  cog_open_mindedness: Low
+  cog_optimism: Low
+  cog_politeness: Polite
+  cog_precision_of_language: Precise
+  cog_question_asking: Rarely asks
+  cog_reading_vs_watching: Prefers video
+  cog_risk_framing: Threat-focused
+  cog_skepticism: High
+  cog_storytelling: Low
+  cog_use_of_jargon: Avoids jargon
+  cog_verbosity: Terse
+  cog_visual_vs_verbal: Visual
+  demo_employment_status: Unemployed
+  demo_ethnicity_broad: East Asian
+  demo_marital_status: Married
+  demo_religion_affiliation: None
+  dominant_trait: Balanced
+  economic_motivation: Value-driven
+  gender_identity: Man
+  health_assistive_tech: None
+  health_caregiver_status: Not a caregiver
+  health_chronic_condition: Undiagnosed concerns
+  health_cognitive_load_capacity: Low
+  health_energy_level: Low
+  health_fitness_level: Sedentary
+  health_general_health: Fair
+  health_health_literacy: Low
+  health_mental_health: Stable
+  health_mobility: Mild limitation
+  health_neurodivergence: Neurotypical
+  health_pain_level: Mild
+  health_stress_level: Moderate
+  highest_education: Primary
+  ind_telecommunications: None
+  lang_mandarin: Native
+  life_stage: Retirement
+  lifex_adversity_level: Significant struggles
+  lifex_cultural_exposure: Monocultural
+  lifex_education_journey: Dropped out
+  lifex_faith_journey: Lifelong faith
+  lifex_formative_decade: 1960s-70s
+  lifex_geographic_mobility: Never left hometown
+  lifex_health_journey: Major surgery / injury
+  lifex_hometown_tie: Still there
+  lifex_immigration_generation: Native multi-generational
+  lifex_languages_lifetime: One
+  lifex_military_history: Never served
+  lifex_public_recognition: Private life
+  lifex_relationship_history: Married once
+  lstyle_exercise_freq: Weekly
+  lstyle_music_listening: Daily
+  lstyle_news_freq: Avoids news
+  lstyle_podcast_listening: Never
+  lstyle_reading_freq: Weekly
+  media_diet: Video-first
+  multilingualism: Monolingual
+  pref_early_vs_late: Laggard
+  primary_language: Mandarin
+  region: East Asia
+  religiosity: Secular
+  socioeconomic_band: Lower-middle
+  tech_savviness: Avoidant
+  topic_religion: Indifferent
+  topic_social_media: Indifferent
+  topic_spirituality: Indifferent
+  trait_adaptability: Moderate
+  trait_curiosity: Slight
+  trait_discipline: Moderate
+  trait_hope_optimism: Moderate
+  trait_love_of_learning: Slight
+  trait_open_mindedness: Slight
+  trait_perseverance: Moderate
+  trait_playfulness: Moderate
+  trait_prudence: Moderate
+  trait_resilience: Moderate
+  trait_self_regulation: Moderate
+  trait_spirituality: Absent
+  trait_zest: Slight
+  trust_level: Skeptical
+  val_health: Important
+  val_spirituality_faith: Minor
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
+  origin_persona_id: cgss2017-14045

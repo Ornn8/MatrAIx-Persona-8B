@@ -56,9 +56,10 @@ Web/CUA agents (`persona-browser-use`, `persona-computer-1`, …) and auto agent
 CLI wrapper agents (`persona-claude-code`, …) pass `-m` through to the same field.
 
 Supported persona models in Playground include Anthropic (`anthropic/claude-*`),
-OpenAI (`openai/gpt-4o*`), and DashScope OpenAI-compatible models
+OpenAI (`openai/gpt-4o*`), official DeepSeek OpenAI-compatible models
+(`deepseek/deepseek-v4-flash`, `deepseek/deepseek-v4-pro`), and DashScope OpenAI-compatible models
 (`dashscope/qwen3.6-plus-2026-04-02`, `dashscope/qwen3.7-max`,
-`dashscope/deepseek-v4-pro`, …). Set `DASHSCOPE_API_KEY` (and optional
+`dashscope/deepseek-v4-pro`, …). Set `DEEPSEEK_API_KEY` for `deepseek/*`, or `DASHSCOPE_API_KEY` (and optional
 `DASHSCOPE_API_BASE`) when using `dashscope/*` — the same `-m` value applies to
 auto survey/chat and Docker web/CUA agents. CLI harness agents
 (`persona-claude-code`, `persona-gemini-cli`, `persona-codex`) stay
@@ -104,8 +105,8 @@ differ by agent:
 
 | Agent | Required on host | Notes |
 |-------|------------------|-------|
-| `persona-json-survey` | `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, or `DASHSCOPE_API_KEY` | Match `-m` / YAML `model_name`. Auto host-native survey. |
-| `persona-user-sim` | Persona: `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, or `DASHSCOPE_API_KEY`; often `OPENAI_API_KEY` for SUT | Persona model via `-m`; chat sidecar engine via `MATRIX_CHATBOT_ENGINE` (default `gpt-4o-mini`). |
+| `persona-json-survey` | `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `DASHSCOPE_API_KEY`, or `DEEPSEEK_API_KEY` | Match `-m` / YAML `model_name`. Auto host-native survey. |
+| `persona-user-sim` | Persona: `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `DASHSCOPE_API_KEY`, or `DEEPSEEK_API_KEY`; often `OPENAI_API_KEY` for SUT | Persona model via `-m`; chat sidecar engine via `MATRIX_CHATBOT_ENGINE` (default `gpt-4o-mini`). |
 | `persona-claude-code` | `ANTHROPIC_API_KEY` (or subscription — see below) | Anthropic models |
 | `persona-gemini-cli` | `GEMINI_API_KEY` (or subscription — see below) | Google models, e.g. `google/gemini-2.5-pro` |
 | `persona-codex` | `OPENAI_API_KEY` (or subscription — see below) | OpenAI models, e.g. `openai/gpt-4o` |

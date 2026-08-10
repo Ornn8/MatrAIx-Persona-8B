@@ -1,0 +1,399 @@
+schemaVersion: "1.0"
+id: vocal_coach_first_week_journey_v1
+title: AI Vocal Coach First-Week Journey
+description: A 20-question staged test of onboarding, seven-day practice, retention, and CNY 68 subscription intent.
+questions:
+  - id: q0_research_role
+    prompt: Which role should guide your decisions in this journey?
+    type: single_choice
+    construct: research_role
+    required: true
+    options:
+      - id: beginner
+        label: Beginner with little or no structured vocal training
+      - id: ktv_casual
+        label: KTV, social, or casual singer
+      - id: self_taught_hobbyist
+        label: Self-taught or serious hobbyist
+      - id: student_candidate
+        label: Vocal student, music major, or exam candidate
+      - id: creator_performer
+        label: Cover creator, livestream singer, choir or band singer, or performer
+      - id: teacher_coach
+        label: Vocal teacher, coach, or voice professional
+      - id: institution_user
+        label: Studio, school, choir, or institution user
+      - id: interested_low_need
+        label: Music-interested person with no current improvement goal
+
+  - id: q1_current_frequency
+    prompt: Before discovering this product, how often would you normally sing, practise, teach, or supervise practice?
+    type: single_choice
+    construct: baseline_frequency
+    required: true
+    options:
+      - id: almost_daily
+        label: Daily or almost daily
+      - id: several_weekly
+        label: Two to five times a week
+      - id: about_weekly
+        label: About once a week
+      - id: monthly
+        label: A few times a month
+      - id: rarely
+        label: Rarely
+
+  - id: q2_primary_first_week_goal
+    prompt: Which result would make a free first week most relevant to you?
+    type: single_choice
+    construct: first_week_goal
+    required: true
+    options:
+      - id: identify_priority
+        label: Identify the one issue I should fix first
+      - id: improve_specific_issue
+        label: Notice a clear improvement in one known issue
+      - id: safer_easier_voice
+        label: Sing more safely or with less effort
+      - id: practice_consistency
+        label: Follow a clear plan consistently for seven days
+      - id: support_students
+        label: Assess or support a student between lessons
+      - id: low_relevance
+        label: None of these is currently important to me
+
+  - id: q3_stage_profile_setup
+    prompt: The free journey begins with several guided recordings to build your private voice profile. What would you most likely do?
+    type: single_choice
+    construct: funnel_voice_profile_decision
+    required: true
+    askRationale: true
+    options:
+      - id: complete_now
+        label: Complete all samples now
+      - id: complete_short_version
+        label: Complete a shorter version first, then decide
+      - id: delay_environment
+        label: Delay because I lack a quiet or private place
+      - id: delay_effort
+        label: Delay because setup feels too long or demanding
+      - id: exit_privacy
+        label: Leave because I do not want to upload voice recordings
+      - id: exit_low_need
+        label: Leave because the expected benefit is not important enough
+
+  - id: q4_stage_priority_result
+    prompt: Your profile is complete and the system names one highest-priority issue. What is your next decision?
+    type: single_choice
+    construct: funnel_priority_diagnosis_decision
+    required: true
+    askRationale: true
+    options:
+      - id: continue_immediately
+        label: Continue immediately to inspect the evidence
+      - id: continue_if_recognizable
+        label: Continue only if the issue matches something I already notice
+      - id: seek_human_check
+        label: Pause and ask a teacher or experienced singer to check it
+      - id: exit_generic
+        label: Leave if the finding sounds generic or obvious
+      - id: exit_disagree
+        label: Leave if I strongly disagree with the priority
+      - id: exit_overwhelmed
+        label: Leave because even one technical issue feels discouraging
+
+  - id: q5_stage_evidence_confidence
+    prompt: The report plays the exact source clip and labels the issue high-confidence, possibly present, or unable to determine. What would keep you moving forward?
+    type: single_choice
+    construct: funnel_evidence_confidence_decision
+    required: true
+    askRationale: true
+    options:
+      - id: high_confidence_clip
+        label: Continue when a high-confidence finding clearly matches the clip
+      - id: possible_with_retest
+        label: Continue on a possibly-present finding if I can record again
+      - id: low_confidence_human_review
+        label: Continue only by requesting human review when the system cannot determine
+      - id: compare_before_trust
+        label: Pause until I can compare another sample or teacher opinion
+      - id: exit_insufficient_proof
+        label: Leave because a clip and confidence label are still insufficient proof
+      - id: exit_complexity
+        label: Leave because the explanation is too technical or time-consuming
+
+  - id: q6_teacher_conflict_decision
+    prompt: If your teacher's view conflicts with the AI finding, which action would you take?
+    type: single_choice
+    construct: teacher_conflict_resolution
+    required: true
+    options:
+      - id: mark_feedback_continue_teacher
+        label: Mark the conflict, submit feedback, and follow the teacher for now
+      - id: compare_evidence_together
+        label: Review the evidence with the teacher before deciding
+      - id: test_both_cautiously
+        label: Test both views cautiously if neither causes discomfort
+      - id: trust_teacher_exit
+        label: Trust the teacher and stop using the product
+      - id: trust_ai_continue
+        label: Follow the AI because its evidence seems stronger
+      - id: no_teacher
+        label: I do not currently have a teacher to compare with
+
+  - id: q7_stage_exercise_start
+    prompt: The app recommends one short exercise specifically matched to the priority issue, with demonstration and stop conditions. What would you do?
+    type: single_choice
+    construct: funnel_exercise_start_decision
+    required: true
+    askRationale: true
+    options:
+      - id: start_today
+        label: Start the exercise today
+      - id: preview_then_start
+        label: Preview it and start only if it feels understandable and safe
+      - id: ask_teacher_first
+        label: Ask a teacher or experienced singer before starting
+      - id: delay_time
+        label: Delay because I cannot fit it into my routine
+      - id: exit_boring
+        label: Leave because repetitive technique practice does not appeal to me
+      - id: exit_safety_doubt
+        label: Leave because I still doubt the exercise is safe or appropriate
+
+  - id: q8_practice_frequency
+    prompt: What seven-day practice schedule would you realistically sustain for one focused issue?
+    type: single_choice
+    construct: sustainable_practice_frequency
+    required: true
+    options:
+      - id: daily_10_15
+        label: 10 to 15 minutes every day
+      - id: five_days_10
+        label: About 10 minutes on five days
+      - id: three_days_15
+        label: About 15 minutes on three days
+      - id: two_days_20
+        label: About 20 minutes on two days
+      - id: one_session
+        label: One session during the week
+      - id: unlikely_any
+        label: I am unlikely to complete even one session
+
+  - id: q9_reminder_preference
+    prompt: Which reminder would be most likely to help without becoming annoying?
+    type: single_choice
+    construct: reminder_preference
+    required: true
+    options:
+      - id: chosen_time_daily
+        label: One reminder at a time I choose on planned practice days
+      - id: missed_plan_only
+        label: Remind me only after I miss a planned session
+      - id: progress_milestone
+        label: Show a progress or streak milestone instead of a notification
+      - id: calendar_plan
+        label: Add planned sessions to my calendar
+      - id: teacher_or_peer
+        label: Let a teacher, coach, or practice partner remind me
+      - id: no_reminders
+        label: No reminders; I would manage practice myself
+
+  - id: q10_stage_midweek_decision
+    prompt: By day 3 you have completed two sessions but cannot yet hear a clear improvement. What would you most likely do?
+    type: single_choice
+    construct: funnel_midweek_retention_decision
+    required: true
+    askRationale: true
+    options:
+      - id: continue_as_planned
+        label: Continue the plan because three days is too early to judge
+      - id: continue_with_guidance
+        label: Continue only after checking form tips or a demonstration
+      - id: rerecord_recalibrate
+        label: Record again and ask the app to recalibrate the exercise
+      - id: reduce_frequency
+        label: Reduce the schedule because it is harder than expected
+      - id: stop_no_progress
+        label: Stop because no early progress makes the plan feel ineffective
+      - id: stop_effort
+        label: Stop because the routine takes too much time or attention
+
+  - id: q11_safety_stop_decision
+    prompt: During practice you notice pain, persistent hoarseness, unusual fatigue, or a worsening voice. What would you do when the app stops the session and recommends human help?
+    type: single_choice
+    construct: safety_stop_response
+    required: true
+    options:
+      - id: stop_seek_qualified_help
+        label: Stop and seek an appropriate qualified professional
+      - id: stop_rest_monitor
+        label: Stop, rest, and seek help if symptoms persist
+      - id: ask_teacher_before_resume
+        label: Stop and ask my teacher before resuming
+      - id: switch_exercise
+        label: Ignore the stop for now and try a different exercise
+      - id: push_through
+        label: Continue because mild discomfort may be part of improvement
+      - id: exit_product
+        label: Stop using the product because the event damaged my trust
+
+  - id: q12_improvement_threshold
+    prompt: At the day-7 retest, what minimum result would count as a meaningful improvement for this single issue?
+    type: single_choice
+    construct: meaningful_week_one_improvement_threshold
+    required: true
+    askRationale: true
+    options:
+      - id: audible_blind_difference
+        label: I or another listener can reliably hear a better before-and-after result
+      - id: easier_repeatable
+        label: The same passage feels easier and the change repeats across attempts
+      - id: objective_metric_plus_audio
+        label: Both the evidence clip and a relevant objective measure improve
+      - id: teacher_confirms
+        label: A teacher or qualified professional confirms the improvement
+      - id: adherence_awareness
+        label: I practise consistently and understand the issue better, even if sound change is small
+      - id: more_than_week
+        label: One week is too short for any result to be meaningful
+
+  - id: q13_stage_day7_clear_improvement
+    prompt: The day-7 comparison shows a clear, repeatable improvement that meets your chosen threshold. What would you do next?
+    type: single_choice
+    construct: funnel_day7_success_decision
+    required: true
+    askRationale: true
+    options:
+      - id: continue_next_issue
+        label: Continue immediately to the next priority issue
+      - id: repeat_week_then_continue
+        label: Repeat or consolidate this week before moving on
+      - id: share_with_teacher
+        label: Share the report with a teacher before continuing
+      - id: continue_free_only
+        label: Keep practising only while access remains free
+      - id: pause_satisfied
+        label: Pause because this one improvement is enough for now
+      - id: still_exit_low_trust
+        label: Leave because one successful week is not enough to trust the system
+
+  - id: q14_stage_day7_weak_improvement
+    prompt: If the day-7 result is smaller than your threshold but there is no pain or worsening, what would you do?
+    type: single_choice
+    construct: funnel_day7_weak_result_decision
+    required: true
+    options:
+      - id: extend_one_week
+        label: Extend the same plan for one more week
+      - id: recalibrate_new_exercise
+        label: Reassess and try a better-matched exercise
+      - id: seek_human_review
+        label: Seek human review before doing more
+      - id: continue_only_free
+        label: Continue only if the extra week remains free
+      - id: stop_no_value
+        label: Stop because the first week did not show enough value
+      - id: exit_accuracy_doubt
+        label: Leave because the weak result makes me doubt the diagnosis
+
+  - id: q15_postweek_practice_intent
+    prompt: After a successful free week, how often would you realistically keep using the full structured course?
+    type: single_choice
+    construct: postweek_practice_intent
+    required: true
+    options:
+      - id: four_plus_weekly
+        label: Four or more practice days per week
+      - id: two_three_weekly
+        label: Two or three practice days per week
+      - id: about_weekly
+        label: About once a week
+      - id: occasional_problem_only
+        label: Only when a specific vocal problem appears
+      - id: teacher_assigned_only
+        label: Only when assigned by a teacher or coach
+      - id: unlikely_continue
+        label: I would be unlikely to continue practising with it
+
+  - id: q16_subscription_decision_68
+    prompt: After a successful free week, the complete progressive teaching system costs CNY 68 per month and can be cancelled anytime. What would you most likely do?
+    type: single_choice
+    construct: postweek_subscription_decision
+    required: true
+    askRationale: true
+    options:
+      - id: subscribe_now
+        label: Subscribe immediately for the next month
+      - id: subscribe_if_next_plan_clear
+        label: Subscribe if the next issue and monthly learning path are clear
+      - id: subscribe_after_teacher_review
+        label: Subscribe after a teacher or trusted singer reviews the result
+      - id: prefer_single_month
+        label: Buy only one month when I have a specific goal
+      - id: want_lower_or_pay_per_use
+        label: Continue only at a lower price or with pay-per-use
+      - id: not_subscribe
+        label: Do not subscribe even after a successful first week
+
+  - id: q17_subscription_blocker
+    prompt: What is the strongest reason you might still reject or cancel the CNY 68 monthly subscription?
+    type: single_choice
+    construct: subscription_blocker
+    required: true
+    options:
+      - id: uncertain_repeatability
+        label: One good week may not repeat across other vocal issues
+      - id: low_usage
+        label: I would not practise often enough to justify a subscription
+      - id: prefer_human_teacher
+        label: I prefer to spend the budget on human instruction
+      - id: accuracy_safety
+        label: Ongoing accuracy or safety risk remains too high
+      - id: privacy_data
+        label: Long-term storage or use of voice data concerns me
+      - id: curriculum_fit
+        label: The complete curriculum may not fit my goals or level
+      - id: no_major_blocker
+        label: No major blocker if results keep improving
+
+  - id: q18_full_curriculum_expectation
+    prompt: Which element would most strongly prove that this is a complete teaching system rather than a one-off diagnosis tool?
+    type: single_choice
+    construct: full_curriculum_proof
+    required: true
+    options:
+      - id: progressive_path
+        label: A clear sequence from fundamentals to advanced skills
+      - id: adaptive_reassessment
+        label: Reassessment that changes the plan as my voice develops
+      - id: technique_explanations
+        label: Mainstream vocal concepts explained with demonstrations and evidence
+      - id: teacher_collaboration
+        label: Reports, conflict marking, and collaboration tools for teachers
+      - id: repertoire_transfer
+        label: Exercises that transfer into songs and performance tasks
+      - id: safety_escalation
+        label: Conservative safety limits and escalation to qualified humans
+
+  - id: q19_decisive_optimization
+    prompt: Which single change would most improve completion of the first week and conversion after it?
+    type: single_choice
+    construct: decisive_first_week_optimization
+    required: true
+    askRationale: true
+    options:
+      - id: shorter_setup
+        label: Shorter voice-profile setup with a visible time estimate
+      - id: stronger_evidence
+        label: Clearer original evidence clips and confidence explanations
+      - id: easier_daily_plan
+        label: Shorter, easier-to-follow daily exercises
+      - id: adaptive_support
+        label: Midweek recalibration when progress stalls
+      - id: human_review
+        label: Optional teacher or qualified human review
+      - id: clearer_day7_proof
+        label: A more convincing before-and-after retest
+      - id: clearer_subscription_value
+        label: A clearer monthly curriculum and cancellation value

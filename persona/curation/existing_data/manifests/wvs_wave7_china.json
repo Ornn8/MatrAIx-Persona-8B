@@ -1,0 +1,17 @@
+{
+  "id": "wvs_wave7_china",
+  "source": {
+    "type": "cross_national_survey_reference",
+    "url": "https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp",
+    "mirror": "https://raw.githubusercontent.com/DanielChan03/global-happiness-reseach-study/main/data/raw/WVS_Cross-National_Wave_7_inverted_csv_v6_0.csv.zip",
+    "project_name": "World Values Survey Wave 7 - China 2018",
+    "sample": 3036,
+    "variables": 611
+  },
+  "dimensions_claimed": 9,
+  "format": "csv_numeric_codes",
+  "license": "wvsa-research-terms",
+  "gated": false,
+  "notes": "WVS wave-7 China 2018 sample (3,036 respondents, subset of the public v6.0 cross-national CSV export, B_COUNTRY_ALPHA=CHN). Crosswalk at scripts/crosswalks/wvs_cn.py maps 9 schema dims from codebook-verified anchors: Q260 sex, Q261/Q262 age, Q57P generalised trust (34% trust, consistent with WVS China), H_URBRURAL urban/rural, Q97 no-religion, Inglehart-Welzel gender-equality indexes (I_WOMJOB/I_WOMPOL/I_WOMEDU) -> att_traditional_gender_roles, I_RELIGPRAC -> religiosity. Q47P health reversed (China-sample direction contradicts international codebook: 61% pick 4, mapped 4->Good) — FLAGGED for China-questionnaire confirmation before production. Deliberately unmapped: Q46P happiness (direction contradiction + no schema dim), institutional trust / tolerance indexes / secular values (no schema dim) — recorded as schema-extension proposals. 3,036 respondents extracted (9 dims, avg 8.9 grounded dims/persona; validate_extraction.py: 0 errors). Complementary to CGSS: independent trust/religion/gender-attitude signal from a different instrument.",
+  "pilot_output": "persona/curation/existing_data/outputs/wvs_cn_pilot/extraction_real.jsonl.gz"
+}

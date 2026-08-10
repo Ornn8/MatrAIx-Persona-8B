@@ -115,6 +115,14 @@ PERSONA_MODEL_KNOB_META: Dict[str, Dict[str, str]] = {
         "label": "DeepSeek V4 Pro",
         "description": "DeepSeek via DashScope OpenAI-compatible API.",
     },
+    "dashscope/deepseek-v4-flash": {
+        "label": "DeepSeek V4 Flash · 百炼",
+        "description": "DeepSeek V4 Flash via DashScope OpenAI-compatible API.",
+    },
+    "deepseek/deepseek-v4-flash": {
+        "label": "DeepSeek V4 Flash · 官方",
+        "description": "DeepSeek V4 Flash via the official DeepSeek API.",
+    },
     "dashscope/deepseek-v3.2": {
         "label": "DeepSeek V3.2",
         "description": "DeepSeek V3.2 via DashScope compatible API.",

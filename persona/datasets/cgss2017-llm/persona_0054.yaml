@@ -1,0 +1,95 @@
+persona_id: '0054'
+version: '1.0'
+source: cgss
+display_name: Aiko Nakamura
+dimensions:
+  accessibility_needs: None
+  age_bracket: 35-44
+  att_traditional_gender_roles: Positive
+  bfi2_domain_negative_emotionality: Low
+  bfi2_facet_depression: Average
+  bfi2_facet_trust: Average
+  big5_depression: Low
+  big5_trust: Average
+  cog_abstraction: Concrete
+  cog_ambiguity_tolerance: Moderate
+  cog_assertiveness: Moderate
+  cog_attention_span: Average
+  cog_big_picture_vs_detail: Big-picture
+  cog_confidence_calibration: Cautious
+  cog_conflict_approach: Avoidant
+  cog_curiosity: Low
+  cog_decision_speed: Deliberate
+  cog_detail_orientation: Low
+  cog_directness: Direct
+  cog_emoji_use: Never
+  cog_emotional_expressiveness: Low
+  cog_empathy_expression: Low
+  cog_formality: Neutral
+  cog_humor: Serious
+  cog_learning_pace: Deliberate
+  cog_multitasking: Prefers single-task
+  cog_numeracy_comfort: Low
+  cog_open_mindedness: Low
+  cog_optimism: Moderate
+  cog_politeness: Polite
+  cog_precision_of_language: Average
+  cog_question_asking: Rarely asks
+  cog_reading_vs_watching: Prefers video
+  cog_risk_framing: Threat-focused
+  cog_skepticism: Moderate
+  cog_storytelling: Low
+  cog_use_of_jargon: Avoids jargon
+  cog_verbosity: Terse
+  cog_visual_vs_verbal: Visual
+  demo_ethnicity_broad: East Asian
+  demo_housing_status: Own outright
+  demo_marital_status: Married
+  demo_religion_affiliation: None
+  dominant_trait: Balanced
+  gender_identity: Man
+  health_assistive_tech: None
+  health_contrast_need: No
+  health_energy_level: High
+  health_general_health: Good
+  health_mental_health: Stable
+  health_mobility: Full
+  health_neurodivergence: Neurotypical
+  health_text_size_need: No
+  highest_education: Secondary
+  ind_telecommunications: None
+  lang_mandarin: Native
+  life_stage: Mid-life
+  lifex_education_journey: Dropped out
+  lifex_faith_journey: Lifelong faith
+  lifex_formative_decade: 1990s
+  lifex_geographic_mobility: Never left hometown
+  lifex_health_journey: No major events
+  lifex_hometown_tie: Still there
+  lifex_immigration_generation: Native multi-generational
+  lifex_languages_lifetime: One
+  lifex_military_history: Never served
+  lifex_public_recognition: Private life
+  lifex_relationship_history: Married once
+  lstyle_exercise_freq: Never
+  lstyle_music_listening: Rarely
+  lstyle_news_freq: Avoids news
+  lstyle_podcast_listening: Rarely
+  lstyle_reading_freq: Never
+  media_diet: Video-first
+  multilingualism: Monolingual
+  primary_language: Mandarin
+  region: East Asia
+  religiosity: Secular
+  socioeconomic_band: Lower-middle
+  tech_savviness: Avoidant
+  topic_religion: Indifferent
+  topic_social_media: Indifferent
+  topic_spirituality: Indifferent
+  trait_spirituality: Slight
+  trust_level: Verifying
+  val_health: Important
+  val_spirituality_faith: Irrelevant
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
+  origin_persona_id: cgss2017-13181

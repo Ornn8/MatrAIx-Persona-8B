@@ -1,0 +1,48 @@
+import type { MessageBundle } from "../../types";
+
+const messages: MessageBundle = {
+  "en-US": {
+    "runResidual.noWebResult": "No web result was recorded for this run.",
+    "runResidual.metPersonaNeed": "Met the persona's need",
+    "runResidual.easeOfUse": "Ease of use",
+    "runResidual.on": "on",
+    "runResidual.catalog": "catalog",
+    "runResidual.websiteTask": "Website task",
+    "runResidual.osAppTask": "OS app task",
+    "runResidual.chatApp": "Chat app",
+    "runResidual.ran": "Ran {date}",
+    "runResidual.relative.justNow": "just now",
+    "runResidual.relative.compactMinute": "{count}m ago",
+    "runResidual.relative.compactHour": "{count}h ago",
+    "runResidual.relative.compactDay": "{count}d ago",
+    "runResidual.relative.minute": "{count} minute ago",
+    "runResidual.relative.minutes": "{count} minutes ago",
+    "runResidual.relative.hour": "{count} hour ago",
+    "runResidual.relative.hours": "{count} hours ago",
+    "runResidual.relative.yesterday": "yesterday",
+    "runResidual.relative.days": "{count} days ago",
+  },
+  "zh-CN": {
+    "runResidual.noWebResult": "本次运行没有记录网页结果。",
+    "runResidual.metPersonaNeed": "满足数字人需求",
+    "runResidual.easeOfUse": "易用性",
+    "runResidual.on": "在",
+    "runResidual.catalog": "目录",
+    "runResidual.websiteTask": "网页任务",
+    "runResidual.osAppTask": "桌面应用任务",
+    "runResidual.chatApp": "聊天应用",
+    "runResidual.ran": "运行于 {date}",
+    "runResidual.relative.justNow": "刚刚",
+    "runResidual.relative.compactMinute": "{count} 分钟前",
+    "runResidual.relative.compactHour": "{count} 小时前",
+    "runResidual.relative.compactDay": "{count} 天前",
+    "runResidual.relative.minute": "{count} 分钟前",
+    "runResidual.relative.minutes": "{count} 分钟前",
+    "runResidual.relative.hour": "{count} 小时前",
+    "runResidual.relative.hours": "{count} 小时前",
+    "runResidual.relative.yesterday": "昨天",
+    "runResidual.relative.days": "{count} 天前",
+  },
+};
+
+export default messages;

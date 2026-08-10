@@ -1,0 +1,130 @@
+persona_id: '0123'
+version: '1.0'
+source: cgss
+display_name: Jun Park
+dimensions:
+  age_bracket: 55-64
+  att_data_privacy: Positive
+  att_remote_work: Enthusiast
+  att_traditional_gender_roles: Neutral
+  bfi2_domain_negative_emotionality: Average
+  bfi2_facet_depression: Average
+  bfi2_facet_trust: High
+  big5_depression: Average
+  big5_self_efficacy: High
+  big5_trust: High
+  cog_abstraction: Concrete
+  cog_ambiguity_tolerance: Moderate
+  cog_big_picture_vs_detail: Big-picture
+  cog_curiosity: Low
+  cog_detail_orientation: Low
+  cog_directness: Direct
+  cog_emoji_use: Never
+  cog_emotional_expressiveness: Low
+  cog_formality: Neutral
+  cog_humor: Serious
+  cog_multitasking: Prefers single-task
+  cog_numeracy_comfort: Low
+  cog_open_mindedness: Moderate
+  cog_optimism: Moderate
+  cog_politeness: Polite
+  cog_precision_of_language: Average
+  cog_question_asking: Rarely asks
+  cog_reading_vs_watching: Prefers video
+  cog_risk_framing: Balanced
+  cog_skepticism: Moderate
+  cog_storytelling: Low
+  cog_use_of_jargon: Avoids jargon
+  cog_verbosity: Terse
+  cog_visual_vs_verbal: Visual
+  demo_employment_status: Retired
+  demo_ethnicity_broad: East Asian
+  demo_housing_status: Own outright
+  demo_marital_status: Widowed
+  demo_religion_affiliation: None
+  dominant_trait: Balanced
+  economic_motivation: Value-driven
+  gender_identity: Woman
+  health_energy_level: Very high
+  health_general_health: Fair
+  health_mental_health: Stable
+  highest_education: Primary
+  ind_telecommunications: None
+  interpersonal_communion_warmth: Average
+  lang_mandarin: Native
+  life_stage: Empty nester
+  lifex_adversity_level: Significant struggles
+  lifex_career_path_shape: Just starting
+  lifex_cultural_exposure: Monocultural
+  lifex_education_journey: Dropped out
+  lifex_entrepreneurship_history: Never considered
+  lifex_faith_journey: Lifelong faith
+  lifex_financial_trajectory: Stable
+  lifex_formative_decade: 1960s-70s
+  lifex_geographic_mobility: Never left hometown
+  lifex_health_journey: No major events
+  lifex_hometown_tie: Still there
+  lifex_immigration_generation: Native multi-generational
+  lifex_languages_lifetime: One
+  lifex_loss_experience: Lost a partner / child
+  lifex_military_history: Never served
+  lifex_parenting_journey: Empty nester
+  lifex_public_recognition: Private life
+  lifex_relationship_history: Widowed
+  lifex_service_history: None
+  lstyle_exercise_freq: Never
+  lstyle_music_listening: Rarely
+  lstyle_news_freq: Avoids news
+  lstyle_podcast_listening: Never
+  lstyle_reading_freq: Never
+  major_life_events: Bereavement
+  media_diet: Video-first
+  multilingualism: Monolingual
+  need_for_cognition: Low
+  pref_early_vs_late: Laggard
+  pref_save_vs_spend: Saver-leaning
+  primary_language: Mandarin
+  region: East Asia
+  religiosity: Secular
+  schwartz_value_achievement: Average
+  schwartz_value_benevolence: Average
+  schwartz_value_conformity: Average
+  schwartz_value_hedonism: Low
+  schwartz_value_power: Low
+  schwartz_value_security: Average
+  schwartz_value_self_direction: Average
+  schwartz_value_stimulation: Low
+  schwartz_value_tradition: Low
+  schwartz_value_universalism: Average
+  sdt_need_autonomy: Average
+  sdt_need_competence: Average
+  sdt_need_relatedness: Average
+  socioeconomic_band: Lower-middle
+  tech_savviness: Avoidant
+  topic_religion: Indifferent
+  topic_social_media: Indifferent
+  topic_spirituality: Interested
+  trait_adaptability: Moderate
+  trait_curiosity: Slight
+  trait_discipline: Moderate
+  trait_hope_optimism: Moderate
+  trait_love_of_learning: Slight
+  trait_open_mindedness: Moderate
+  trait_perseverance: Moderate
+  trait_playfulness: Slight
+  trait_prudence: Moderate
+  trait_resilience: Moderate
+  trait_self_regulation: Moderate
+  trait_spirituality: Slight
+  trait_zest: Slight
+  trust_level: Trusting
+  val_achievement: Moderate
+  val_adventure: Irrelevant
+  val_career_success: Irrelevant
+  val_health: Moderate
+  val_power_influence: Irrelevant
+  val_social_status: Irrelevant
+  val_spirituality_faith: Irrelevant
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
+  origin_persona_id: cgss2017-4655
