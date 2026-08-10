@@ -51,7 +51,7 @@ dimensions:
   gender_identity: Man
   habit_doomscrolling: Daily
   health_assistive_tech: None
-  health_contrast_need: false
+  health_contrast_need: 'No'
   health_energy_level: Very high
   health_general_health: Fair
   health_mental_health: Stable
@@ -59,7 +59,7 @@ dimensions:
   health_neurodivergence: Neurotypical
   health_pain_level: None
   health_stress_level: Moderate
-  health_text_size_need: false
+  health_text_size_need: 'No'
   highest_education: Bachelor's
   life_stage: Mid-life
   lifex_career_path_shape: Linear climb

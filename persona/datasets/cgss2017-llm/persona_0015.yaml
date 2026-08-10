@@ -31,14 +31,14 @@ dimensions:
   gender_identity: Woman
   health_assistive_tech: None
   health_caregiver_status: Child caregiver
-  health_contrast_need: false
+  health_contrast_need: 'No'
   health_energy_level: Low
   health_fitness_level: Sedentary
   health_general_health: Poor
   health_mental_health: Struggling
   health_mobility: Full
   health_stress_level: High
-  health_text_size_need: false
+  health_text_size_need: 'No'
   highest_education: Associate's
   ind_telecommunications: None
   lang_mandarin: Native

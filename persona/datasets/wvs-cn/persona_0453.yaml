@@ -1,0 +1,17 @@
+persona_id: '0453'
+version: '1.0'
+source: wvs_cn
+display_name: Yuki Sato
+dimensions:
+  age_bracket: 35-44
+  att_traditional_gender_roles: Enthusiast
+  demo_religion_affiliation: None
+  gender_identity: Woman
+  health_general_health: Excellent
+  region: East Asia
+  religiosity: Secular
+  trust_level: Trusting
+  urbanicity: Rural
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/wvs_cn_pilot
+  origin_persona_id: wvs-cn-00452

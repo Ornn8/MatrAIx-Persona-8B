@@ -44,12 +44,12 @@ dimensions:
   habit_doomscrolling: Weekly
   health_assistive_tech: None
   health_caregiver_status: Not a caregiver
-  health_contrast_need: false
+  health_contrast_need: 'No'
   health_energy_level: High
   health_general_health: Excellent
   health_mental_health: Stable
   health_mobility: Full
-  health_text_size_need: false
+  health_text_size_need: 'No'
   highest_education: Secondary
   lang_mandarin: Native
   life_stage: Early career

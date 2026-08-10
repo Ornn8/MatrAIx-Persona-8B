@@ -52,12 +52,12 @@ dimensions:
   gender_identity: Woman
   health_assistive_tech: None
   health_caregiver_status: Not a caregiver
-  health_contrast_need: false
+  health_contrast_need: 'No'
   health_energy_level: High
   health_general_health: Good
   health_mental_health: Stable
   health_mobility: Full
-  health_text_size_need: false
+  health_text_size_need: 'No'
   highest_education: Secondary
   ind_telecommunications: None
   lang_mandarin: Native

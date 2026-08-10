@@ -57,14 +57,14 @@ dimensions:
   gender_identity: Woman
   health_assistive_tech: None
   health_caregiver_status: Child caregiver
-  health_contrast_need: false
+  health_contrast_need: 'No'
   health_energy_level: Very high
   health_general_health: Fair
   health_mental_health: Stable
   health_mobility: Full
   health_neurodivergence: Neurotypical
   health_pain_level: None
-  health_text_size_need: false
+  health_text_size_need: 'No'
   highest_education: Associate's
   interpersonal_agency_dominance: Average
   interpersonal_communion_warmth: High

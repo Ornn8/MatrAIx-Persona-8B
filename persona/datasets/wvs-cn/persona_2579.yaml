@@ -1,0 +1,17 @@
+persona_id: '2579'
+version: '1.0'
+source: wvs_cn
+display_name: Hana Kim
+dimensions:
+  age_bracket: 45-54
+  att_traditional_gender_roles: Opposed
+  demo_religion_affiliation: None
+  gender_identity: Woman
+  health_general_health: Good
+  region: East Asia
+  religiosity: Secular
+  trust_level: Skeptical
+  urbanicity: Dense urban
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/wvs_cn_pilot
+  origin_persona_id: wvs-cn-02578

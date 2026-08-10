@@ -52,7 +52,7 @@ dimensions:
   health_chronic_condition: None
   health_cognitive_load_capacity: High
   health_color_vision: Typical
-  health_contrast_need: false
+  health_contrast_need: 'No'
   health_dexterity: Full
   health_dietary_restriction: None
   health_energy_level: Very high
@@ -68,7 +68,7 @@ dimensions:
   health_pain_level: None
   health_sleep_quality: Good
   health_stress_level: Low
-  health_text_size_need: false
+  health_text_size_need: 'No'
   health_vision: Normal
   highest_education: Bachelor's
   ind_telecommunications: None

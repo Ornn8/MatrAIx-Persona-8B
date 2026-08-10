@@ -59,13 +59,13 @@ dimensions:
   gender_identity: Man
   habit_doomscrolling: Rarely
   health_assistive_tech: None
-  health_contrast_need: false
+  health_contrast_need: 'No'
   health_energy_level: High
   health_general_health: Excellent
   health_mental_health: Thriving
   health_mobility: Full
   health_pain_level: None
-  health_text_size_need: false
+  health_text_size_need: 'No'
   highest_education: Associate's
   ind_telecommunications: None
   lang_mandarin: Native

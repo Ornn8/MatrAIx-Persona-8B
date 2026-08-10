@@ -53,12 +53,12 @@ dimensions:
   gender_identity: Woman
   health_assistive_tech: None
   health_caregiver_status: Child caregiver
-  health_contrast_need: false
+  health_contrast_need: 'No'
   health_energy_level: High
   health_general_health: Fair
   health_mental_health: Stable
   health_neurodivergence: Neurotypical
-  health_text_size_need: false
+  health_text_size_need: 'No'
   highest_education: Primary
   ind_telecommunications: None
   lang_english: None

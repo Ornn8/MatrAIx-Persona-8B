@@ -1,0 +1,17 @@
+persona_id: '0314'
+version: '1.0'
+source: wvs_cn
+display_name: Mei Lin Tan
+dimensions:
+  age_bracket: 55-64
+  att_traditional_gender_roles: Opposed
+  demo_religion_affiliation: None
+  gender_identity: Woman
+  health_general_health: Excellent
+  region: East Asia
+  religiosity: Secular
+  trust_level: Trusting
+  urbanicity: Dense urban
+provenance:
+  parent_pool: persona/curation/existing_data/outputs/wvs_cn_pilot
+  origin_persona_id: wvs-cn-00313
