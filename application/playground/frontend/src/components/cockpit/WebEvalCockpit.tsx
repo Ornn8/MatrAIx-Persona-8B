@@ -460,6 +460,7 @@ export function WebEvalCockpit({
     ? formatBatchProgressLabel(
         batchCompletedTrials,
         expectedTrialCount,
+        t,
       )
     : phase === "launching"
       ? t("eval.web.progress.launching", "Launching web trial…")

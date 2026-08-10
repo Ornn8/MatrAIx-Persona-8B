@@ -288,8 +288,8 @@ function humanizeFeedbackKey(key: string): string {
   return humanizeToken(snake);
 }
 
-function feedbackDisplayValue(value: unknown): string {
-  if (typeof value === "boolean") return value ? "Yes" : "No";
+function feedbackDisplayValue(value: unknown, t: (key: string, fallback?: string) => string): string {
+  if (typeof value === "boolean") return value ? t("runs.yes") : t("runs.no");
   if (typeof value === "number") return String(value);
   if (typeof value === "string") return value;
   return "-";
@@ -422,7 +422,7 @@ function UserFeedbackPanel({
                     {humanizeFeedbackKey(key)}
                   </div>
                   <div className="mt-1.5 text-[15px] leading-relaxed text-text-main">
-                    {feedbackDisplayValue(value)}
+                    {feedbackDisplayValue(value, t)}
                   </div>
                 </div>
               ))}
@@ -791,6 +791,7 @@ function SurveyAnswerVisual({
 
 /** Milestone row for survey_started / survey_completed / unpaired events. */
 function SurveyTrajectoryMilestone({ event }: { event: SurveyTrajectoryEvent }) {
+  const { t } = useI18n();
   const action = event.action;
   const outcome = event.outcome ?? {};
   const context = event.context ?? {};
@@ -798,24 +799,26 @@ function SurveyTrajectoryMilestone({ event }: { event: SurveyTrajectoryEvent }) 
   let detail = "";
 
   if (action === "survey_started") {
-    title = "Started";
+    title = t("runs.started", "Started");
     const n = context.numQuestions;
-    detail = typeof n === "number" ? `${n} questions` : String(context.instrumentTitle ?? "");
+    detail = typeof n === "number"
+      ? t("runs.questionCount", "{count} question{suffix}", { count: String(n), suffix: n === 1 ? "" : "s" })
+      : String(context.instrumentTitle ?? "");
   } else if (action === "survey_completed") {
-    title = "Completed";
+    title = t("runs.completed", "Completed");
     const answered = outcome.numAnswered;
     const valid = outcome.valid;
     const parts: string[] = [];
-    if (typeof answered === "number") parts.push(`${answered} answered`);
-    if (typeof valid === "boolean") parts.push(valid ? "valid" : "needs review");
+    if (typeof answered === "number") parts.push(t("runs.answered", "{count} answered", { count: String(answered) }));
+    if (typeof valid === "boolean") parts.push(valid ? t("runs.valid", "Valid") : t("runs.needsReview", "Needs review"));
     detail = parts.join(" · ");
   } else if (action === "ask_question") {
     const index = surveyTrajectoryQuestionIndex(event);
-    title = index != null ? `Q${index}` : "Asked";
+    title = index != null ? `Q${index}` : t("runs.asked", "Asked");
     detail = surveyTrajectoryPrompt(event) || surveyQuestionTypeLabel(surveyTrajectoryQuestionType(event));
   } else if (action === "answer_question") {
     const index = surveyTrajectoryQuestionIndex(event);
-    title = index != null ? `Q${index}` : "Answered";
+    title = index != null ? `Q${index}` : t("runs.answeredShort", "Answered");
     detail = formatSurveyTrajectoryValue(outcome.value);
   }
 
@@ -1139,35 +1142,37 @@ function DetailLoading() {
 }
 
 function DetailNotFound() {
+  const { t } = useI18n();
   return (
     <StudioGlassPanel className="px-6 py-14 text-center rise-in">
       <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-md glass-tile">
         <Sym name="search_off" size={26} className="text-text-dim" />
       </div>
       <h2 className="font-display text-[15px] font-semibold text-text-main">
-        We couldn&apos;t find this run
+        {t("runs.notFoundTitle")}
       </h2>
       <p className="mx-auto mt-2 max-w-sm text-[15px] leading-relaxed text-text-variant">
-        It may have been deleted. Go back to the list to pick another.
+        {t("runs.notFoundDetail")}
       </p>
     </StudioGlassPanel>
   );
 }
 
 function DetailError({ error, onRetry }: { error: unknown; onRetry: () => void }) {
+  const { t } = useI18n();
   const notFound = error instanceof ApiError && error.status === 404;
   if (notFound) return <DetailNotFound />;
   const message =
     error instanceof ApiError
       ? error.message
-      : "Something went wrong loading the details. Try again in a moment.";
+      : t("runs.loadDetailError");
   return (
     <StudioGlassPanel className="border-l-4 border-l-danger px-5 py-8 text-center rise-in">
       <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-md bg-danger/10">
         <Sym name="error" fill={1} size={22} className="text-danger" />
       </div>
       <h2 className="font-display text-[15px] font-semibold text-text-main">
-        We couldn&apos;t open this run
+        {t("runs.openErrorTitle")}
       </h2>
       <p className="mx-auto mt-1.5 max-w-md break-words text-[15px] leading-relaxed text-text-variant">
         {message}
@@ -1178,7 +1183,7 @@ function DetailError({ error, onRetry }: { error: unknown; onRetry: () => void }
         className={`mt-4 inline-flex items-center gap-1.5 rounded-md bg-danger/10 px-4 py-2 text-[14px] text-danger transition ease-out hover:bg-danger/20 active:scale-[0.97] ${FOCUS_RING}`}
       >
         <Sym name="refresh" size={16} />
-        Try again
+        {t("runs.tryAgain")}
       </button>
     </StudioGlassPanel>
   );

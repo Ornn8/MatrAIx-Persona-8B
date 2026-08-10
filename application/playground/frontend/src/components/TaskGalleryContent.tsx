@@ -164,7 +164,7 @@ export function TaskGalleryContent({
 
     return [
       ...surveyHarborTaskCards(surveyTasks),
-      ...chatbotEvalTaskCards(chatbotTasks),
+      ...chatbotEvalTaskCards(chatbotTasks, undefined, t),
       ...webEvalTaskCards(webTasks),
       ...osAppTaskCards(osAppTasks),
     ];

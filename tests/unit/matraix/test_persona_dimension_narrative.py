@@ -96,3 +96,36 @@ def test_persona_agent_context_floor():
         }
     )
     assert agent["kwargs"]["model_info"]["max_input_tokens"] >= RECOMMENDED_MAX_INPUT_TOKENS
+
+
+def test_zh_rendering_uses_chinese_labels_and_values():
+    persona = load_persona(
+        "persona/datasets/matraix-persona-dev-sample/persona_0018.yaml"
+    )
+    paragraphs = build_dimension_narrative(persona.dimensions, language="zh")
+    text = "\n".join(paragraphs)
+
+    assert "### 身份" in text
+    assert "### 语言与沟通" in text
+    # a core dim whose zh label exists in labels_zh.json
+    assert "年龄" in text or "年龄段" in text
+    # zh value for a frequency dim (lstyle_exercise_freq Daily -> 每天)
+    assert "每天" in text
+
+
+def test_zh_unknown_dimension_falls_back_to_english():
+    # a dim id not present in labels_zh.json keeps its english label/value
+    dims = {"zzz_fake_dim": "Fake value"}
+    paragraphs = build_dimension_narrative(dims, language="zh")
+    text = "\n".join(paragraphs)
+    assert "zzz fake dim" in text  # english label fallback (id, underscores spaced)
+    assert "Fake value" in text
+
+
+def test_zh_missing_labels_file_returns_empty(tmp_path):
+    from matraix import persona_dimension_catalog as cat
+
+    assert cat.load_zh_labels(str(tmp_path / "missing.json")) == {}
+    assert cat.resolve_persona_language(None) == "en"
+    assert cat.resolve_persona_language("zh") == "zh"
+    assert cat.resolve_persona_language("ZH ") == "zh"

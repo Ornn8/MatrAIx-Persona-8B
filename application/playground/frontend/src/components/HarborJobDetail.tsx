@@ -693,14 +693,27 @@ function humanizeFacetLabel(label: string | null | undefined, key?: string | nul
  * cross-facet view, used to fill the "{reason}, grouped by {answer}" subtitle
  * so each grouping self-describes what it summarizes.
  */
-function crossFacetReasonPhrase(textFacetKey: string | null | undefined): string {
+function crossFacetReasonPhrase(
+  textFacetKey: string | null | undefined,
+  t?: ReportTranslate,
+): string {
   const leaf = facetKeyLeaf(textFacetKey).toLowerCase().replace(/-/g, "_")
   const byKey: Record<string, string> = {
-    outcome_reason: "Reasons for the result",
-    feedback_reason: "Reasons for the rating",
-    process_notes: "What happened in the chat",
-    conversation_path: "How the chat went",
-    resolution_basis: "How the result was judged",
+    outcome_reason: t
+      ? t("reports.facet.outcomeReason", "Reasons for the result")
+      : "Reasons for the result",
+    feedback_reason: t
+      ? t("reports.facet.feedbackReason", "Reasons for the rating")
+      : "Reasons for the rating",
+    process_notes: t
+      ? t("reports.facet.processNotes", "What happened in the chat")
+      : "What happened in the chat",
+    conversation_path: t
+      ? t("reports.facet.conversationPath", "How the chat went")
+      : "How the chat went",
+    resolution_basis: t
+      ? t("reports.facet.resolutionBasis", "How the result was judged")
+      : "How the result was judged",
   }
   if (byKey[leaf]) return byKey[leaf]
   const label = humanizeFacetLabel(null, textFacetKey)
@@ -1665,7 +1678,7 @@ function summaryBucketsForContext(context: AggregationContext): CountBarItem[] {
   }))
 }
 
-function contextLeadText(context: AggregationContext): string {
+function contextLeadText(context: AggregationContext, t?: ReportTranslate): string {
   const summary = context.summaries?.find((item) => item.overall?.summary)?.overall?.summary
   // Collapsed cards keep a short tease; expand for the full quote.
   if (summary && !isHeuristicAggregationSummary(summary)) return previewText(summary, 220)
@@ -1682,7 +1695,9 @@ function contextLeadText(context: AggregationContext): string {
   const primary = primaryFacetForContext(context)
   if (primary?.kind === "categorical" && isUnanimousField(primary)) {
     const value = primary.categorical?.counts?.[0]?.value ?? "—"
-    return `All ${primary.presentCount} personas: ${formatBucketLabel(value)}`
+    return t
+      ? `${t("reports.report.allPersonasCount", "All {count} personas", { count: String(primary.presentCount) })}: ${formatBucketLabel(value)}`
+      : `All ${primary.presentCount} personas: ${formatBucketLabel(value)}`
   }
   if (primary?.kind === "numerical") {
     return `${humanizeFacetLabel(primary.label, primary.key)}: ${formatNumericalSummary(primary)}`
@@ -4891,7 +4906,7 @@ function ContextCard({ context }: { context: AggregationContext }) {
   const panelId = useId()
   const primaryFacet = primaryFacetForContext(context)
   const distributionItems = summaryBucketsForContext(context)
-  const leadText = contextLeadText(context)
+  const leadText = contextLeadText(context, t)
   const typeDescription = contextTypeDescription(context)
   const unanimousPrimary =
     primaryFacet?.kind === "categorical" && primaryFacet != null && isUnanimousField(primaryFacet)
@@ -5100,8 +5115,8 @@ function SummaryDisclosure({ summary }: { summary: AggregationSummary }) {
   // Auto reason-summaries self-describe from their facets; reporting.json ones keep their title.
   const title = summary.auto
     ? groupLower
-      ? `${crossFacetReasonPhrase(summary.targetFacetKey)}, by ${groupLower}`
-      : crossFacetReasonPhrase(summary.targetFacetKey)
+      ? `${crossFacetReasonPhrase(summary.targetFacetKey, t)}, by ${groupLower}`
+      : crossFacetReasonPhrase(summary.targetFacetKey, t)
     : humanizeAnalysisTitle(summary.title)
   const isPersonaGrouped = summary.groupByMode === "persona_attribute"
   const personaGroupLabel = (summary.groupByLabel || summary.groupByPersonaDimension || "")
@@ -5323,7 +5338,7 @@ function CrossFacetViewDisclosure({
     : null
   const title =
     primaryLower && textLabel
-      ? `${crossFacetReasonPhrase(crossFacetView.textFacetKey)}, grouped by ${primaryLower}`
+      ? `${crossFacetReasonPhrase(crossFacetView.textFacetKey, t)}, grouped by ${primaryLower}`
       : crossFacetView.type === "text_by_primary_category"
         ? t("reports.analysis.quotesByAnswer", "Quotes by answer group")
         : formatBucketLabel(crossFacetView.type)

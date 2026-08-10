@@ -514,6 +514,7 @@ export function SurveyEvalCockpit({
     ? formatBatchProgressLabel(
         batchCompletedTrials,
         expectedTrialCount,
+        t,
       )
     : phase === "launching"
       ? t("eval.survey.progress.launching", "Launching survey trial…")

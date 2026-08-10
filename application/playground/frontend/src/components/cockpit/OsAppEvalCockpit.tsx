@@ -412,6 +412,7 @@ export function OsAppEvalCockpit({
     ? formatBatchProgressLabel(
         batchCompletedTrials,
         expectedTrialCount,
+        t,
       )
     : phase === "launching"
       ? t("eval.os.progress.launching", "Launching OS app trial…")
