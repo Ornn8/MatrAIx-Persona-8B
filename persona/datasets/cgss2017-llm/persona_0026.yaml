@@ -57,14 +57,14 @@ dimensions:
   gender_identity: Woman
   health_assistive_tech: None
   health_caregiver_status: Child caregiver
-  health_contrast_need: No
+  health_contrast_need: false
   health_energy_level: Very high
   health_general_health: Fair
   health_mental_health: Stable
   health_mobility: Full
   health_neurodivergence: Neurotypical
   health_pain_level: None
-  health_text_size_need: No
+  health_text_size_need: false
   highest_education: Associate's
   interpersonal_agency_dominance: Average
   interpersonal_communion_warmth: High
@@ -163,3 +163,54 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-11588
+consumer_profile:
+  willingness_to_pay:
+    value: moderate
+    evidence: 'economic_motivation: Value-driven; socioeconomic_band: Middle'
+    assignment_type: summary_inference
+  price_anchor:
+    value: 50-200
+    evidence: 'economic_motivation: Value-driven; socioeconomic_band: Middle'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: moderate
+    evidence: 'economic_motivation: Value-driven; socioeconomic_band: Middle'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: one_time
+    evidence: 'economic_motivation: Value-driven; lstyle_payment_pref: Mobile wallet'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Trusting; cog_curiosity: Moderate'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    - official_channels
+    evidence: 'trust_level: Trusting; val_loyalty: Important; region: East Asia'
+    assignment_type: summary_inference
+  spending_style:
+    value: balanced
+    evidence: 'economic_motivation: Value-driven; socioeconomic_band: Middle'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - quality
+    - price
+    - word_of_mouth
+    evidence: 'economic_motivation: Value-driven; trust_level: Trusting; val_loyalty:
+      Important'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: moderate
+    evidence: 'val_loyalty: Important; trust_level: Trusting'
+    assignment_type: summary_inference
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'economic_motivation: Value-driven; life_stage: Mid-life; demo_employment_status:
+      Full-time'
+    assignment_type: summary_inference

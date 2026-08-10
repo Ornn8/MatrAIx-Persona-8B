@@ -59,7 +59,7 @@ dimensions:
   health_chronic_condition: None
   health_cognitive_load_capacity: High
   health_color_vision: Typical
-  health_contrast_need: No
+  health_contrast_need: false
   health_dexterity: Full
   health_energy_level: Very high
   health_fitness_level: Average
@@ -72,7 +72,7 @@ dimensions:
   health_neurodivergence: Neurotypical
   health_pain_level: None
   health_stress_level: Moderate
-  health_text_size_need: No
+  health_text_size_need: false
   health_vision: Normal
   highest_education: Secondary
   ind_telecommunications: None
@@ -151,3 +151,55 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-10639
+consumer_profile:
+  willingness_to_pay:
+    value: moderate
+    evidence: 'economic_motivation: Value-driven; socioeconomic_band: Middle'
+    assignment_type: summary_inference
+  price_anchor:
+    value: 50-200
+    evidence: 'socioeconomic_band: Middle; economic_motivation: Value-driven'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: high
+    evidence: 'economic_motivation: Value-driven; trust_level: Skeptical'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: one_time
+    evidence: 'economic_motivation: Value-driven; trust_level: Skeptical'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Skeptical; cog_curiosity: Moderate'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    - official_channels
+    evidence: 'trust_level: Skeptical; economic_motivation: Value-driven'
+    assignment_type: summary_inference
+  spending_style:
+    value: balanced
+    evidence: 'socioeconomic_band: Middle; economic_motivation: Value-driven'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - price
+    - quality
+    - word_of_mouth
+    - convenience
+    evidence: 'economic_motivation: Value-driven; trust_level: Skeptical; life_stage:
+      Early career'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: low
+    evidence: 'trust_level: Skeptical; economic_motivation: Value-driven'
+    assignment_type: summary_inference
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'economic_motivation: Value-driven; life_stage: Early career; demo_employment_status:
+      Self-employed'
+    assignment_type: summary_inference

@@ -1,4 +1,4 @@
-persona_id: '0089'
+persona_id: 0089
 version: '1.0'
 source: cgss
 display_name: Min Ho
@@ -38,14 +38,14 @@ dimensions:
   gender_identity: Woman
   health_assistive_tech: None
   health_caregiver_status: Child caregiver
-  health_contrast_need: No
+  health_contrast_need: false
   health_energy_level: High
   health_general_health: Good
   health_mental_health: Stable
   health_mobility: Full
   health_neurodivergence: Neurotypical
   health_stress_level: Moderate
-  health_text_size_need: No
+  health_text_size_need: false
   highest_education: Associate's
   lang_mandarin: Native
   life_stage: Mid-life
@@ -116,3 +116,53 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-2507
+consumer_profile:
+  willingness_to_pay:
+    value: moderate
+    evidence: 'socioeconomic_band: Middle; life_stage: Mid-life'
+    assignment_type: summary_inference
+  price_anchor:
+    value: 50-200
+    evidence: 'socioeconomic_band: Middle; lstyle_payment_pref: Mobile wallet'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: moderate
+    evidence: 'socioeconomic_band: Middle; demo_children_count: 3+ children'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: one_time
+    evidence: 'lstyle_payment_pref: Mobile wallet; socioeconomic_band: Middle'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Trusting; trait_loyalty: Strong'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    - official_channels
+    evidence: 'trust_level: Trusting; trait_loyalty: Strong; region: East Asia'
+    assignment_type: summary_inference
+  spending_style:
+    value: balanced
+    evidence: 'socioeconomic_band: Middle; demo_children_count: 3+ children'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - quality
+    - price
+    - word_of_mouth
+    evidence: 'health_general_health: Good; socioeconomic_band: Middle; trust_level:
+      Trusting'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: high
+    evidence: 'trait_loyalty: Strong'
+    assignment_type: direct
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'demo_children_count: 3+ children; demo_employment_status: Homemaker'
+    assignment_type: summary_inference

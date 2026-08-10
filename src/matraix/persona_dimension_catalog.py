@@ -465,6 +465,7 @@ def build_template_context_extras(
     catalog_path: str = DEFAULT_CATALOG_PATH,
     max_chars: int | None = None,
     language: str | None = None,
+    consumer_profile: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     language = resolve_persona_language(language)
     return {
@@ -476,4 +477,8 @@ def build_template_context_extras(
         ),
         "dimension_catalog_path": catalog_path,
         "language": language,
+        # Optional consumer-behavior block (China market-research scenarios).
+        # Only rendered when the caller explicitly passes it — keeps China data
+        # out of generic scenarios (data-isolation constraint).
+        "consumer_profile": consumer_profile or {},
     }

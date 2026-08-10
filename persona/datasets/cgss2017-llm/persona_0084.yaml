@@ -1,4 +1,4 @@
-persona_id: '0084'
+persona_id: 0084
 version: '1.0'
 source: cgss
 display_name: Min Ho
@@ -77,3 +77,52 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-2411
+consumer_profile:
+  willingness_to_pay:
+    value: moderate
+    evidence: 'socioeconomic_band: Middle; life_stage: Retirement'
+    assignment_type: summary_inference
+  price_anchor:
+    value: 50-200
+    evidence: 'socioeconomic_band: Middle; life_stage: Retirement'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: moderate
+    evidence: 'socioeconomic_band: Middle; life_stage: Retirement'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: one_time
+    evidence: 'life_stage: Retirement; cog_curiosity: Low'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Trusting; cog_curiosity: Low'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - official_channels
+    evidence: 'trust_level: Trusting; age_bracket: 55-64; region: East Asia'
+    assignment_type: summary_inference
+  spending_style:
+    value: balanced
+    evidence: 'socioeconomic_band: Middle; life_stage: Retirement'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - quality
+    - price
+    - convenience
+    evidence: 'health_general_health: Fair; socioeconomic_band: Middle; life_stage:
+      Retirement'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: moderate
+    evidence: 'trust_level: Trusting; cog_curiosity: Low'
+    assignment_type: summary_inference
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'life_stage: Retirement; health_general_health: Fair'
+    assignment_type: summary_inference

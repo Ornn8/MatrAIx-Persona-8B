@@ -1,4 +1,4 @@
-persona_id: '0009'
+persona_id: 0009
 version: '1.0'
 source: cgss
 display_name: Jun Park
@@ -106,3 +106,53 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-10546
+consumer_profile:
+  willingness_to_pay:
+    value: moderate
+    evidence: 'socioeconomic_band: Upper-middle; life_stage: Empty nester'
+    assignment_type: summary_inference
+  price_anchor:
+    value: 200-500
+    evidence: 'socioeconomic_band: Upper-middle; life_stage: Empty nester'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: moderate
+    evidence: 'socioeconomic_band: Upper-middle; trust_level: Verifying'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: one_time
+    evidence: 'cog_curiosity: Low; trust_level: Verifying'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Verifying; cog_curiosity: Low'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    - official_channels
+    evidence: 'trust_level: Verifying; region: East Asia; life_stage: Empty nester'
+    assignment_type: summary_inference
+  spending_style:
+    value: balanced
+    evidence: 'socioeconomic_band: Upper-middle; life_stage: Empty nester'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - quality
+    - price
+    - word_of_mouth
+    evidence: 'trust_level: Verifying; socioeconomic_band: Upper-middle; life_stage:
+      Empty nester'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: moderate
+    evidence: 'trust_level: Verifying; cog_curiosity: Low'
+    assignment_type: summary_inference
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'life_stage: Empty nester; health_general_health: Fair'
+    assignment_type: summary_inference

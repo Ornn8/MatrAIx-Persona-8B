@@ -1,4 +1,4 @@
-persona_id: '0128'
+persona_id: 0128
 version: '1.0'
 source: cgss
 display_name: Wei Zhang
@@ -62,14 +62,14 @@ dimensions:
   habit_doomscrolling: Monthly
   health_assistive_tech: None
   health_caregiver_status: Not a caregiver
-  health_contrast_need: No
+  health_contrast_need: false
   health_energy_level: High
   health_general_health: Good
   health_mental_health: Stable
   health_mobility: Full
   health_pain_level: None
   health_stress_level: Low
-  health_text_size_need: No
+  health_text_size_need: false
   highest_education: Bachelor's
   ind_telecommunications: None
   lang_mandarin: Native
@@ -127,3 +127,53 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-4988
+consumer_profile:
+  willingness_to_pay:
+    value: moderate
+    evidence: 'economic_motivation: Value-driven; socioeconomic_band: Upper-middle'
+    assignment_type: summary_inference
+  price_anchor:
+    value: 200-500
+    evidence: 'socioeconomic_band: Upper-middle; economic_motivation: Value-driven'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: moderate
+    evidence: 'economic_motivation: Value-driven; socioeconomic_band: Upper-middle'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: one_time
+    evidence: 'life_stage: Empty nester; economic_motivation: Value-driven'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Trusting; cog_curiosity: Moderate'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    - official_channels
+    evidence: 'trust_level: Trusting; region: East Asia; age_bracket: 65-74'
+    assignment_type: summary_inference
+  spending_style:
+    value: balanced
+    evidence: 'economic_motivation: Value-driven; socioeconomic_band: Upper-middle'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - quality
+    - price
+    - word_of_mouth
+    evidence: 'economic_motivation: Value-driven; trust_level: Trusting; age_bracket:
+      65-74'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: moderate
+    evidence: 'trust_level: Trusting; life_stage: Empty nester'
+    assignment_type: summary_inference
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'economic_motivation: Value-driven; life_stage: Empty nester'
+    assignment_type: summary_inference

@@ -51,12 +51,12 @@ dimensions:
   english_proficiency: None
   gender_identity: Woman
   health_assistive_tech: None
-  health_contrast_need: No
+  health_contrast_need: false
   health_energy_level: Very high
   health_general_health: Excellent
   health_mental_health: Stable
   health_neurodivergence: Neurotypical
-  health_text_size_need: No
+  health_text_size_need: false
   highest_education: No formal
   ind_telecommunications: None
   lang_english: None
@@ -109,3 +109,53 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-1618
+consumer_profile:
+  willingness_to_pay:
+    value: moderate
+    evidence: 'economic_motivation: Value-driven; socioeconomic_band: Upper-middle'
+    assignment_type: summary_inference
+  price_anchor:
+    value: 50-200
+    evidence: 'economic_motivation: Value-driven; socioeconomic_band: Upper-middle'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: moderate
+    evidence: 'economic_motivation: Value-driven; trust_level: Verifying'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: one_time
+    evidence: 'economic_motivation: Value-driven; cog_curiosity: Low'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Verifying; economic_motivation: Value-driven'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    - official_channels
+    evidence: 'trust_level: Verifying; age_bracket: 65-74; highest_education: No formal'
+    assignment_type: summary_inference
+  spending_style:
+    value: balanced
+    evidence: 'economic_motivation: Value-driven; socioeconomic_band: Upper-middle'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - quality
+    - price
+    - word_of_mouth
+    evidence: 'economic_motivation: Value-driven; trust_level: Verifying; age_bracket:
+      65-74'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: moderate
+    evidence: 'trust_level: Verifying; economic_motivation: Value-driven'
+    assignment_type: summary_inference
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'economic_motivation: Value-driven; life_stage: Empty nester'
+    assignment_type: summary_inference

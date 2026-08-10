@@ -1,4 +1,4 @@
-persona_id: '0029'
+persona_id: 0029
 version: '1.0'
 source: cgss
 display_name: Min Ho
@@ -113,3 +113,53 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-11700
+consumer_profile:
+  willingness_to_pay:
+    value: moderate
+    evidence: 'socioeconomic_band: Lower-middle; life_stage: Empty nester'
+    assignment_type: summary_inference
+  price_anchor:
+    value: 50-200
+    evidence: 'socioeconomic_band: Lower-middle; age_bracket: 45-54'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: high
+    evidence: 'socioeconomic_band: Lower-middle; trust_level: Verifying'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: one_time
+    evidence: 'socioeconomic_band: Lower-middle; trust_level: Verifying'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Verifying; cog_curiosity: Low'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    - official_channels
+    evidence: 'trust_level: Verifying; age_bracket: 45-54; highest_education: Secondary'
+    assignment_type: summary_inference
+  spending_style:
+    value: frugal
+    evidence: 'socioeconomic_band: Lower-middle; life_stage: Empty nester'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - price
+    - quality
+    - word_of_mouth
+    evidence: 'socioeconomic_band: Lower-middle; trust_level: Verifying; age_bracket:
+      45-54'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: moderate
+    evidence: 'trust_level: Verifying; cog_curiosity: Low'
+    assignment_type: summary_inference
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'life_stage: Empty nester; demo_employment_status: Homemaker'
+    assignment_type: summary_inference

@@ -95,3 +95,50 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-4835
+consumer_profile:
+  willingness_to_pay:
+    value: low
+    evidence: 'socioeconomic_band: Lower-middle'
+    assignment_type: heuristic_fallback
+  price_anchor:
+    value: under_50
+    evidence: 'socioeconomic_band: Lower-middle'
+    assignment_type: heuristic_fallback
+  price_sensitivity:
+    value: high
+    evidence: 'socioeconomic_band: Lower-middle; pref_save_vs_spend: None'
+    assignment_type: heuristic_fallback
+  payment_model_pref:
+    value: null
+    evidence: null
+    assignment_type: heuristic_fallback
+  promo_receptivity:
+    value: null
+    evidence: null
+    assignment_type: heuristic_fallback
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    evidence: heuristic default
+    assignment_type: heuristic_fallback
+  spending_style:
+    value: null
+    evidence: null
+    assignment_type: heuristic_fallback
+  decision_factors:
+    value:
+    - price
+    - quality
+    - convenience
+    evidence: heuristic default
+    assignment_type: heuristic_fallback
+  brand_loyalty:
+    value: null
+    evidence: null
+    assignment_type: heuristic_fallback
+  payment_motivations:
+    value:
+    - core_need
+    evidence: heuristic default
+    assignment_type: heuristic_fallback

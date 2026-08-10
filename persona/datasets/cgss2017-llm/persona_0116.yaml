@@ -55,7 +55,7 @@ dimensions:
   health_chronic_condition: None
   health_cognitive_load_capacity: High
   health_color_vision: Typical
-  health_contrast_need: No
+  health_contrast_need: false
   health_dexterity: Full
   health_dietary_restriction: None
   health_energy_level: Very high
@@ -71,7 +71,7 @@ dimensions:
   health_pain_level: None
   health_sleep_quality: Good
   health_stress_level: Low
-  health_text_size_need: No
+  health_text_size_need: false
   health_vision: Normal
   highest_education: Bachelor's
   lang_mandarin: Native
@@ -127,3 +127,53 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-4257
+consumer_profile:
+  willingness_to_pay:
+    value: moderate
+    evidence: 'economic_motivation: Value-driven; socioeconomic_band: Middle'
+    assignment_type: summary_inference
+  price_anchor:
+    value: 50-200
+    evidence: 'socioeconomic_band: Middle; demo_employment_status: Student'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: high
+    evidence: 'economic_motivation: Value-driven; demo_employment_status: Student'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: freemium
+    evidence: 'economic_motivation: Value-driven; lstyle_payment_pref: Mobile wallet'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Trusting; cog_curiosity: High'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    - official_channels
+    evidence: 'trust_level: Trusting; cog_curiosity: High; region: East Asia'
+    assignment_type: summary_inference
+  spending_style:
+    value: balanced
+    evidence: 'economic_motivation: Value-driven; socioeconomic_band: Middle'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - price
+    - quality
+    - word_of_mouth
+    evidence: 'economic_motivation: Value-driven; trust_level: Trusting; cog_curiosity:
+      High'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: moderate
+    evidence: 'trust_level: Trusting; cog_curiosity: High'
+    assignment_type: summary_inference
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'economic_motivation: Value-driven; demo_employment_status: Student'
+    assignment_type: summary_inference

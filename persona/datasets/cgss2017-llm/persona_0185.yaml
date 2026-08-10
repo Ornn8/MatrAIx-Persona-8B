@@ -1,4 +1,4 @@
-persona_id: '0185'
+persona_id: 0185
 version: '1.0'
 source: cgss
 display_name: Yuki Sato
@@ -158,3 +158,52 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-9051
+consumer_profile:
+  willingness_to_pay:
+    value: moderate
+    evidence: 'socioeconomic_band: Middle; economic_motivation: Indifferent'
+    assignment_type: summary_inference
+  price_anchor:
+    value: 50-200
+    evidence: 'socioeconomic_band: Middle; economic_motivation: Indifferent'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: moderate
+    evidence: 'socioeconomic_band: Middle; economic_motivation: Indifferent'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: one_time
+    evidence: 'cog_curiosity: Low; economic_motivation: Indifferent'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Trusting; cog_curiosity: Low'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    - official_channels
+    evidence: 'trust_level: Trusting; val_loyalty: Moderate; region: East Asia'
+    assignment_type: summary_inference
+  spending_style:
+    value: balanced
+    evidence: 'socioeconomic_band: Middle; economic_motivation: Indifferent'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - quality
+    - price
+    - word_of_mouth
+    evidence: 'socioeconomic_band: Middle; trust_level: Trusting; val_loyalty: Moderate'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: moderate
+    evidence: 'val_loyalty: Moderate'
+    assignment_type: direct
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'cog_curiosity: Low; life_stage: Mid-life; demo_employment_status: Unemployed'
+    assignment_type: summary_inference

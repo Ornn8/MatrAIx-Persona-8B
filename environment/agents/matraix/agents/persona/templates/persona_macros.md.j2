@@ -15,6 +15,81 @@
 {% endif -%}
 {% endmacro %}
 
+{% macro render_consumer_profile(cp, language='en') -%}
+{# Optional consumer-behavior block (China market-research scenarios only).
+   Rendered only when the caller explicitly passes consumer_profile. #}
+{% if cp %}
+{% set zh_map = {
+  'low': '低', 'moderate': '中', 'high': '高',
+  'under_50': '50 元以下', '50-200': '50-200 元', '200-500': '200-500 元',
+  '500-2000': '500-2000 元', '2000+': '2000 元以上',
+  'one_time': '一次性买断', 'subscription': '订阅制', 'freemium': '免费+内购', 'ad_supported': '广告支持',
+  'open': '开放', 'selective': '有选择地接受', 'resistant': '抵触',
+  'word_of_mouth': '口碑/朋友推荐', 'platform_reviews': '平台评价', 'official_channels': '官方渠道',
+  'influencer': '达人/网红', 'offline': '线下体验',
+  'frugal': '节俭', 'balanced': '平衡', 'generous': '慷慨',
+  'price': '价格', 'quality': '质量', 'brand': '品牌', 'convenience': '便捷',
+  'core_need': '核心需求', 'time_saving': '节省时间', 'membership_perks': '会员权益',
+  'creator_support': '支持创作者', 'none': '不付费',
+} -%}
+{% macro z(v) -%}{{ zh_map.get(v, v) if language == 'zh' else v }}{%- endmacro %}
+{% if language == 'zh' %}## 消费画像
+{% else %}## Consumer profile
+{% endif %}
+
+{% if cp.willingness_to_pay is defined and cp.willingness_to_pay.value -%}
+{% if language == 'zh' %}- 付费意愿: {{ z(cp.willingness_to_pay.value) }}
+{% else %}- Willingness to pay: {{ cp.willingness_to_pay.value }}
+{% endif -%}
+{% endif -%}
+{% if cp.price_anchor is defined and cp.price_anchor.value -%}
+{% if language == 'zh' %}- 价格锚点（人民币）: {{ z(cp.price_anchor.value) }}
+{% else %}- Price anchor (RMB): {{ cp.price_anchor.value }}
+{% endif -%}
+{% endif -%}
+{% if cp.price_sensitivity is defined and cp.price_sensitivity.value -%}
+{% if language == 'zh' %}- 价格敏感度: {{ z(cp.price_sensitivity.value) }}
+{% else %}- Price sensitivity: {{ cp.price_sensitivity.value }}
+{% endif -%}
+{% endif -%}
+{% if cp.payment_model_pref is defined and cp.payment_model_pref.value -%}
+{% if language == 'zh' %}- 付费模式偏好: {{ z(cp.payment_model_pref.value) }}
+{% else %}- Payment model preference: {{ cp.payment_model_pref.value }}
+{% endif -%}
+{% endif -%}
+{% if cp.promo_receptivity is defined and cp.promo_receptivity.value -%}
+{% if language == 'zh' %}- 推广接受度: {{ z(cp.promo_receptivity.value) }}
+{% else %}- Promotion receptivity: {{ cp.promo_receptivity.value }}
+{% endif -%}
+{% endif -%}
+{% if cp.trusted_channels is defined and cp.trusted_channels.value -%}
+{% if language == 'zh' %}- 信任的渠道: {% for v in cp.trusted_channels.value %}{{ z(v) }}{% if not loop.last %}、{% endif %}{% endfor %}
+{% else %}- Trusted channels: {{ cp.trusted_channels.value | join(', ') }}
+{% endif -%}
+{% endif -%}
+{% if cp.spending_style is defined and cp.spending_style.value -%}
+{% if language == 'zh' %}- 消费风格: {{ z(cp.spending_style.value) }}
+{% else %}- Spending style: {{ cp.spending_style.value }}
+{% endif -%}
+{% endif -%}
+{% if cp.decision_factors is defined and cp.decision_factors.value -%}
+{% if language == 'zh' %}- 决策因素（按权重）: {% for v in cp.decision_factors.value %}{{ z(v) }}{% if not loop.last %} > {% endif %}{% endfor %}
+{% else %}- Decision factors (by weight): {{ cp.decision_factors.value | join(' > ') }}
+{% endif -%}
+{% endif -%}
+{% if cp.brand_loyalty is defined and cp.brand_loyalty.value -%}
+{% if language == 'zh' %}- 品牌忠诚度: {{ z(cp.brand_loyalty.value) }}
+{% else %}- Brand loyalty: {{ cp.brand_loyalty.value }}
+{% endif -%}
+{% endif -%}
+{% if cp.payment_motivations is defined and cp.payment_motivations.value -%}
+{% if language == 'zh' %}- 付费理由: {% for v in cp.payment_motivations.value %}{{ z(v) }}{% if not loop.last %}、{% endif %}{% endfor %}
+{% else %}- Payment motivations: {{ cp.payment_motivations.value | join(', ') }}
+{% endif -%}
+{% endif -%}
+{% endif -%}
+{% endmacro %}
+
 {% macro render_demographics(d) -%}
 {% if d %}
 ## Demographics

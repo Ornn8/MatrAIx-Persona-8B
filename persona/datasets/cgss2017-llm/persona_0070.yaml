@@ -102,3 +102,51 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-14351
+consumer_profile:
+  willingness_to_pay:
+    value: low
+    evidence: 'economic_motivation: Cost-sensitive; socioeconomic_band: Middle'
+    assignment_type: summary_inference
+  price_anchor:
+    value: under_50
+    evidence: 'economic_motivation: Cost-sensitive; socioeconomic_band: Middle'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: high
+    evidence: 'economic_motivation: Cost-sensitive; trust_level: Skeptical'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: freemium
+    evidence: 'economic_motivation: Cost-sensitive; lstyle_payment_pref: Mobile wallet'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Skeptical; economic_motivation: Cost-sensitive'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    evidence: 'trust_level: Skeptical; region: East Asia'
+    assignment_type: summary_inference
+  spending_style:
+    value: frugal
+    evidence: 'economic_motivation: Cost-sensitive; socioeconomic_band: Middle'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - price
+    - quality
+    - word_of_mouth
+    evidence: 'economic_motivation: Cost-sensitive; trust_level: Skeptical'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: low
+    evidence: 'trust_level: Skeptical; economic_motivation: Cost-sensitive'
+    assignment_type: summary_inference
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'economic_motivation: Cost-sensitive; life_stage: Early career'
+    assignment_type: summary_inference

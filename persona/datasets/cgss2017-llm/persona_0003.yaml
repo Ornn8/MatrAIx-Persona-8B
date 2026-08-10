@@ -120,3 +120,53 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-10051
+consumer_profile:
+  willingness_to_pay:
+    value: low
+    evidence: 'socioeconomic_band: Middle; health_general_health: Poor; cog_curiosity:
+      Low'
+    assignment_type: summary_inference
+  price_anchor:
+    value: under_50
+    evidence: 'socioeconomic_band: Middle; age_bracket: 65-74'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: high
+    evidence: 'socioeconomic_band: Middle; health_general_health: Poor; cog_curiosity:
+      Low'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: one_time
+    evidence: 'age_bracket: 65-74; cog_curiosity: Low'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Trusting; trait_loyalty: Strong'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - official_channels
+    evidence: 'trust_level: Trusting; trait_loyalty: Strong; age_bracket: 65-74'
+    assignment_type: summary_inference
+  spending_style:
+    value: frugal
+    evidence: 'socioeconomic_band: Middle; health_general_health: Poor; cog_curiosity:
+      Low'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - price
+    - quality
+    - word_of_mouth
+    evidence: 'socioeconomic_band: Middle; trust_level: Trusting; trait_loyalty: Strong'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: high
+    evidence: 'trait_loyalty: Strong'
+    assignment_type: direct
+  payment_motivations:
+    value:
+    - core_need
+    evidence: 'health_general_health: Poor; cog_curiosity: Low'
+    assignment_type: summary_inference

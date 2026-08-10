@@ -1,4 +1,4 @@
-persona_id: '0158'
+persona_id: 0158
 version: '1.0'
 source: cgss
 display_name: Li Wei Chen
@@ -53,12 +53,12 @@ dimensions:
   gender_identity: Woman
   health_assistive_tech: None
   health_caregiver_status: Child caregiver
-  health_contrast_need: No
+  health_contrast_need: false
   health_energy_level: High
   health_general_health: Fair
   health_mental_health: Stable
   health_neurodivergence: Neurotypical
-  health_text_size_need: No
+  health_text_size_need: false
   highest_education: Primary
   ind_telecommunications: None
   lang_english: None
@@ -127,3 +127,55 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-7023
+consumer_profile:
+  willingness_to_pay:
+    value: moderate
+    evidence: 'socioeconomic_band: Middle; life_stage: Parent of young kids'
+    assignment_type: summary_inference
+  price_anchor:
+    value: 50-200
+    evidence: 'socioeconomic_band: Middle; life_stage: Parent of young kids'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: high
+    evidence: 'socioeconomic_band: Middle; highest_education: Primary; health_general_health:
+      Fair'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: one_time
+    evidence: 'cog_curiosity: Low; trait_loyalty: Moderate'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Trusting; trait_loyalty: Moderate'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    - official_channels
+    evidence: 'trust_level: Trusting; region: East Asia; life_stage: Parent of young
+      kids'
+    assignment_type: summary_inference
+  spending_style:
+    value: balanced
+    evidence: 'socioeconomic_band: Middle; life_stage: Parent of young kids'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - price
+    - quality
+    - convenience
+    evidence: 'socioeconomic_band: Middle; health_general_health: Fair; life_stage:
+      Parent of young kids'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: moderate
+    evidence: 'trait_loyalty: Moderate'
+    assignment_type: direct
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'life_stage: Parent of young kids; health_general_health: Fair'
+    assignment_type: summary_inference

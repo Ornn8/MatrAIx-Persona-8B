@@ -1,4 +1,4 @@
-persona_id: '0118'
+persona_id: 0118
 version: '1.0'
 source: cgss
 display_name: Li Wei Chen
@@ -91,3 +91,52 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-4296
+consumer_profile:
+  willingness_to_pay:
+    value: moderate
+    evidence: 'socioeconomic_band: Middle; life_stage: Early career'
+    assignment_type: summary_inference
+  price_anchor:
+    value: 50-200
+    evidence: 'socioeconomic_band: Middle; lstyle_payment_pref: Mobile wallet'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: moderate
+    evidence: 'socioeconomic_band: Middle; trust_level: Skeptical'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: one_time
+    evidence: 'trust_level: Skeptical; lstyle_payment_pref: Mobile wallet'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Skeptical; cog_curiosity: High'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    - official_channels
+    evidence: 'trust_level: Skeptical; cog_curiosity: High; region: East Asia'
+    assignment_type: summary_inference
+  spending_style:
+    value: balanced
+    evidence: 'socioeconomic_band: Middle; life_stage: Early career'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - quality
+    - price
+    - word_of_mouth
+    evidence: 'cog_curiosity: High; socioeconomic_band: Middle; trust_level: Skeptical'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: moderate
+    evidence: 'trust_level: Skeptical; cog_curiosity: High'
+    assignment_type: summary_inference
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'life_stage: Early career; demo_employment_status: Full-time'
+    assignment_type: summary_inference

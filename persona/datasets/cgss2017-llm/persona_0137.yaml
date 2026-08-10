@@ -97,3 +97,51 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-5821
+consumer_profile:
+  willingness_to_pay:
+    value: low
+    evidence: 'economic_motivation: Indifferent; cog_curiosity: Low'
+    assignment_type: summary_inference
+  price_anchor:
+    value: under_50
+    evidence: 'economic_motivation: Indifferent; socioeconomic_band: Upper-middle'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: high
+    evidence: 'economic_motivation: Indifferent; life_stage: Retirement'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: one_time
+    evidence: 'life_stage: Retirement; economic_motivation: Indifferent'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Trusting; cog_curiosity: Low'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - official_channels
+    evidence: 'trust_level: Trusting; age_bracket: 85+'
+    assignment_type: summary_inference
+  spending_style:
+    value: frugal
+    evidence: 'economic_motivation: Indifferent; life_stage: Retirement'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - quality
+    - price
+    - convenience
+    evidence: 'health_general_health: Poor; economic_motivation: Indifferent; age_bracket:
+      85+'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: moderate
+    evidence: 'trust_level: Trusting; cog_curiosity: Low'
+    assignment_type: summary_inference
+  payment_motivations:
+    value:
+    - core_need
+    evidence: 'health_general_health: Poor; life_stage: Retirement'
+    assignment_type: summary_inference

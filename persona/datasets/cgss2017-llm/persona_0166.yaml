@@ -102,3 +102,53 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-773
+consumer_profile:
+  willingness_to_pay:
+    value: moderate
+    evidence: 'economic_motivation: Value-driven; socioeconomic_band: Middle'
+    assignment_type: summary_inference
+  price_anchor:
+    value: 50-200
+    evidence: 'economic_motivation: Value-driven; socioeconomic_band: Middle'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: high
+    evidence: 'economic_motivation: Value-driven; life_stage: Retirement'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: one_time
+    evidence: 'economic_motivation: Value-driven; cog_curiosity: Low'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Trusting; economic_motivation: Value-driven'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    - official_channels
+    evidence: 'trust_level: Trusting; age_bracket: 65-74; highest_education: Secondary'
+    assignment_type: summary_inference
+  spending_style:
+    value: balanced
+    evidence: 'economic_motivation: Value-driven; socioeconomic_band: Middle'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - price
+    - quality
+    - word_of_mouth
+    evidence: 'economic_motivation: Value-driven; trust_level: Trusting; age_bracket:
+      65-74'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: moderate
+    evidence: 'trust_level: Trusting; economic_motivation: Value-driven'
+    assignment_type: summary_inference
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'economic_motivation: Value-driven; life_stage: Retirement'
+    assignment_type: summary_inference

@@ -116,3 +116,55 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-14009
+consumer_profile:
+  willingness_to_pay:
+    value: low
+    evidence: 'economic_motivation: Cost-sensitive; pref_save_vs_spend: Hard saver;
+      socioeconomic_band: Lower-middle'
+    assignment_type: summary_inference
+  price_anchor:
+    value: under_50
+    evidence: 'economic_motivation: Cost-sensitive; socioeconomic_band: Lower-middle'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: high
+    evidence: 'economic_motivation: Cost-sensitive; pref_save_vs_spend: Hard saver'
+    assignment_type: direct
+  payment_model_pref:
+    value: freemium
+    evidence: 'economic_motivation: Cost-sensitive; pref_save_vs_spend: Hard saver'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Verifying; cog_curiosity: Moderate'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    - official_channels
+    evidence: 'trust_level: Verifying; region: East Asia; highest_education: Secondary'
+    assignment_type: summary_inference
+  spending_style:
+    value: frugal
+    evidence: 'pref_save_vs_spend: Hard saver; economic_motivation: Cost-sensitive'
+    assignment_type: direct
+  decision_factors:
+    value:
+    - price
+    - quality
+    - word_of_mouth
+    evidence: 'economic_motivation: Cost-sensitive; trust_level: Verifying; big5_self_efficacy:
+      Very low'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: low
+    evidence: 'economic_motivation: Cost-sensitive; trust_level: Verifying'
+    assignment_type: summary_inference
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'economic_motivation: Cost-sensitive; life_stage: Mid-life; demo_employment_status:
+      Homemaker'
+    assignment_type: summary_inference

@@ -117,3 +117,52 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-7952
+consumer_profile:
+  willingness_to_pay:
+    value: moderate
+    evidence: 'socioeconomic_band: Middle'
+    assignment_type: summary_inference
+  price_anchor:
+    value: 200-500
+    evidence: 'socioeconomic_band: Middle'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: moderate
+    evidence: 'socioeconomic_band: Middle'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: one_time
+    evidence: 'lstyle_payment_pref: Mobile wallet'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: open
+    evidence: 'trust_level: Trusting'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    - official_channels
+    evidence: 'trust_level: Trusting; trait_loyalty: Strong'
+    assignment_type: summary_inference
+  spending_style:
+    value: balanced
+    evidence: 'socioeconomic_band: Middle'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - quality
+    - price
+    - convenience
+    evidence: 'socioeconomic_band: Middle; lstyle_household_size: 3-4 people'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: high
+    evidence: 'trait_loyalty: Strong'
+    assignment_type: direct
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'life_stage: Parent of young kids; lstyle_household_size: 3-4 people'
+    assignment_type: summary_inference

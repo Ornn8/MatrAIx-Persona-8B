@@ -1,4 +1,4 @@
-persona_id: '0178'
+persona_id: 0178
 version: '1.0'
 source: cgss
 display_name: Wei Zhang
@@ -135,3 +135,52 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-8450
+consumer_profile:
+  willingness_to_pay:
+    value: moderate
+    evidence: 'socioeconomic_band: Upper-middle; life_stage: Empty nester'
+    assignment_type: summary_inference
+  price_anchor:
+    value: 50-200
+    evidence: 'socioeconomic_band: Upper-middle; age_bracket: 55-64'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: moderate
+    evidence: 'socioeconomic_band: Upper-middle; health_general_health: Poor'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: one_time
+    evidence: 'age_bracket: 55-64; cog_curiosity: Low'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Trusting; cog_curiosity: Low'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - official_channels
+    evidence: 'trust_level: Trusting; age_bracket: 55-64; highest_education: No formal'
+    assignment_type: summary_inference
+  spending_style:
+    value: balanced
+    evidence: 'socioeconomic_band: Upper-middle; life_stage: Empty nester'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - quality
+    - price
+    - convenience
+    evidence: 'health_general_health: Poor; socioeconomic_band: Upper-middle; age_bracket:
+      55-64'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: moderate
+    evidence: 'trust_level: Trusting; cog_curiosity: Low'
+    assignment_type: summary_inference
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'health_general_health: Poor; life_stage: Empty nester'
+    assignment_type: summary_inference

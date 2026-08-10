@@ -62,13 +62,13 @@ dimensions:
   habit_doomscrolling: Rarely
   health_assistive_tech: None
   health_caregiver_status: Not a caregiver
-  health_contrast_need: No
+  health_contrast_need: false
   health_energy_level: Very high
   health_general_health: Good
   health_mental_health: Stable
   health_mobility: Full
   health_pain_level: None
-  health_text_size_need: No
+  health_text_size_need: false
   highest_education: Vocational / cert
   ind_telecommunications: None
   lang_mandarin: Native
@@ -117,3 +117,54 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-11517
+consumer_profile:
+  willingness_to_pay:
+    value: low
+    evidence: 'economic_motivation: Cost-sensitive; socioeconomic_band: Lower-middle'
+    assignment_type: summary_inference
+  price_anchor:
+    value: under_50
+    evidence: 'economic_motivation: Cost-sensitive; socioeconomic_band: Lower-middle'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: high
+    evidence: 'economic_motivation: Cost-sensitive; socioeconomic_band: Lower-middle'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: freemium
+    evidence: 'economic_motivation: Cost-sensitive; lstyle_payment_pref: Mobile wallet'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Skeptical; cog_curiosity: Low'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    evidence: 'trust_level: Skeptical; demo_employment_status: Student; age_bracket:
+      18-24'
+    assignment_type: summary_inference
+  spending_style:
+    value: frugal
+    evidence: 'economic_motivation: Cost-sensitive; socioeconomic_band: Lower-middle'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - price
+    - quality
+    - word_of_mouth
+    evidence: 'economic_motivation: Cost-sensitive; trust_level: Skeptical; demo_employment_status:
+      Student'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: low
+    evidence: 'trust_level: Skeptical; cog_curiosity: Low'
+    assignment_type: summary_inference
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'economic_motivation: Cost-sensitive; demo_employment_status: Student;
+      life_stage: Student'
+    assignment_type: summary_inference

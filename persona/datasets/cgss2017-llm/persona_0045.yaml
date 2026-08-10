@@ -127,3 +127,54 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-12642
+consumer_profile:
+  willingness_to_pay:
+    value: moderate
+    evidence: 'socioeconomic_band: Low income; life_stage: Student'
+    assignment_type: summary_inference
+  price_anchor:
+    value: 50-200
+    evidence: 'socioeconomic_band: Low income; life_stage: Student'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: high
+    evidence: 'socioeconomic_band: Low income; life_stage: Student'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: freemium
+    evidence: 'socioeconomic_band: Low income; life_stage: Student'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Trusting; trait_loyalty: Moderate'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    - official_channels
+    evidence: 'trust_level: Trusting; region: East Asia; lstyle_payment_pref: Mobile
+      wallet'
+    assignment_type: summary_inference
+  spending_style:
+    value: frugal
+    evidence: 'socioeconomic_band: Low income; life_stage: Student'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - price
+    - quality
+    - convenience
+    evidence: 'socioeconomic_band: Low income; cog_curiosity: Moderate; lstyle_payment_pref:
+      Mobile wallet'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: moderate
+    evidence: 'trait_loyalty: Moderate'
+    assignment_type: direct
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'life_stage: Student; cog_curiosity: Moderate'
+    assignment_type: summary_inference

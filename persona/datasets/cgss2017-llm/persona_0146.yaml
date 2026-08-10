@@ -120,3 +120,54 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-6540
+consumer_profile:
+  willingness_to_pay:
+    value: moderate
+    evidence: 'socioeconomic_band: Middle; economic_motivation: Indifferent'
+    assignment_type: summary_inference
+  price_anchor:
+    value: 50-200
+    evidence: 'socioeconomic_band: Middle; lstyle_payment_pref: Mobile wallet'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: moderate
+    evidence: 'economic_motivation: Indifferent; socioeconomic_band: Middle'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: one_time
+    evidence: 'lstyle_payment_pref: Mobile wallet; economic_motivation: Indifferent'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Trusting; cog_curiosity: Moderate'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    - official_channels
+    evidence: 'trust_level: Trusting; region: East Asia; age_bracket: 55-64'
+    assignment_type: summary_inference
+  spending_style:
+    value: balanced
+    evidence: 'socioeconomic_band: Middle; economic_motivation: Indifferent'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - quality
+    - price
+    - convenience
+    evidence: 'big5_self_efficacy: High; socioeconomic_band: Middle; lstyle_payment_pref:
+      Mobile wallet'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: moderate
+    evidence: 'trust_level: Trusting; cog_curiosity: Moderate'
+    assignment_type: summary_inference
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'big5_self_efficacy: High; demo_employment_status: Full-time; life_stage:
+      Mid-life'
+    assignment_type: summary_inference

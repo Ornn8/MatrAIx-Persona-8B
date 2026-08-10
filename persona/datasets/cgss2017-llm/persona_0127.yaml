@@ -161,3 +161,53 @@ dimensions:
 provenance:
   parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
   origin_persona_id: cgss2017-4966
+consumer_profile:
+  willingness_to_pay:
+    value: moderate
+    evidence: 'economic_motivation: Value-driven; socioeconomic_band: Upper-middle'
+    assignment_type: summary_inference
+  price_anchor:
+    value: 200-500
+    evidence: 'socioeconomic_band: Upper-middle; economic_motivation: Value-driven'
+    assignment_type: summary_inference
+  price_sensitivity:
+    value: moderate
+    evidence: 'economic_motivation: Value-driven; socioeconomic_band: Upper-middle'
+    assignment_type: summary_inference
+  payment_model_pref:
+    value: freemium
+    evidence: 'economic_motivation: Value-driven; lstyle_payment_pref: Mobile wallet'
+    assignment_type: summary_inference
+  promo_receptivity:
+    value: selective
+    evidence: 'trust_level: Trusting; cog_curiosity: High'
+    assignment_type: summary_inference
+  trusted_channels:
+    value:
+    - word_of_mouth
+    - platform_reviews
+    - official_channels
+    evidence: 'trust_level: Trusting; cog_curiosity: High; region: East Asia'
+    assignment_type: summary_inference
+  spending_style:
+    value: balanced
+    evidence: 'economic_motivation: Value-driven; socioeconomic_band: Upper-middle'
+    assignment_type: summary_inference
+  decision_factors:
+    value:
+    - quality
+    - price
+    - word_of_mouth
+    evidence: 'economic_motivation: Value-driven; trust_level: Trusting; cog_curiosity:
+      High'
+    assignment_type: summary_inference
+  brand_loyalty:
+    value: moderate
+    evidence: 'val_loyalty: Moderate'
+    assignment_type: direct
+  payment_motivations:
+    value:
+    - core_need
+    - time_saving
+    evidence: 'economic_motivation: Value-driven; life_stage: Early career'
+    assignment_type: summary_inference
