@@ -1,4 +1,4 @@
-# macOS filesystem cruft
+﻿# macOS filesystem cruft
 .DS_Store
 **/.DS_Store
 
@@ -310,3 +310,7 @@ site/
 .cache/
 
 # Reasonix local session metadata.reasonix/
+.reasonix/
+
+# Reasonix local session metadata
+.reasonix/
