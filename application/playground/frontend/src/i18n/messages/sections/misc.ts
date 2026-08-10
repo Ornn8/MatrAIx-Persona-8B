@@ -17,6 +17,8 @@ const messages: MessageBundle = {
     "turnBubble.toolCallOk": "Tool call OK",
     "structuredExposure.details": "Details",
     "structuredExposure.top": "Top",
+    "misc.logoHomeAria": "MatrAIx home",
+    "misc.optionalLabel": "Optional label",
   },
   "zh-CN": {
     "runHeader.title": "配置模拟任务",
@@ -34,6 +36,8 @@ const messages: MessageBundle = {
     "turnBubble.toolCallOk": "工具调用正常",
     "structuredExposure.details": "详情",
     "structuredExposure.top": "首选",
+  "misc.logoHomeAria": "MatrAIx 首页",
+  "misc.optionalLabel": "可选标签",
   },
 };
 

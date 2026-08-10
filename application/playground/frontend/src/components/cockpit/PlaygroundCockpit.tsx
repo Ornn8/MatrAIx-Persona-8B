@@ -939,12 +939,12 @@ function ChatbotEvalCockpit({
           }
             context={
               <InstructionPanel
-                label={t("eval.common.taskContextLabel")}
+                label={t("eval.common.taskContextLabel", "Task context")}
                 title={instructionView.title}
                 markdown={instructionView.contextMarkdown}
                 loading={instructionView.loading}
                 error={instructionView.error}
-                emptyMessage={t("eval.common.noSeparateContext")}
+                emptyMessage={t("eval.common.noSeparateContext", "No separate context document is available for this task.")}
                 icon="menu_book"
               />
             }

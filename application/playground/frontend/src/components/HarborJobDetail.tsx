@@ -7,6 +7,7 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 
 import { api, ApiError } from "@/lib/api";
 import { useI18n } from "@/i18n/I18nProvider";
+import { BUCKET_I18N_KEY } from "./_bucket_i18n_map";
 import {
   exportBatchReportPdf,
   humanizePathLeaf,
@@ -613,7 +614,11 @@ function facetTitleClassName(label: string, size: "sm" | "md" = "md"): string {
     : "text-[13px] font-medium uppercase tracking-wide text-text-dim"
 }
 
-function humanizeFacetLabel(label: string | null | undefined, key?: string | null): string {
+function humanizeFacetLabel(
+  label: string | null | undefined,
+  key?: string | null,
+  t?: ReportTranslate,
+): string {
   const leafKey = facetKeyLeaf(key)
   // Aggregation keys look like "user_feedback.primary.foo" (no spaces). Prose
   const labelLooksLikeKey = Boolean(
@@ -634,47 +639,48 @@ function humanizeFacetLabel(label: string | null | undefined, key?: string | nul
   const normalized = raw.toLowerCase().replace(/[_-]+/g, " ")
   const keyNorm = leafKey.toLowerCase().replace(/-/g, "_")
   const byKey: Record<string, string> = {
-    outcome_status: "Task outcome",
-    outcome_reason: "Why this result",
-    feedback_reason: "Why they rated it this way",
-    clarification_questions_useful: "Clarifying questions useful",
-    asked_useful_clarification_questions: "Clarifying questions useful",
-    felt_understood: "Felt understood",
-    conversation_path: "How the chat went",
-    process_notes: "What happened in the chat",
-    resolution_basis: "How we judged the result",
-    next_step_owner: "Who acts next",
-    task_goal_label: "User goal",
-    trust_level: "Trust",
-    effort_rating: "Effort",
-    clarity_of_next_step: "Next step clear",
-    user_turn_count: "User turns",
-    assistant_turn_count: "Assistant turns",
-    message_count: "Messages",
-    clarification_question_count: "Clarifying questions",
-    policy_compliance: "Policy check",
-    groundedness_primary: "Groundedness",
-    coordination_mode: "Who needs to act",
-    guidance_quality: "Guidance quality",
-    state_change_achieved: "State changed",
-    user_action_required: "User action needed",
-    goal_completion_bucket: "Goal completion",
-    goal_completion_ratio: "Goal completion",
-    primary_failure_reason: "Main failure reason",
-    verifier_mode: "How it was checked",
+    outcome_status: t ? t("reports.facet.taskOutcome", "Task outcome") : "Task outcome",
+    outcome_reason: t ? t("reports.facet.outcomeReason", "Why this result") : "Why this result",
+    feedback_reason: t ? t("reports.facet.feedbackReason", "Why they rated it this way") : "Why they rated it this way",
+    clarification_questions_useful: t ? t("reports.facet.clarificationUseful", "Clarifying questions useful") : "Clarifying questions useful",
+    asked_useful_clarification_questions: t ? t("reports.facet.clarificationUseful", "Clarifying questions useful") : "Clarifying questions useful",
+    felt_understood: t ? t("reports.facet.feltUnderstood", "Felt understood") : "Felt understood",
+    conversation_path: t ? t("reports.facet.conversationPath", "How the chat went") : "How the chat went",
+    process_notes: t ? t("reports.facet.processNotes", "What happened in the chat") : "What happened in the chat",
+    resolution_basis: t ? t("reports.facet.resolutionBasis", "How we judged the result") : "How we judged the result",
+    next_step_owner: t ? t("reports.facet.nextStepOwner", "Who acts next") : "Who acts next",
+    task_goal_label: t ? t("reports.facet.taskGoal", "User goal") : "User goal",
+    trust_level: t ? t("reports.facet.trust", "Trust") : "Trust",
+    effort_rating: t ? t("reports.facet.effort", "Effort") : "Effort",
+    clarity_of_next_step: t ? t("reports.facet.nextStepClear", "Next step clear") : "Next step clear",
+    user_turn_count: t ? t("reports.facet.userTurns", "User turns") : "User turns",
+    assistant_turn_count: t ? t("reports.facet.assistantTurns", "Assistant turns") : "Assistant turns",
+    message_count: t ? t("reports.facet.messages", "Messages") : "Messages",
+    clarification_question_count: t ? t("reports.facet.clarificationQuestions", "Clarifying questions") : "Clarifying questions",
+    policy_compliance: t ? t("reports.facet.policyCheck", "Policy check") : "Policy check",
+    groundedness_primary: t ? t("reports.facet.groundedness", "Groundedness") : "Groundedness",
+    coordination_mode: t ? t("reports.facet.whoNeedsToAct", "Who needs to act") : "Who needs to act",
+    guidance_quality: t ? t("reports.facet.guidanceQuality", "Guidance quality") : "Guidance quality",
+    state_change_achieved: t ? t("reports.facet.stateChanged", "State changed") : "State changed",
+    user_action_required: t ? t("reports.facet.userActionNeeded", "User action needed") : "User action needed",
+    goal_completion_bucket: t ? t("reports.facet.goalCompletion", "Goal completion") : "Goal completion",
+    goal_completion_ratio: t ? t("reports.facet.goalCompletion", "Goal completion") : "Goal completion",
+    primary_failure_reason: t ? t("reports.facet.mainFailureReason", "Main failure reason") : "Main failure reason",
+    verifier_mode: t ? t("reports.facet.howChecked", "How it was checked") : "How it was checked",
   }
   if (keyNorm && byKey[keyNorm]) return byKey[keyNorm]
-  if (normalized === "outcome status") return "Task outcome"
-  if (normalized === "outcome reason") return "Why this result"
-  if (normalized === "feedback reason") return "Why they rated it this way"
-  if (normalized === "conversation path") return "How the chat went"
-  if (normalized === "process notes") return "What happened in the chat"
-  if (normalized === "resolution basis") return "How we judged the result"
-  if (normalized === "next step owner") return "Who acts next"
-  if (normalized === "personal preference satisfaction") return "Preferences matched"
-  if (normalized === "clarification questions useful") return "Clarifying questions useful"
+  if (normalized === "outcome status") return t ? t("reports.facet.taskOutcome", "Task outcome") : "Task outcome"
+  if (normalized === "outcome reason") return t ? t("reports.facet.outcomeReason", "Why this result") : "Why this result"
+  if (normalized === "feedback reason") return t ? t("reports.facet.feedbackReason", "Why they rated it this way") : "Why they rated it this way"
+  if (normalized === "conversation path") return t ? t("reports.facet.conversationPath", "How the chat went") : "How the chat went"
+  if (normalized === "process notes") return t ? t("reports.facet.processNotes", "What happened in the chat") : "What happened in the chat"
+  if (normalized === "resolution basis") return t ? t("reports.facet.resolutionBasis", "How we judged the result") : "How we judged the result"
+  if (normalized === "next step owner") return t ? t("reports.facet.nextStepOwner", "Who acts next") : "Who acts next"
+  if (normalized === "personal preference satisfaction") return t ? t("reports.facet.personalPreferences", "Preferences matched") : "Preferences matched"
+  if (normalized === "clarification questions useful") return t ? t("reports.facet.clarificationUseful", "Clarifying questions useful") : "Clarifying questions useful"
   if (normalized.endsWith(" reason")) {
-    return `Why: ${raw.replace(/\s*reason$/i, "").trim() || "explanation"}`
+    const base = raw.replace(/\s*reason$/i, "").trim() || "explanation"
+    return t ? `原因: ${base}` : `Why: ${base}`
   }
   // Never surface dotted aggregation keys in the UI.
   if (labelLooksLikeKey || (/^[a-zA-Z0-9_.-]+$/.test(raw) && raw.includes("."))) {
@@ -716,12 +722,12 @@ function crossFacetReasonPhrase(
       : "How the result was judged",
   }
   if (byKey[leaf]) return byKey[leaf]
-  const label = humanizeFacetLabel(null, textFacetKey)
+  const label = humanizeFacetLabel(null, textFacetKey, t)
   return label && label !== "Explanation" ? label : "Persona explanations"
 }
 
 /** Soften reporting.json titles that still say "Feedback reason by …". */
-function humanizeAnalysisTitle(title: string | null | undefined): string {
+function humanizeAnalysisTitle(title: string | null | undefined, t?: ReportTranslate): string {
   const raw = (title ?? "").trim()
   if (!raw) return "Analysis"
   let next = raw
@@ -746,8 +752,10 @@ function humanizeAnalysisTitle(title: string | null | undefined): string {
     }
     const plain =
       groupMap[groupNorm] ??
-      humanizeFacetLabel(group, group.trim().toLowerCase().replace(/\s+/g, "_"))
-    return `, by ${plain.charAt(0).toLowerCase()}${plain.slice(1)}`
+      humanizeFacetLabel(group, group.trim().toLowerCase().replace(/\s+/g, "_"), t)
+    return t
+      ? `${t("reports.analysis.by", ", by")} ${plain.charAt(0).toLowerCase()}${plain.slice(1)}`
+      : `, by ${plain.charAt(0).toLowerCase()}${plain.slice(1)}`
   })
   return next
 }
@@ -914,10 +922,15 @@ const BUCKET_LABELS: Record<string, string> = {
   hybrid: "Mixed checks",
 }
 
-function formatBucketLabel(value: string): string {
+function formatBucketLabel(value: string, t?: ReportTranslate): string {
   const normalized = value.trim().toLowerCase().replace(/[\s-]+/g, "_")
   if (!normalized) return value
-  if (BUCKET_LABELS[normalized]) return BUCKET_LABELS[normalized]
+  if (BUCKET_LABELS[normalized]) {
+    const camelKey = BUCKET_I18N_KEY[normalized] ?? normalized
+    return t
+      ? t(`reports.bucket.${camelKey}`, BUCKET_LABELS[normalized])
+      : BUCKET_LABELS[normalized]
+  }
   // Already human sentence-ish (contains spaces or punctuation) — keep as-is.
   if (/[\s,:]/.test(value.trim()) && !/_/.test(value)) return value.trim()
   return value
@@ -1311,14 +1324,14 @@ function FacetCategoricalDistribution({ facet }: { facet: AggregationField }) {
   const { t } = useI18n()
   const counts = facet.categorical?.counts ?? []
   const total = counts.reduce((sum, entry) => sum + entry.count, 0)
-  const label = reportText(t, humanizeFacetLabel(facet.label, facet.key))
+  const label = reportText(t, humanizeFacetLabel(facet.label, facet.key, t))
   return (
     <div className="rounded-lg bg-surface/45 px-3 py-2.5">
       <div className="mb-2 text-[13px] font-medium text-text-main" title={facet.label}>
         {label}
       </div>
       <CountBars
-        items={counts.map((entry) => ({ label: reportText(t, formatBucketLabel(entry.value)), count: entry.count }))}
+        items={counts.map((entry) => ({ label: reportText(t, formatBucketLabel(entry.value, t)), count: entry.count }))}
         total={total}
         compact
         showShare
@@ -1462,7 +1475,7 @@ function NumericalDistributionCard({
 }) {
   const { t } = useI18n()
   const num = facet.numerical
-  const label = reportText(t, humanizeFacetLabel(facet.label, facet.key))
+  const label = reportText(t, humanizeFacetLabel(facet.label, facet.key, t))
   const avg = num?.avg ?? null
   const min = num?.min ?? null
   const max = num?.max ?? null
@@ -1696,11 +1709,11 @@ function contextLeadText(context: AggregationContext, t?: ReportTranslate): stri
   if (primary?.kind === "categorical" && isUnanimousField(primary)) {
     const value = primary.categorical?.counts?.[0]?.value ?? "—"
     return t
-      ? `${t("reports.report.allPersonasCount", "All {count} personas", { count: String(primary.presentCount) })}: ${formatBucketLabel(value)}`
-      : `All ${primary.presentCount} personas: ${formatBucketLabel(value)}`
+      ? `${t("reports.report.allPersonasCount", "All {count} personas", { count: String(primary.presentCount) })}: ${formatBucketLabel(value, t)}`
+      : `All ${primary.presentCount} personas: ${formatBucketLabel(value, t)}`
   }
   if (primary?.kind === "numerical") {
-    return `${humanizeFacetLabel(primary.label, primary.key)}: ${formatNumericalSummary(primary)}`
+    return `${humanizeFacetLabel(primary.label, primary.key, t)}: ${formatNumericalSummary(primary)}`
   }
 
   const buckets = summaryBucketsForContext(context)
@@ -2035,11 +2048,11 @@ function PersonaDistributionCard({
   const numeric = distribution.kind === "numerical"
   const columns = personaDistributionColumns(distribution)
   const columnMeta = useMemo(
-    () => buildDistributionColumnMeta(columns, { numeric, choiceOptions }),
+    () => buildDistributionColumnMeta(columns, { numeric, choiceOptions }, t),
     [columns, numeric, choiceOptions],
   )
   const signalBase = reportText(t, stripSplitBySuffix(
-    humanizeFacetLabel(distribution.facetLabel, distribution.facetKey),
+    humanizeFacetLabel(distribution.facetLabel, distribution.facetKey, t),
   ))
   const segmentLabel = reportText(t, distribution.groupByLabel || "Persona segment")
   const showSegmentSuffix = Boolean(distribution.groupByPersonaDimension?.trim())
@@ -2072,8 +2085,8 @@ function PersonaDistributionCard({
               <th className="py-1 pr-3 text-right font-medium">n</th>
               {columns.map((value) => {
                 const meta = columnMeta.get(value) ?? {
-                  fullLabel: formatBucketLabel(value),
-                  title: formatBucketLabel(value),
+                  fullLabel: formatBucketLabel(value, t),
+                  title: formatBucketLabel(value, t),
                   compact: false,
                 }
                 return (
@@ -2105,7 +2118,7 @@ function PersonaDistributionCard({
             {distribution.buckets.map((bucket) => (
               <tr key={bucket.bucket} className="border-t border-outline/25">
                 <td className="py-1.5 pr-3 font-medium text-text-main">
-                  {reportText(t, formatBucketLabel(bucket.bucket))}
+                  {reportText(t, formatBucketLabel(bucket.bucket, t))}
                 </td>
                 <td className="py-1.5 pr-3 text-right font-mono text-text-variant">
                   {bucket.count}
@@ -2116,7 +2129,7 @@ function PersonaDistributionCard({
                   const pct = Math.round(share * 100)
                   const intensity = count > 0 ? 0.1 + 0.55 * share : 0
                   const meta = columnMeta.get(value)
-                  const answerLabel = meta?.title ?? formatBucketLabel(value)
+                  const answerLabel = meta?.title ?? formatBucketLabel(value, t)
                   return (
                     <td key={value} className="p-0.5 text-center align-middle">
                       <span
@@ -2129,7 +2142,7 @@ function PersonaDistributionCard({
                         }}
                         title={
                           count > 0
-                            ? `${formatBucketLabel(bucket.bucket)} · ${answerLabel}: ${count} of ${bucket.count} (${pct}%)`
+                            ? `${formatBucketLabel(bucket.bucket, t)} · ${answerLabel}: ${count} of ${bucket.count} (${pct}%)`
                             : "0"
                         }
                       >
@@ -2240,6 +2253,7 @@ function buildDistributionColumnMeta(
     numeric: boolean
     choiceOptions?: Array<{ id: string; label: string }>
   },
+  t?: ReportTranslate,
 ): Map<string, DistributionColumnMeta> {
   const byId = new Map(
     (choiceOptions ?? []).map((option, index) => [
@@ -2266,7 +2280,7 @@ function buildDistributionColumnMeta(
       })
       return
     }
-    const pretty = formatBucketLabel(value)
+    const pretty = formatBucketLabel(value, t)
     meta.set(value, {
       fullLabel: pretty,
       title: pretty,
@@ -2377,14 +2391,14 @@ function PersonaDistributionExplorer({
           label: stripSplitBySuffix(
             humanizeFacetLabel(
               entry.distribution.facetLabel,
-              entry.distribution.facetKey,
+              entry.distribution.facetKey, t
             ),
           ),
         })
       }
     }
     return [...seen.values()]
-  }, [entries, activeContext])
+  }, [entries, activeContext, t])
 
   const [facetValue, setFacetValue] = useState<string>(facetOptions[0]?.value ?? "")
   const preferredFacet =
@@ -2792,7 +2806,7 @@ function CompactContextGroup({ contexts }: { contexts: AggregationContext[] }) {
         {(open ? contexts : contexts.slice(0, 4)).map((context) => {
           const primary = primaryFacetForContext(context)
           const rawValue = primary?.categorical?.counts?.[0]?.value ?? "—"
-          const value = rawValue === "—" ? rawValue : formatBucketLabel(rawValue)
+          const value = rawValue === "—" ? rawValue : formatBucketLabel(rawValue, t)
           return (
             <div key={context.key} className="flex items-center gap-3 px-4 py-2.5">
               <Sym name="check_circle" size={16} className="shrink-0 text-secondary" fill={1} />
@@ -3822,7 +3836,7 @@ function surveyAnswerItems(
     const known = new Set(options.map((option) => option.id))
     const rows = options.map((option) => ({
       id: option.id,
-      label: option.label?.trim() || formatBucketLabel(option.id),
+      label: option.label?.trim() || formatBucketLabel(option.id, t),
       count: byId.get(option.id) ?? 0,
     }))
     // Keep unexpected values that aren't in the questionnaire inventory.
@@ -3830,7 +3844,7 @@ function surveyAnswerItems(
       if (!known.has(entry.value)) {
         rows.push({
           id: entry.value,
-          label: t ? reportText(t, formatBucketLabel(entry.value)) : formatBucketLabel(entry.value),
+          label: t ? reportText(t, formatBucketLabel(entry.value, t)) : formatBucketLabel(entry.value, t),
           count: entry.count,
         })
       }
@@ -3839,7 +3853,7 @@ function surveyAnswerItems(
   }
   return counts.map((entry) => ({
     id: entry.value,
-    label: formatBucketLabel(entry.value),
+    label: formatBucketLabel(entry.value, t),
     count: entry.count,
   }))
 }
@@ -4385,7 +4399,7 @@ function SurveyQuestionCard({ context }: { context: AggregationContext }) {
   const hasReasons = reasonSamples.length > 0 || Boolean(reasonSummary)
   const reasonTitle = humanizeFacetLabel(
     explanationFacet?.label ?? t("reports.report.reasons", "Reasons"),
-    explanationFacet?.key ?? "explanation",
+    explanationFacet?.key ?? "explanation", t
   )
   const quoteCount = reasonSamples.length
   const summaries = context.summaries ?? []
@@ -4696,7 +4710,10 @@ function defaultFeedbackCategories(field: AggregationField): string[] {
   return field.categories?.map((item) => String(item)) ?? []
 }
 
-function feedbackChoiceItems(field: AggregationField): Array<CountBarItem & { id?: string }> {
+function feedbackChoiceItems(
+  field: AggregationField,
+  t?: ReportTranslate,
+): Array<CountBarItem & { id?: string }> {
   if (field.kind !== "categorical") return []
   const counts = field.categorical?.counts ?? []
   const byId = new Map(counts.map((entry) => [entry.value, entry.count]))
@@ -4704,21 +4721,21 @@ function feedbackChoiceItems(field: AggregationField): Array<CountBarItem & { id
   if (inventory.length === 0) {
     return counts.map((entry) => ({
       id: entry.value,
-      label: formatBucketLabel(entry.value),
+      label: formatBucketLabel(entry.value, t),
       count: entry.count,
     }))
   }
   const known = new Set(inventory)
   const rows = inventory.map((id) => ({
     id,
-    label: formatBucketLabel(id),
+    label: formatBucketLabel(id, t),
     count: byId.get(id) ?? byId.get(id.toLowerCase()) ?? 0,
   }))
   for (const entry of counts) {
     if (!known.has(entry.value) && !known.has(entry.value.toLowerCase())) {
       rows.push({
         id: entry.value,
-        label: formatBucketLabel(entry.value),
+        label: formatBucketLabel(entry.value, t),
         count: entry.count,
       })
     }
@@ -4768,7 +4785,7 @@ function UserFeedbackBatchCard({ context }: { context: AggregationContext }) {
         : null
   const ratingLead =
     primaryRating?.kind === "numerical"
-      ? `${reportText(t, humanizeFacetLabel(primaryRating.label, primaryRating.key))}: ${t("reports.report.avg", "avg")} ${formatNumericalSummary(primaryRating)}${
+      ? `${reportText(t, humanizeFacetLabel(primaryRating.label, primaryRating.key, t))}: ${t("reports.report.avg", "avg")} ${formatNumericalSummary(primaryRating)}${
           typeof primaryRating.scaleMax === "number"
             ? `/${primaryRating.scaleMax}`
             : inferRatingScale(primaryRating)
@@ -4805,8 +4822,8 @@ function UserFeedbackBatchCard({ context }: { context: AggregationContext }) {
 
         {primaryRating ? (
           <div className="rounded-xl glass-tile p-3">
-            <div className={`mb-2 ${facetTitleClassName(reportText(t, humanizeFacetLabel(primaryRating.label, primaryRating.key)))}`}>
-              {reportText(t, humanizeFacetLabel(primaryRating.label, primaryRating.key))}
+            <div className={`mb-2 ${facetTitleClassName(reportText(t, humanizeFacetLabel(primaryRating.label, primaryRating.key, t)))}`}>
+              {reportText(t, humanizeFacetLabel(primaryRating.label, primaryRating.key, t))}
             </div>
             <LikertQuestionBody context={feedbackRatingContext(primaryRating)} primary={primaryRating} />
           </div>
@@ -4815,7 +4832,7 @@ function UserFeedbackBatchCard({ context }: { context: AggregationContext }) {
         {choiceFacets.length > 0 ? (
           <div className="space-y-3">
             {choiceFacets.map((facet) => {
-              const items = feedbackChoiceItems(facet)
+              const items = feedbackChoiceItems(facet, t)
               const total = Math.max(
                 facet.presentCount,
                 items.reduce((sum, item) => sum + item.count, 0),
@@ -4823,8 +4840,8 @@ function UserFeedbackBatchCard({ context }: { context: AggregationContext }) {
               )
               return (
                 <div key={facet.key} className="rounded-xl glass-tile p-3">
-                  <div className={`mb-2 ${facetTitleClassName(reportText(t, humanizeFacetLabel(facet.label, facet.key)))}`}>
-                    {reportText(t, humanizeFacetLabel(facet.label, facet.key))}
+                  <div className={`mb-2 ${facetTitleClassName(reportText(t, humanizeFacetLabel(facet.label, facet.key, t)))}`}>
+                    {reportText(t, humanizeFacetLabel(facet.label, facet.key, t))}
                   </div>
                   <ChoiceCompositionChart items={items} respondentCount={total} />
                 </div>
@@ -4837,8 +4854,8 @@ function UserFeedbackBatchCard({ context }: { context: AggregationContext }) {
           <div className="grid gap-3 lg:grid-cols-2">
             {otherRatings.map((facet) => (
               <div key={facet.key} className="rounded-xl glass-tile p-3">
-                <div className={`mb-2 ${facetTitleClassName(reportText(t, humanizeFacetLabel(facet.label, facet.key)))}`}>
-                  {reportText(t, humanizeFacetLabel(facet.label, facet.key))}
+                <div className={`mb-2 ${facetTitleClassName(reportText(t, humanizeFacetLabel(facet.label, facet.key, t)))}`}>
+                  {reportText(t, humanizeFacetLabel(facet.label, facet.key, t))}
                 </div>
                 <LikertQuestionBody context={feedbackRatingContext(facet)} primary={facet} />
               </div>
@@ -4854,7 +4871,7 @@ function UserFeedbackBatchCard({ context }: { context: AggregationContext }) {
           const themes = (signalThemes.length > 0 ? signalThemes : coverage.themes).filter(
             (theme) => !isQuoteLikeTheme(theme),
           )
-          const facetTitle = reportText(t, humanizeFacetLabel(facet.label, facet.key))
+          const facetTitle = reportText(t, humanizeFacetLabel(facet.label, facet.key, t))
           const showSummary =
             coverage.summary &&
             !isHeuristicAggregationSummary(coverage.summary) &&
@@ -4931,7 +4948,7 @@ function ContextCard({ context }: { context: AggregationContext }) {
               {unanimousPrimary && primaryValue ? (
                 <span className="inline-flex items-center gap-1 rounded-md bg-secondary/10 px-2 py-0.5 text-[13px] font-medium text-secondary">
                   <Sym name="check_circle" size={12} fill={1} />
-                  {reportText(t, formatBucketLabel(primaryValue))}
+                  {reportText(t, formatBucketLabel(primaryValue, t))}
                 </span>
               ) : null}
             </div>
@@ -4958,7 +4975,7 @@ function ContextCard({ context }: { context: AggregationContext }) {
               <div className="rounded-xl glass-tile p-2.5">
                 <div className="mb-1.5 flex items-center justify-between gap-2">
                   <div className="text-[13px] font-medium uppercase tracking-wide text-text-dim">
-                    {reportText(t, humanizeFacetLabel(primaryFacet.label, primaryFacet.key))}
+                    {reportText(t, humanizeFacetLabel(primaryFacet.label, primaryFacet.key, t))}
                   </div>
                   {localizedFacetRole(t, primaryFacet.role) ? (
                     <InlineBadge>{localizedFacetRole(t, primaryFacet.role)}</InlineBadge>
@@ -5064,7 +5081,7 @@ function FacetCard({ field }: { field: AggregationField }) {
   const { t } = useI18n()
   const textSummary = field.textual?.summary ?? null
   const textSamples = field.textual?.samples ?? []
-  const title = reportText(t, humanizeFacetLabel(field.label, field.key))
+  const title = reportText(t, humanizeFacetLabel(field.label, field.key, t))
   const roleLabel = localizedFacetRole(t, field.role)
 
   return (
@@ -5108,16 +5125,19 @@ function SummaryDisclosure({ summary }: { summary: AggregationSummary }) {
   const total = summary.buckets.reduce((sum, bucket) => sum + bucket.count, 0)
   const groupLower = summary.groupByFacetKey
     ? (() => {
-        const label = humanizeFacetLabel(null, summary.groupByFacetKey)
+        const label = humanizeFacetLabel(null, summary.groupByFacetKey, t)
         return `${label.charAt(0).toLowerCase()}${label.slice(1)}`
       })()
     : null
   // Auto reason-summaries self-describe from their facets; reporting.json ones keep their title.
   const title = summary.auto
     ? groupLower
-      ? `${crossFacetReasonPhrase(summary.targetFacetKey, t)}, by ${groupLower}`
+      ? t("reports.analysis.groupedBy", "{reason}, grouped by {answer}", {
+          reason: crossFacetReasonPhrase(summary.targetFacetKey, t),
+          answer: groupLower,
+        })
       : crossFacetReasonPhrase(summary.targetFacetKey, t)
-    : humanizeAnalysisTitle(summary.title)
+    : humanizeAnalysisTitle(summary.title, t)
   const isPersonaGrouped = summary.groupByMode === "persona_attribute"
   const personaGroupLabel = (summary.groupByLabel || summary.groupByPersonaDimension || "")
     .toString()
@@ -5140,7 +5160,7 @@ function SummaryDisclosure({ summary }: { summary: AggregationSummary }) {
         <div className="mt-3 space-y-3">
           <CountBars
             items={summary.buckets.map((bucket) => ({
-              label: formatBucketLabel(bucket.bucket),
+              label: formatBucketLabel(bucket.bucket, t),
               count: bucket.count,
             }))}
             total={total}
@@ -5150,7 +5170,7 @@ function SummaryDisclosure({ summary }: { summary: AggregationSummary }) {
             {summary.buckets.map((bucket) => (
               <div key={`${summary.id}-${bucket.bucket}`} className="rounded-lg glass-tile p-3">
                 <div className="flex items-center justify-between gap-3 text-[14px]">
-                  <span className="font-medium text-text-main">{reportText(t, formatBucketLabel(bucket.bucket))}</span>
+                  <span className="font-medium text-text-main">{reportText(t, formatBucketLabel(bucket.bucket, t))}</span>
                   <span className="font-mono text-text-variant">{bucket.count}</span>
                 </div>
                 {bucket.summary ? (
@@ -5233,7 +5253,7 @@ function SignalGroupBreakdown({ judge }: { judge: AggregationJudge }) {
   const signals = judge.signals ?? []
   const buckets = (judge.buckets ?? []).filter((bucket) => (bucket.signalStats ?? []).length > 0)
   if (signals.length === 0 || buckets.length < 2) return null
-  const groupLabel = humanizeFacetLabel(judge.groupByLabel ?? null, judge.groupByFacetKey)
+  const groupLabel = humanizeFacetLabel(judge.groupByLabel ?? null, judge.groupByFacetKey, t)
   const presentFor = (bucket: AggregationJudge["buckets"][number], key: string) =>
     (bucket.signalStats ?? []).find((stat) => stat.key === key) ?? null
 
@@ -5249,7 +5269,7 @@ function SignalGroupBreakdown({ judge }: { judge: AggregationJudge }) {
               <th className="p-1.5 text-left font-medium text-text-dim">{t("reports.analysis.signal", "Signal")}</th>
               {buckets.map((bucket) => (
                 <th key={bucket.bucket} className="whitespace-nowrap p-1.5 text-right font-medium text-text-dim">
-                  {reportText(t, formatBucketLabel(bucket.bucket))} <span className="font-normal text-text-dim/70">n={bucket.count}</span>
+                  {reportText(t, formatBucketLabel(bucket.bucket, t))} <span className="font-normal text-text-dim/70">n={bucket.count}</span>
                 </th>
               ))}
             </tr>
@@ -5285,7 +5305,7 @@ function JudgeDisclosure({ judge }: { judge: AggregationJudge }) {
 
   return (
     <DisclosurePanel
-      title={humanizeAnalysisTitle(judge.title)}
+      title={humanizeAnalysisTitle(judge.title, t)}
       subtitle={t(
         "reports.analysis.signalFrequency",
         "How often each signal appears across {count} scored {sampleLabel} (share, not a quality score)",
@@ -5328,20 +5348,23 @@ function CrossFacetViewDisclosure({
   const buckets = crossFacetView.buckets ?? []
   const total = buckets.reduce((sum, bucket) => sum + bucket.count, 0)
   const primaryLabel = crossFacetView.primaryFacetKey
-    ? humanizeFacetLabel(null, crossFacetView.primaryFacetKey)
+    ? humanizeFacetLabel(null, crossFacetView.primaryFacetKey, t)
     : null
   const textLabel = crossFacetView.textFacetKey
-    ? humanizeFacetLabel(null, crossFacetView.textFacetKey)
+    ? humanizeFacetLabel(null, crossFacetView.textFacetKey, t)
     : null
   const primaryLower = primaryLabel
     ? `${primaryLabel.charAt(0).toLowerCase()}${primaryLabel.slice(1)}`
     : null
   const title =
     primaryLower && textLabel
-      ? `${crossFacetReasonPhrase(crossFacetView.textFacetKey, t)}, grouped by ${primaryLower}`
+      ? t("reports.analysis.groupedBy", "{reason}, grouped by {answer}", {
+          reason: crossFacetReasonPhrase(crossFacetView.textFacetKey, t),
+          answer: primaryLower,
+        })
       : crossFacetView.type === "text_by_primary_category"
         ? t("reports.analysis.quotesByAnswer", "Quotes by answer group")
-        : formatBucketLabel(crossFacetView.type)
+        : formatBucketLabel(crossFacetView.type, t)
   const subtitle = t("reports.analysis.expandGroupQuotes", "Expand a group to read the persona quotes behind each {answer}", {
     answer: primaryLower ?? t("reports.analysis.answer", "answer"),
   })
@@ -5354,7 +5377,7 @@ function CrossFacetViewDisclosure({
     >
       <CountBars
         items={buckets.map((bucket) => ({
-          label: formatBucketLabel(bucket.category),
+          label: formatBucketLabel(bucket.category, t),
           count: bucket.count,
         }))}
         total={total}
@@ -5363,7 +5386,7 @@ function CrossFacetViewDisclosure({
         {buckets.map((bucket) => (
           <div key={`${crossFacetView.type}-${bucket.category}`} className="rounded-lg glass-tile p-3">
             <div className="flex items-center justify-between gap-3 text-[14px]">
-              <span className="font-medium text-text-main">{reportText(t, formatBucketLabel(bucket.category))}</span>
+              <span className="font-medium text-text-main">{reportText(t, formatBucketLabel(bucket.category, t))}</span>
               <span className="font-mono text-text-variant">{bucket.count}</span>
             </div>
             {bucket.samples.length > 0 ? (
@@ -5496,7 +5519,7 @@ function FacetVisual({ field, compact = false }: { field: AggregationField; comp
     return (
       <CountBars
         items={(field.categorical?.counts ?? []).slice(0, compact ? 4 : 6).map((entry) => ({
-          label: formatBucketLabel(entry.value),
+          label: formatBucketLabel(entry.value, t),
           count: entry.count,
         }))}
         total={Math.max(field.presentCount, 1)}

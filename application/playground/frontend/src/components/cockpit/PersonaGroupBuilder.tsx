@@ -221,7 +221,7 @@ export function PersonaGroupBuilder({
             <input
               value={saveName}
               onChange={(e) => setSaveName(e.target.value)}
-              placeholder="Optional label"
+              placeholder={t("misc.optionalLabel", "Optional label")}
               className="h-8 rounded border border-outline bg-surface px-2 text-[14px]"
             />
           </label>

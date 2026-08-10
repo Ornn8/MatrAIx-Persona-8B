@@ -152,7 +152,7 @@ export function SchemaSelfReportPanel({
   if (measured.length === 0) {
     return (
       <div className="rounded-md glass-tile glass-tile--dim px-4 py-8 text-center text-[15px] text-text-variant">
-        {t("scorecards.survey.noMeasurableFields")}
+        {t("scorecards.survey.noMeasurableFields", "This task defines a self-report schema, but no measurable fields were authored.")}
       </div>
     );
   }

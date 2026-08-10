@@ -289,7 +289,7 @@ function humanizeFeedbackKey(key: string): string {
 }
 
 function feedbackDisplayValue(value: unknown, t: (key: string, fallback?: string) => string): string {
-  if (typeof value === "boolean") return value ? t("runs.yes") : t("runs.no");
+  if (typeof value === "boolean") return value ? t("runs.yes", "Yes") : t("runs.no", "No");
   if (typeof value === "number") return String(value);
   if (typeof value === "string") return value;
   return "-";
@@ -1149,10 +1149,10 @@ function DetailNotFound() {
         <Sym name="search_off" size={26} className="text-text-dim" />
       </div>
       <h2 className="font-display text-[15px] font-semibold text-text-main">
-        {t("runs.notFoundTitle")}
+        {t("runs.notFoundTitle", "We couldn't find this run")}
       </h2>
       <p className="mx-auto mt-2 max-w-sm text-[15px] leading-relaxed text-text-variant">
-        {t("runs.notFoundDetail")}
+        {t("runs.notFoundDetail", "It may have been deleted. Go back to the list to pick another.")}
       </p>
     </StudioGlassPanel>
   );
@@ -1165,14 +1165,14 @@ function DetailError({ error, onRetry }: { error: unknown; onRetry: () => void }
   const message =
     error instanceof ApiError
       ? error.message
-      : t("runs.loadDetailError");
+      : t("runs.loadDetailError", "Something went wrong loading the details. Try again in a moment.");
   return (
     <StudioGlassPanel className="border-l-4 border-l-danger px-5 py-8 text-center rise-in">
       <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-md bg-danger/10">
         <Sym name="error" fill={1} size={22} className="text-danger" />
       </div>
       <h2 className="font-display text-[15px] font-semibold text-text-main">
-        {t("runs.openErrorTitle")}
+        {t("runs.openErrorTitle", "We couldn't open this run")}
       </h2>
       <p className="mx-auto mt-1.5 max-w-md break-words text-[15px] leading-relaxed text-text-variant">
         {message}
@@ -1183,7 +1183,7 @@ function DetailError({ error, onRetry }: { error: unknown; onRetry: () => void }
         className={`mt-4 inline-flex items-center gap-1.5 rounded-md bg-danger/10 px-4 py-2 text-[14px] text-danger transition ease-out hover:bg-danger/20 active:scale-[0.97] ${FOCUS_RING}`}
       >
         <Sym name="refresh" size={16} />
-        {t("runs.tryAgain")}
+        {t("runs.tryAgain", "Try again")}
       </button>
     </StudioGlassPanel>
   );
