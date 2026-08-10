@@ -93,6 +93,32 @@ huggingface-cli download MatrAIx2026/MatrAIx_Persona_1M_Public_Release \
 Playground: Dataset → **`matraix-persona-1m`**. CLI: `--dataset persona/datasets/matraix-persona-1m`.
 Details: [Handbook § Persona 1M](docs/README.md#3-persona-1m-optional).
 
+## China persona pipeline
+
+A real-data pipeline that grounds personas in actual survey respondents instead
+of relying on synthesis alone:
+
+- **Sources**: CGSS 2017 (12,582 respondents), CGSS 2021 (8,148) and WVS Wave-7
+  China (3,036) mapped onto the 1,290-dimension schema via declarative
+  crosswalks (persona/curation/existing_data/scripts/crosswalks/), validated
+  with zero schema violations.
+- **Persona pools**: persona/datasets/cgss2017-llm/ (200 respondents, LLM-rich
+  ~105 dims/persona, with evidence-grounded inference) and
+  persona/datasets/wvs-cn/ (3,036). Each pool carries an isolated source
+  marker and its own manifest, so China cohorts never mix into generic pools.
+- **Consumer profile**: every cgss2017-llm persona includes a 10-field
+  consumer-behavior block — willingness to pay, price anchor, price
+  sensitivity, payment-model preference, promotion receptivity, trusted
+  channels, spending style, decision factors, brand loyalty, payment
+  motivations — for simulated pricing / promotion / feedback studies. The block
+  is rendered only when a market-research scenario explicitly requests it.
+- **Chinese rendering**: set MATRAIX_PERSONA_LANGUAGE=zh to render persona
+  narratives in Chinese (1,290/1,290 dims translated; English stays the default
+  and is byte-identical).
+
+See [delivery map](docs/persona/delivery-map.md) and
+[consumer profile fields](docs/persona/consumer-profile-fields.md).
+
 ## Quick start
 
 ### Smoke test
@@ -158,6 +184,9 @@ Batch (`--sample-size N`), filters, and chat / web / os-app examples:
 
 **[MatrAIx Handbook](docs/README.md)** — guides, persona / application / environment docs.
 
+- **[China persona pipeline](docs/persona/delivery-map.md)** — real-data CGSS/WVS pipeline, persona pools, consumer profiles.
+- **[Chinese rendering](docs/persona/zh-rendering.md)** — MATRAIX_PERSONA_LANGUAGE=zh language switch.
+
 <p align="center">
   <img src="docs/assets/matraix-architecture.png" alt="MatrAIx architecture" width="900">
 </p>
@@ -168,7 +197,8 @@ Batch (`--sample-size N`), filters, and chat / web / os-app examples:
 MatrAIx/
 ├── persona/                 Schema, datasets, synthesis/curation/validation pipelines
 │   ├── schema/              1,290-dimension persona schema
-│   ├── datasets/            Dev sample pool and persona YAMLs
+│   ├── datasets/            Dev sample pool, CGSS/WVS China pools, persona YAMLs
+│   ├── curation/            Existing-data crosswalks (CGSS/WVS) + LLM enrichment
 │   ├── validation/          Grounding / quality validation suites
 │   └── scripts/             Persona job & pipeline helpers
 ├── application/
