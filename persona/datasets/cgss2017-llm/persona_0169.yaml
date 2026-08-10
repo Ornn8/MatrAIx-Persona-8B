@@ -123,9 +123,6 @@ dimensions:
   val_tradition: Important
   val_wealth: Moderate
   years_experience: 0-2
-provenance:
-  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
-  origin_persona_id: cgss2017-7857
 consumer_profile:
   willingness_to_pay:
     value: low

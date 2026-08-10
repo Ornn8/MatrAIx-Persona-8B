@@ -155,9 +155,6 @@ dimensions:
   val_wealth: Moderate
   values_priority: Security
   years_experience: 20+
-provenance:
-  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
-  origin_persona_id: cgss2017-9051
 consumer_profile:
   willingness_to_pay:
     value: moderate

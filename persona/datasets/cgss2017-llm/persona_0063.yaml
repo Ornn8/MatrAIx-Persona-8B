@@ -102,9 +102,6 @@ dimensions:
   val_family: Important
   val_health: Important
   val_spirituality_faith: Minor
-provenance:
-  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
-  origin_persona_id: cgss2017-1388
 consumer_profile:
   willingness_to_pay:
     value: moderate

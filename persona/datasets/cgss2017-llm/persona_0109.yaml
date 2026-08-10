@@ -115,9 +115,6 @@ dimensions:
   trust_level: Verifying
   val_health: Important
   years_experience: 20+
-provenance:
-  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
-  origin_persona_id: cgss2017-3788
 consumer_profile:
   willingness_to_pay:
     value: low

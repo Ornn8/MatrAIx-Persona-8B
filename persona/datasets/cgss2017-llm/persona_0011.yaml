@@ -111,9 +111,6 @@ dimensions:
   val_spirituality_faith: Minor
   val_tradition: Moderate
   years_experience: 6-10
-provenance:
-  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
-  origin_persona_id: cgss2017-10652
 consumer_profile:
   willingness_to_pay:
     value: moderate

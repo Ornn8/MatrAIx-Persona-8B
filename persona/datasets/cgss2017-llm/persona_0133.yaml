@@ -94,9 +94,6 @@ dimensions:
   val_health: Moderate
   val_spirituality_faith: Minor
   years_experience: 20+
-provenance:
-  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
-  origin_persona_id: cgss2017-5393
 consumer_profile:
   willingness_to_pay:
     value: moderate

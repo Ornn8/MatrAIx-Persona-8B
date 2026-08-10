@@ -314,3 +314,9 @@ site/
 
 # Reasonix local session metadata
 .reasonix/
+
+# Local caches (never commit)
+.hf-cache/
+.uv-cache/
+.npm-cache/
+work/

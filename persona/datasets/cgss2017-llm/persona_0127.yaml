@@ -158,9 +158,6 @@ dimensions:
   val_wealth: Moderate
   values_priority: Achievement
   years_experience: 6-10
-provenance:
-  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
-  origin_persona_id: cgss2017-4966
 consumer_profile:
   willingness_to_pay:
     value: moderate

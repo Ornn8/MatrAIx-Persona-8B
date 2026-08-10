@@ -139,9 +139,6 @@ dimensions:
   val_social_status: Irrelevant
   val_spirituality_faith: Irrelevant
   val_tradition: Important
-provenance:
-  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
-  origin_persona_id: cgss2017-9331
 consumer_profile:
   willingness_to_pay:
     value: low

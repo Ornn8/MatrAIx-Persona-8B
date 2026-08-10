@@ -209,3 +209,19 @@ Large generated datasets stay outside git (see the Hugging Face release above).
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+## Acknowledgements
+
+- **China General Social Survey (CGSS)** — the China persona pipeline maps items
+  from CGSS 2017 / 2021 (中国人民大学, distributed via
+  [CNSDA](https://www.cnsda.org/)) onto the persona schema. CGSS data is
+  distributed for academic use under CNSDA registration terms; the derived
+  persona artifacts in this repository are provided for research purposes only
+  and are not for commercial redistribution.
+- **World Values Survey (WVS) Wave 7** — China 2018 sample mapped via
+  [WVSA](https://www.worldvaluessurvey.org/), used under the
+  [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) terms of the public
+  cross-national dataset.
+- **Inter font** — bundled under the
+  [SIL Open Font License 1.1](https://openfontlicense.org).
+

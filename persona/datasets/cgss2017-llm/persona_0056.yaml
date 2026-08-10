@@ -113,9 +113,6 @@ dimensions:
   val_spirituality_faith: Important
   val_tradition: Important
   years_experience: 3-5
-provenance:
-  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
-  origin_persona_id: cgss2017-13442
 consumer_profile:
   willingness_to_pay:
     value: low

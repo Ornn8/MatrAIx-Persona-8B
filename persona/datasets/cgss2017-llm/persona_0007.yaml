@@ -87,9 +87,6 @@ dimensions:
   trait_love_of_learning: Strong
   trait_spirituality: Slight
   trust_level: Skeptical
-provenance:
-  parent_pool: persona/curation/existing_data/outputs/cgss2017_llm
-  origin_persona_id: cgss2017-10427
 consumer_profile:
   willingness_to_pay:
     value: low
