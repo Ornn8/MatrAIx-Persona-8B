@@ -41,7 +41,7 @@ python -m pytest tests/unit/matraix/test_persona_dimension_narrative.py
 
 ## 待决事项
 
-1. **CGSS2021 LLM 富化**:2021 数据最新(8,148 人)但目前只有 observed-only 29 维;做 200 人 LLM 池需 API 成本(~1-2 小时)。是否执行?
+1. **CGSS2021 LLM 富化**:2021 数据最新(8,148 人)但目前只有 observed-only 29 维。~~做 200 人 LLM 池需 API 成本~~ — **用户决策(2026-08):暂不做,先用现有池**。
 2. **schema 扩展 3 个决策点**:happiness/信任/户口维度是否进入 1290 维(taxonomy 变更风险,见提案文档)。
 3. **Playground 中国市场实验模板**:基于消费画像的定价 A/B、推广偏好问卷等场景模板,可下一步做。
 4. **行为校准**:模拟付费意愿对照真实市场转化率(需要目标产品数据)。
