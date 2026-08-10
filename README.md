@@ -1,4 +1,7 @@
 <div align="center">
+  <p>
+    [<strong>English</strong>] · [<a href="README.zh-CN.md">中文</a>]
+  </p>
   <h1>MatrAIx</h1>
   <p><strong>Simulate before reality.</strong></p>
   <p>
