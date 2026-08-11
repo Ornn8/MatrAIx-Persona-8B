@@ -1,6 +1,6 @@
 import { FOCUS_RING, Sym } from "../cockpitShared";
 import { useI18n } from "@/i18n/I18nProvider";
-import { personaDimensionLabelKey } from "@/i18n/messages/sections/personaDisplay";
+import { personaDimensionLabelKey } from "@/i18n/personaLabelKeys";
 import { personaDisplayId, personaPrimaryName } from "@/lib/personaDisplay";
 import type { PersonaPoolPersonaCard } from "@/lib/types";
 import { PersonaAvatar } from "./PersonaAvatar";

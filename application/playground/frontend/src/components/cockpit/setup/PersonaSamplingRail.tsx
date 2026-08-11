@@ -3,7 +3,7 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 
 import { api, ApiError } from "@/lib/api";
 import { useI18n } from "@/i18n/I18nProvider";
-import { personaDimensionLabelKey } from "@/i18n/messages/sections/personaDisplay";
+import { personaDimensionLabelKey } from "@/i18n/personaLabelKeys";
 import {
   PERSONA_BENCH_POOL,
   PERSONA_CARD_PREVIEW_LIMIT,

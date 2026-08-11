@@ -1,16 +1,20 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useMemo, useRef, useState } from "react";
 import type { ReactNode } from "react";
 
-import { dictionaries } from "./messages/registry";
-import type { Locale, MessageValues } from "./types";
+import enPackModule from "./messages/packs/en-US";
+import { localePacks } from "./registry";
+import type { Locale, LocaleMeta, MessagePack, MessageValues } from "./types";
+
+const enPack: MessagePack = enPackModule;
 
 const STORAGE_KEY = "matraix.locale";
-const DEFAULT_LOCALE: Locale = "zh-CN";
+const DEFAULT_LOCALE: Locale = "en-US"; // English-first: en is the shipped default
 
 interface I18nContextValue {
   locale: Locale;
   setLocale: (locale: Locale) => void;
-  toggleLocale: () => void;
+  /** Locale registry (extensible, drives the picker). */
+  locales: LocaleMeta[];
   t: (key: string, fallback?: string, values?: MessageValues) => string;
   formatNumber: (value: number) => string;
   formatDate: (value: Date | number | string, options?: Intl.DateTimeFormatOptions) => string;
@@ -34,37 +38,61 @@ function interpolate(template: string, values?: MessageValues): string {
   );
 }
 
+/** Cache for lazily-loaded packs (en-US is always present). */
+const packCache = new Map<Locale, MessagePack>([["en-US", enPack]]);
+
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>(readStoredLocale);
+  const [pack, setPack] = useState<MessagePack>(enPack);
+  const inflight = useRef<Promise<MessagePack> | null>(null);
 
   const setLocale = useCallback((next: Locale) => {
+    if (next === locale && packCache.has(next)) {
+      return;
+    }
     setLocaleState(next);
+    // Keep the UI consistent instantly: fall back to the always-present en-US
+    // pack while the target locale loads.
+    setPack(enPack);
+    const cached = packCache.get(next);
+    const load =
+      cached !== undefined
+        ? Promise.resolve(cached)
+        : (inflight.current =
+            inflight.current ??
+            localePacks[next]().then((p) => {
+              packCache.set(next, p);
+              return p;
+            }));
+    inflight.current = load;
+    load
+      .then((p) => {
+        if (localePacks[next]) {
+          setPack(p);
+        }
+      })
+      .catch(() => {
+        // Load failure: stay on English fallback.
+        setPack(enPack);
+      });
     try {
       window.localStorage.setItem(STORAGE_KEY, next);
     } catch {
-      // Local storage can be unavailable in privacy-restricted browser modes.
+      /* storage unavailable */
     }
-  }, []);
-
-  const toggleLocale = useCallback(() => {
-    setLocale(locale === "zh-CN" ? "en-US" : "zh-CN");
-  }, [locale, setLocale]);
-
-  useEffect(() => {
-    document.documentElement.lang = locale;
   }, [locale]);
 
   const value = useMemo<I18nContextValue>(
     () => ({
       locale,
       setLocale,
-      toggleLocale,
+      locales: LOCALES,
       t: (key, fallback = key, values) =>
-        interpolate(dictionaries[locale][key] ?? dictionaries["en-US"][key] ?? fallback, values),
+        interpolate(pack[key] ?? enPack[key] ?? fallback, values),
       formatNumber: (number) => new Intl.NumberFormat(locale).format(number),
       formatDate: (date, options) => new Intl.DateTimeFormat(locale, options).format(new Date(date)),
     }),
-    [locale, setLocale, toggleLocale],
+    [locale, setLocale, pack],
   );
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
@@ -77,3 +105,6 @@ export function useI18n(): I18nContextValue {
   }
   return context;
 }
+
+// Imported lazily to avoid a cycle with registry.ts.
+import { LOCALE_REGISTRY as LOCALES } from "./registry";

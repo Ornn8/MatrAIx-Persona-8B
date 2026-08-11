@@ -9,6 +9,7 @@ import { FOCUS_RING, Sym } from "./cockpit/cockpitShared";
 import { MatrAIxLogo } from "./studio/MatrAIxLogo";
 import { useTheme } from "@/hooks/useTheme";
 import { useI18n } from "@/i18n/I18nProvider";
+import { LocalePicker } from "@/i18n/picker";
 
 export type StudioMode = "home" | "playground";
 
@@ -39,7 +40,7 @@ export function TopBar({
   variant = "solid",
 }: TopBarProps) {
   const { theme, toggle } = useTheme();
-  const { locale, t, toggleLocale } = useI18n();
+  const { t } = useI18n();
   const nextIsLight = theme === "dark";
   const overlayActive = runsActive || galleryActive || storeActive;
 
@@ -77,7 +78,6 @@ export function TopBar({
   ];
 
   const glass = variant === "glass";
-  const switchToEnglish = locale === "zh-CN";
 
   return (
     <header
@@ -117,25 +117,7 @@ export function TopBar({
         <div className="flex flex-shrink-0 items-center justify-end gap-2.5">
           <PreflightChip />
 
-          <button
-            type="button"
-            onClick={toggleLocale}
-            aria-label={
-              switchToEnglish
-                ? t("shell.locale.switchToEnglish", "Switch to English")
-                : t("shell.locale.switchToChinese", "Switch to Chinese")
-            }
-            title={
-              switchToEnglish
-                ? t("shell.locale.switchToEnglish", "Switch to English")
-                : t("shell.locale.switchToChinese", "Switch to Chinese")
-            }
-            className={`nasa-glass-pill flex h-9 min-w-9 flex-none items-center justify-center rounded-full px-2 text-[11px] font-semibold text-text-variant transition hover:bg-surface-high/40 hover:text-text-main active:scale-95 ${FOCUS_RING}`}
-          >
-            {switchToEnglish
-              ? t("shell.locale.english", "English")
-              : t("shell.locale.chinese", "Chinese")}
-          </button>
+          <LocalePicker compact />
 
           <button
             type="button"
